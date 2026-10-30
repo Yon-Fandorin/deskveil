@@ -1,0 +1,7146 @@
+{
+  "sourceLanguage": "en",
+  "strings": {
+    "화면 가림 표시를 확인하지 못했습니다. 가림 해제 또는 긴급 해제로 복구해주세요.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Could not verify the screen cover. Reveal the screen or use emergency release to recover."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "화면 가림 표시를 확인하지 못했습니다. 가림 해제 또는 긴급 해제로 복구해주세요."
+          }
+        }
+      }
+    },
+    "정리 상태가 변경되어 업데이트를 적용하지 않았습니다.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cleanup state changed, so the update was not applied."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "정리 상태가 변경되어 업데이트를 적용하지 않았습니다."
+          }
+        }
+      }
+    },
+    "화면 전환 보조 프로세스가 종료되어 입력 차단을 해제했습니다.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Input blocking ended because the display transition helper stopped."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "화면 전환 보조 프로세스가 종료되어 입력 차단을 해제했습니다."
+          }
+        }
+      }
+    },
+    "긴급 해제 단축키가 다른 앱과 겹칩니다. 설정에서 다른 조합을 지정해주세요.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The emergency shortcut conflicts with another app. Choose a different shortcut in Settings."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "긴급 해제 단축키가 다른 앱과 겹칩니다. 설정에서 다른 조합을 지정해주세요."
+          }
+        }
+      }
+    },
+    "긴급 해제 키를 다시 연결하지 못했습니다. 다른 조합을 지정해주세요.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Could not reconnect the emergency shortcut. Choose a different shortcut."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "긴급 해제 키를 다시 연결하지 못했습니다. 다른 조합을 지정해주세요."
+          }
+        }
+      }
+    },
+    "앱을 다시 시작한 뒤 변경해주세요.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Restart the app before changing this setting."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "앱을 다시 시작한 뒤 변경해주세요."
+          }
+        }
+      }
+    },
+    "입력 차단을 해제한 뒤 변경해주세요.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "End input blocking before changing this setting."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "입력 차단을 해제한 뒤 변경해주세요."
+          }
+        }
+      }
+    },
+    "macOS에서 사용하는 조합입니다. 다른 키를 지정해주세요.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "This shortcut is used by macOS. Choose a different shortcut."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "macOS에서 사용하는 조합입니다. 다른 키를 지정해주세요."
+          }
+        }
+      }
+    },
+    "긴급 해제 키가 다른 앱에서 사용 중입니다. 다른 조합을 지정해주세요.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The emergency shortcut is used by another app. Choose a different shortcut."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "긴급 해제 키가 다른 앱에서 사용 중입니다. 다른 조합을 지정해주세요."
+          }
+        }
+      }
+    },
+    "입력 차단 기능을 준비하지 못했습니다. 손쉬운 사용을 허용한 뒤 ‘권한 다시 확인’을 눌러주세요.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Could not prepare input blocking. Allow Accessibility access, then click Check permissions again."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "입력 차단 기능을 준비하지 못했습니다. 손쉬운 사용을 허용한 뒤 ‘권한 다시 확인’을 눌러주세요."
+          }
+        }
+      }
+    },
+    "화면 처리가 끝난 뒤 입력 차단을 시작해주세요.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wait for the display operation to finish before blocking input."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "화면 처리가 끝난 뒤 입력 차단을 시작해주세요."
+          }
+        }
+      }
+    },
+    "현재 입력을 차단할 수 없습니다": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cannot block input right now"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "현재 입력을 차단할 수 없습니다"
+          }
+        }
+      }
+    },
+    "보안 입력이 활성화되어 있습니다. 암호 입력창 등을 닫고 다시 시도해주세요.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Secure Input is active. Close any password fields and try again."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "보안 입력이 활성화되어 있습니다. 암호 입력창 등을 닫고 다시 시도해주세요."
+          }
+        }
+      }
+    },
+    "macOS 잠금 전환을 사용할 수 없습니다. ‘해제할 때 macOS 잠금’을 끄면 입력 차단만 사용할 수 있습니다.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "macOS locking is unavailable. Turn off Lock macOS when ending to use input blocking alone."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "macOS 잠금 전환을 사용할 수 없습니다. ‘해제할 때 macOS 잠금’을 끄면 입력 차단만 사용할 수 있습니다."
+          }
+        }
+      }
+    },
+    "덮개 모드 준비가 중단됐습니다. 전원과 배터리 상태를 확인한 뒤 다시 시도해주세요.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Closed-lid setup was interrupted. Check the power source and battery, then try again."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "덮개 모드 준비가 중단됐습니다. 전원과 배터리 상태를 확인한 뒤 다시 시도해주세요."
+          }
+        }
+      }
+    },
+    "잠자기 방지를 준비하지 못해 차단 시작을 취소했습니다.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The session was canceled because sleep prevention could not be prepared."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "잠자기 방지를 준비하지 못해 차단 시작을 취소했습니다."
+          }
+        }
+      }
+    },
+    "밝기 보조 프로세스를 실행할 수 없습니다. 화면을 켠 채 입력만 차단합니다.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The brightness helper could not start. Input will be blocked with the displays left on."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "밝기 보조 프로세스를 실행할 수 없습니다. 화면을 켠 채 입력만 차단합니다."
+          }
+        }
+      }
+    },
+    "화면 복원을 아직 확인하지 못했습니다.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Display restoration has not been confirmed yet."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "화면 복원을 아직 확인하지 못했습니다."
+          }
+        }
+      }
+    },
+    "화면 전환 보조 프로세스를 준비할 수 없습니다.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Could not prepare the display transition helper."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "화면 전환 보조 프로세스를 준비할 수 없습니다."
+          }
+        }
+      }
+    },
+    "화면 전환 준비 응답을 받지 못했습니다.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No response received while preparing the display transition."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "화면 전환 준비 응답을 받지 못했습니다."
+          }
+        }
+      }
+    },
+    "검은 전환 화면을 준비할 수 없습니다.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Could not prepare the black transition screen."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "검은 전환 화면을 준비할 수 없습니다."
+          }
+        }
+      }
+    },
+    "화면 복원에 실패했습니다. %@로 긴급 해제하고, 계속 어두우면 DeskVeil을 다시 실행해주세요.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Display restoration failed. Use %@ for emergency release. If the screens stay dark, reopen DeskVeil."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "화면 복원에 실패했습니다. %@로 긴급 해제하고, 계속 어두우면 DeskVeil을 다시 실행해주세요."
+          }
+        }
+      }
+    },
+    "화면 복원에 실패했습니다. DeskVeil을 다시 실행해주세요.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Display restoration failed. Reopen DeskVeil."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "화면 복원에 실패했습니다. DeskVeil을 다시 실행해주세요."
+          }
+        }
+      }
+    },
+    "화면 복구 프로세스가 종료됐습니다. 계속 어두우면 DeskVeil을 다시 실행해주세요.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The display recovery process stopped. If the screens stay dark, reopen DeskVeil."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "화면 복구 프로세스가 종료됐습니다. 계속 어두우면 DeskVeil을 다시 실행해주세요."
+          }
+        }
+      }
+    },
+    "밝기 보조 프로세스가 종료되어 입력 차단을 해제했습니다.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Input blocking ended because the brightness helper stopped."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "밝기 보조 프로세스가 종료되어 입력 차단을 해제했습니다."
+          }
+        }
+      }
+    },
+    "화면 밝기를 제어할 수 없습니다. 입력 차단은 유지됩니다.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Display brightness cannot be controlled. Input blocking remains active."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "화면 밝기를 제어할 수 없습니다. 입력 차단은 유지됩니다."
+          }
+        }
+      }
+    },
+    "화면 %@개를 완전히 어둡게 하지 못했습니다. 입력 차단은 유지됩니다.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Could not fully dim these displays: %@. Input blocking remains active."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "화면 %@개를 완전히 어둡게 하지 못했습니다. 입력 차단은 유지됩니다."
+          }
+        }
+      }
+    },
+    "화면 복원을 확인하지 못했습니다. 계속 어두우면 DeskVeil을 다시 실행해주세요.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Could not confirm display restoration. If the screens stay dark, reopen DeskVeil."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "화면 복원을 확인하지 못했습니다. 계속 어두우면 DeskVeil을 다시 실행해주세요."
+          }
+        }
+      }
+    },
+    "입력 감시를 유지할 수 없어 차단을 해제했습니다.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Input blocking ended because input monitoring could not be maintained."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "입력 감시를 유지할 수 없어 차단을 해제했습니다."
+          }
+        }
+      }
+    },
+    "보안 입력이 활성화되어 입력 차단을 해제했습니다.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Input blocking ended because Secure Input became active."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "보안 입력이 활성화되어 입력 차단을 해제했습니다."
+          }
+        }
+      }
+    },
+    " %@초": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": " %@s"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": " %@초"
+          }
+        }
+      }
+    },
+    " 차단": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": " Blocking"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": " 차단"
+          }
+        }
+      }
+    },
+    "%@초 후 자동 해제": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Auto-release in %@s"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@초 후 자동 해제"
+          }
+        }
+      }
+    },
+    "입력 감시가 중단되어 차단을 해제했습니다.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Input blocking ended because input monitoring stopped."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "입력 감시가 중단되어 차단을 해제했습니다."
+          }
+        }
+      }
+    },
+    "앱 응답이 지연되어 입력 차단을 해제했습니다.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Input blocking ended because the app stopped responding."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "앱 응답이 지연되어 입력 차단을 해제했습니다."
+          }
+        }
+      }
+    },
+    "업데이트 적용 중": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Applying update"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "업데이트 적용 중"
+          }
+        }
+      }
+    },
+    "입력 차단 중단 · 화면 가림 유지": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Input blocking stopped · Screen covered"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "입력 차단 중단 · 화면 가림 유지"
+          }
+        }
+      }
+    },
+    "덮개 모드 준비 중": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Preparing closed-lid mode"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "덮개 모드 준비 중"
+          }
+        }
+      }
+    },
+    "macOS 잠금으로 전환 중": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Switching to macOS lock"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "macOS 잠금으로 전환 중"
+          }
+        }
+      }
+    },
+    "잠금 전환 실패 · 입력 차단 유지": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lock failed · Input still blocked"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "잠금 전환 실패 · 입력 차단 유지"
+          }
+        }
+      }
+    },
+    "테스트 중 · %@초 후 해제": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Testing · Ends in %@s"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "테스트 중 · %@초 후 해제"
+          }
+        }
+      }
+    },
+    "입력 차단 중": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Input blocked"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "입력 차단 중"
+          }
+        }
+      }
+    },
+    "권한 설정 필요": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Permissions needed"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "권한 설정 필요"
+          }
+        }
+      }
+    },
+    "입력 차단 준비 실패": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Input blocking unavailable"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "입력 차단 준비 실패"
+          }
+        }
+      }
+    },
+    "대기 중": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ready"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "대기 중"
+          }
+        }
+      }
+    },
+    "상태 확인 필요": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Check status"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "상태 확인 필요"
+          }
+        }
+      }
+    },
+    "DeskVeil 상태 확인 필요": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "DeskVeil needs attention"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "DeskVeil 상태 확인 필요"
+          }
+        }
+      }
+    },
+    "DeskVeil · %@\n%@ 차단·해제 · %@ 긴급 해제": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "DeskVeil · %@\n%@ Start/end · %@ Emergency release"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "DeskVeil · %@\n%@ 차단·해제 · %@ 긴급 해제"
+          }
+        }
+      }
+    },
+    "이전 화면을 복구한 뒤 화면 버튼을 다시 눌러주세요.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Restore the previous display before using the display button again."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "이전 화면을 복구한 뒤 화면 버튼을 다시 눌러주세요."
+          }
+        }
+      }
+    },
+    "v%@ 업데이트 대기 · %@": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "v%@ update waiting · %@"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "v%@ 업데이트 대기 · %@"
+          }
+        }
+      }
+    },
+    "화면 연결 상태가 바뀌었습니다. 목록에서 다시 선택해주세요.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The display connection changed. Select it again from the list."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "화면 연결 상태가 바뀌었습니다. 목록에서 다시 선택해주세요."
+          }
+        }
+      }
+    },
+    "업데이트 적용 중…": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Applying update…"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "업데이트 적용 중…"
+          }
+        }
+      }
+    },
+    "화면 가림 해제": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Reveal screen"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "화면 가림 해제"
+          }
+        }
+      }
+    },
+    "확인": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "OK"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "확인"
+          }
+        }
+      }
+    },
+    "입력 차단을 준비할 수 없습니다. 권한을 다시 확인해주세요.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Could not prepare input blocking. Check permissions again."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "입력 차단을 준비할 수 없습니다. 권한을 다시 확인해주세요."
+          }
+        }
+      }
+    },
+    "보조 프로세스 종료를 확인하지 못했습니다. 종료가 확인된 뒤 다시 시도해주세요.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Could not confirm that the helper stopped. Try again once it has exited."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "보조 프로세스 종료를 확인하지 못했습니다. 종료가 확인된 뒤 다시 시도해주세요."
+          }
+        }
+      }
+    },
+    "현재 앱 정리 중": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cleaning up the current app"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "현재 앱 정리 중"
+          }
+        }
+      }
+    },
+    "화면 복원을 확인하지 못해 업데이트를 적용하지 않았습니다.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The update was not applied because display restoration could not be confirmed."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "화면 복원을 확인하지 못해 업데이트를 적용하지 않았습니다."
+          }
+        }
+      }
+    },
+    "업데이트 승인을 받지 못해 현재 버전을 유지합니다.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Update approval was not received. Keeping the current version."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "업데이트 승인을 받지 못해 현재 버전을 유지합니다."
+          }
+        }
+      }
+    },
+    "새 앱의 시작을 확인하지 못해 현재 앱을 유지합니다.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Could not confirm the new app started. Keeping the current app."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "새 앱의 시작을 확인하지 못해 현재 앱을 유지합니다."
+          }
+        }
+      }
+    },
+    "새 앱을 실행하지 못해 현재 앱을 유지합니다.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Could not launch the new app. Keeping the current app."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "새 앱을 실행하지 못해 현재 앱을 유지합니다."
+          }
+        }
+      }
+    },
+    "다시 시작 실패": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Restart failed"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "다시 시작 실패"
+          }
+        }
+      }
+    },
+    "앱을 다시 열어주세요.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Reopen the app."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "앱을 다시 열어주세요."
+          }
+        }
+      }
+    },
+    "전원 연결됨": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Power connected"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "전원 연결됨"
+          }
+        }
+      }
+    },
+    "배터리 %@%": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Battery %@%"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "배터리 %@%"
+          }
+        }
+      }
+    },
+    "동작 중 · %@": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Active · %@"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "동작 중 · %@"
+          }
+        }
+      }
+    },
+    "사용 안 함": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Off"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "사용 안 함"
+          }
+        }
+      }
+    },
+    "차단 시작 시 동작": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Starts with input blocking"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "차단 시작 시 동작"
+          }
+        }
+      }
+    },
+    "전원 연결 시 동작": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Starts when power is connected"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "전원 연결 시 동작"
+          }
+        }
+      }
+    },
+    "설정 전": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Not configured"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "설정 전"
+          }
+        }
+      }
+    },
+    "보조 도구 설치…": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Install helper…"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "보조 도구 설치…"
+          }
+        }
+      }
+    },
+    "테스트": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Test"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "테스트"
+          }
+        }
+      }
+    },
+    "배터리 종료 기준": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Battery cutoff"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "배터리 종료 기준"
+          }
+        }
+      }
+    },
+    "덮개 유지 시간": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Closed-lid duration"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "덮개 유지 시간"
+          }
+        }
+      }
+    },
+    "직접 설정": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Custom"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "직접 설정"
+          }
+        }
+      }
+    },
+    "차단·해제 단축키": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Start/end shortcut"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "차단·해제 단축키"
+          }
+        }
+      }
+    },
+    "긴급 해제 단축키": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Emergency shortcut"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "긴급 해제 단축키"
+          }
+        }
+      }
+    },
+    "밝기 전환 시간": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Brightness transition"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "밝기 전환 시간"
+          }
+        }
+      }
+    },
+    "즉시": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Instant"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "즉시"
+          }
+        }
+      }
+    },
+    "0.15초": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "0.15s"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "0.15초"
+          }
+        }
+      }
+    },
+    "0.3초": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "0.3s"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "0.3초"
+          }
+        }
+      }
+    },
+    "0.6초": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "0.6s"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "0.6초"
+          }
+        }
+      }
+    },
+    "1초": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "1s"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "1초"
+          }
+        }
+      }
+    },
+    "권한 설정": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Set up permissions"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "권한 설정"
+          }
+        }
+      }
+    },
+    "DeskVeil 설정": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "DeskVeil Settings"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "DeskVeil 설정"
+          }
+        }
+      }
+    },
+    "설정": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Settings"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "설정"
+          }
+        }
+      }
+    },
+    "접근 권한": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Permissions"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "접근 권한"
+          }
+        }
+      }
+    },
+    "긴급 해제": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Emergency release"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "긴급 해제"
+          }
+        }
+      }
+    },
+    "단축키 초기화": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Reset shortcuts"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "단축키 초기화"
+          }
+        }
+      }
+    },
+    "차단·해제 키와 긴급 해제 키를 모두 기본값으로 되돌립니다.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Restore both the start/end and emergency shortcuts to their defaults."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "차단·해제 키와 긴급 해제 키를 모두 기본값으로 되돌립니다."
+          }
+        }
+      }
+    },
+    "%@초": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@s"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@초"
+          }
+        }
+      }
+    },
+    "테스트 자동 해제 시간": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Test auto-release time"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "테스트 자동 해제 시간"
+          }
+        }
+      }
+    },
+    "화면을 켜둔 채 입력 차단만 시험합니다. 수동으로 끝내도 macOS 인증을 요청하지 않습니다.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Test input blocking with the screens left on. Ending manually will not request macOS authentication."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "화면을 켜둔 채 입력 차단만 시험합니다. 수동으로 끝내도 macOS 인증을 요청하지 않습니다."
+          }
+        }
+      }
+    },
+    "화면 어둡게": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dim displays"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "화면 어둡게"
+          }
+        }
+      }
+    },
+    "내장은 밝기를 낮추고, 지원 외장은 밝기와 출력 색상을 함께 낮춰 내용을 검게 가립니다. 화면 연결은 유지하며 해제하면 원래 값으로 복원합니다. 외장 백라이트의 빛은 남을 수 있습니다.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lowers built-in brightness and dims brightness and output colors on supported external displays. Connections stay active, and original values are restored when the session ends. External backlight glow may remain."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "내장은 밝기를 낮추고, 지원 외장은 밝기와 출력 색상을 함께 낮춰 내용을 검게 가립니다. 화면 연결은 유지하며 해제하면 원래 값으로 복원합니다. 외장 백라이트의 빛은 남을 수 있습니다."
+          }
+        }
+      }
+    },
+    "잠자기·자동 잠금 방지": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Prevent sleep and auto-lock"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "잠자기·자동 잠금 방지"
+          }
+        }
+      }
+    },
+    "덮개를 닫아도 계속 실행": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Keep running with lid closed"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "덮개를 닫아도 계속 실행"
+          }
+        }
+      }
+    },
+    "일반 차단에 적용합니다. 배터리 사용은 아래 옵션에서 선택합니다. 응답 중단·해제 시 잠자기 설정을 복구합니다.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Applies to normal sessions. Choose battery use below. Sleep settings are restored when the app stops responding or the session ends."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "일반 차단에 적용합니다. 배터리 사용은 아래 옵션에서 선택합니다. 응답 중단·해제 시 잠자기 설정을 복구합니다."
+          }
+        }
+      }
+    },
+    "배터리에서도 계속 실행": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Keep running on battery"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "배터리에서도 계속 실행"
+          }
+        }
+      }
+    },
+    "덮개 유지 중 전원을 분리해도 작업을 계속합니다. 아래에서 선택한 잔량에 도달하거나 잔량을 확인할 수 없으면 종료합니다.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Continue closed-lid operation after power is disconnected. Ends at the selected battery level or if the level cannot be read."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "덮개 유지 중 전원을 분리해도 작업을 계속합니다. 아래에서 선택한 잔량에 도달하거나 잔량을 확인할 수 없으면 종료합니다."
+          }
+        }
+      }
+    },
+    "유지 시간 · 시간 단위": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Duration in hours"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "유지 시간 · 시간 단위"
+          }
+        }
+      }
+    },
+    "1~8,760시간을 입력할 수 있습니다. 새 차단을 시작할 때 적용됩니다.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Enter 1–8,760 hours. Applies to the next session."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "1~8,760시간을 입력할 수 있습니다. 새 차단을 시작할 때 적용됩니다."
+          }
+        }
+      }
+    },
+    "해제할 때 macOS 잠금": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lock macOS when ending"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "해제할 때 macOS 잠금"
+          }
+        }
+      }
+    },
+    "일반 해제에만 적용합니다. 자동 해제 테스트·긴급 해제·오류 복구는 제외됩니다.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Applies to normal sessions only. Excludes timed tests, emergency release, and error recovery."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "일반 해제에만 적용합니다. 자동 해제 테스트·긴급 해제·오류 복구는 제외됩니다."
+          }
+        }
+      }
+    },
+    "오류 알림 소리": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Error sound"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "오류 알림 소리"
+          }
+        }
+      }
+    },
+    "macOS 잠금 전환에 실패했을 때 소리를 냅니다. 기본값은 꺼짐입니다.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Play a sound if switching to macOS lock fails. Off by default."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "macOS 잠금 전환에 실패했을 때 소리를 냅니다. 기본값은 꺼짐입니다."
+          }
+        }
+      }
+    },
+    "설정 창을 다시 열어주세요.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Reopen Settings."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "설정 창을 다시 열어주세요."
+          }
+        }
+      }
+    },
+    "동작 확인 및 테스트": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Status and testing"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "동작 확인 및 테스트"
+          }
+        }
+      }
+    },
+    "현재 상태와 최근 기록을 확인하고, 입력 차단을 시험합니다.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Check the current status and recent activity, and test input blocking."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "현재 상태와 최근 기록을 확인하고, 입력 차단을 시험합니다."
+          }
+        }
+      }
+    },
+    "차단과 해제": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Blocking and release"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "차단과 해제"
+          }
+        }
+      }
+    },
+    "일반 해제·유지 시간 종료 시 인증합니다. 테스트·긴급 해제는 제외됩니다.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Authenticate on normal release or when the duration expires. Excludes tests and emergency release."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "일반 해제·유지 시간 종료 시 인증합니다. 테스트·긴급 해제는 제외됩니다."
+          }
+        }
+      }
+    },
+    "작업 유지": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Keep work running"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "작업 유지"
+          }
+        }
+      }
+    },
+    "입력 차단 중 동작합니다. 배터리 사용은 덮개 유지 옵션에서 선택합니다.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Active while input is blocked. Choose battery use under closed-lid options."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "입력 차단 중 동작합니다. 배터리 사용은 덮개 유지 옵션에서 선택합니다."
+          }
+        }
+      }
+    },
+    "처음 사용할 때 접근 권한에서 보조 도구를 준비해주세요.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Set up the helper in Permissions before first use."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "처음 사용할 때 접근 권한에서 보조 도구를 준비해주세요."
+          }
+        }
+      }
+    },
+    "전원을 분리해도 덮개 유지를 계속합니다.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Continue closed-lid operation after disconnecting power."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "전원을 분리해도 덮개 유지를 계속합니다."
+          }
+        }
+      }
+    },
+    "화면과 알림": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Displays and alerts"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "화면과 알림"
+          }
+        }
+      }
+    },
+    "내장·지원 외장 화면에 적용하고, 해제하면 원래 밝기로 돌립니다.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dims built-in and supported external displays, then restores their original brightness."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "내장·지원 외장 화면에 적용하고, 해제하면 원래 밝기로 돌립니다."
+          }
+        }
+      }
+    },
+    "시간": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "hours"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "시간"
+          }
+        }
+      }
+    },
+    "%g초": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%gs"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%g초"
+          }
+        }
+      }
+    },
+    "기록 보기": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "View log"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "기록 보기"
+          }
+        }
+      }
+    },
+    "차단한 직접 입력": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Physical input blocked"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "차단한 직접 입력"
+          }
+        }
+      }
+    },
+    "통과한 앱 입력": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "App input allowed"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "통과한 앱 입력"
+          }
+        }
+      }
+    },
+    "입력 차단 테스트": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Test input blocking"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "입력 차단 테스트"
+          }
+        }
+      }
+    },
+    "화면을 켜둔 채 시험하고, macOS 인증 없이 자동 해제합니다.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Test with the screens left on. Ends automatically without macOS authentication."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "화면을 켜둔 채 시험하고, macOS 인증 없이 자동 해제합니다."
+          }
+        }
+      }
+    },
+    "현재 상태": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Current status"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "현재 상태"
+          }
+        }
+      }
+    },
+    "잠자기 방지": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sleep prevention"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "잠자기 방지"
+          }
+        }
+      }
+    },
+    "자동 잠금 방지": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Auto-lock prevention"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "자동 잠금 방지"
+          }
+        }
+      }
+    },
+    "덮개 유지": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Closed-lid mode"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "덮개 유지"
+          }
+        }
+      }
+    },
+    "최근 차단 기록": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Recent session"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "최근 차단 기록"
+          }
+        }
+      }
+    },
+    "통과 횟수에는 DeskVeil의 자동 잠금 방지 신호도 포함됩니다. 일부 자동화 조작은 기록에 남지 않을 수 있습니다.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Allowed events include DeskVeil's auto-lock prevention signals. Some automation actions may not be recorded."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "통과 횟수에는 DeskVeil의 자동 잠금 방지 신호도 포함됩니다. 일부 자동화 조작은 기록에 남지 않을 수 있습니다."
+          }
+        }
+      }
+    },
+    "보조 도구 제거…": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Remove helper…"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "보조 도구 제거…"
+          }
+        }
+      }
+    },
+    "관리자 승인 후 덮개 유지 보조 도구와 동작 기록을 제거합니다. 입력 차단과 밝기 조절은 계속 사용할 수 있습니다.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Remove the closed-lid helper and its log with administrator approval. Input blocking and brightness control remain available."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "관리자 승인 후 덮개 유지 보조 도구와 동작 기록을 제거합니다. 입력 차단과 밝기 조절은 계속 사용할 수 있습니다."
+          }
+        }
+      }
+    },
+    "덮개 유지 보조 도구": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Closed-lid helper"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "덮개 유지 보조 도구"
+          }
+        }
+      }
+    },
+    "시스템 설정 열기": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Open System Settings"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "시스템 설정 열기"
+          }
+        }
+      }
+    },
+    "손쉬운 사용": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Accessibility"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "손쉬운 사용"
+          }
+        }
+      }
+    },
+    "권한 다시 확인": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Check permissions again"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "권한 다시 확인"
+          }
+        }
+      }
+    },
+    "Finder에서 앱 보기": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Show app in Finder"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Finder에서 앱 보기"
+          }
+        }
+      }
+    },
+    "앱 다시 시작": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Restart app"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "앱 다시 시작"
+          }
+        }
+      }
+    },
+    "먼저 권한을 다시 확인해주세요.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Check permissions again first."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "먼저 권한을 다시 확인해주세요."
+          }
+        }
+      }
+    },
+    "계속 안 된다면 앱을 다시 등록해주세요.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "If the issue persists, register the app again."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "계속 안 된다면 앱을 다시 등록해주세요."
+          }
+        }
+      }
+    },
+    "손쉬운 사용에서 기존 DeskVeil을 지운 뒤 아래 앱을 다시 추가해주세요. 재등록 후에도 안 되면 앱을 다시 시작해주세요.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Remove the existing DeskVeil entry from Accessibility, then add the app shown below. Restart the app if registering it again does not help."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "손쉬운 사용에서 기존 DeskVeil을 지운 뒤 아래 앱을 다시 추가해주세요. 재등록 후에도 안 되면 앱을 다시 시작해주세요."
+          }
+        }
+      }
+    },
+    "손쉬운 사용 문제 해결": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Accessibility troubleshooting"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "손쉬운 사용 문제 해결"
+          }
+        }
+      }
+    },
+    "허용했는데 입력 차단이 되지 않을 때": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "When access is allowed but input blocking does not work"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "허용했는데 입력 차단이 되지 않을 때"
+          }
+        }
+      }
+    },
+    "입력 차단을 준비할 수 없습니다": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Input blocking unavailable"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "입력 차단을 준비할 수 없습니다"
+          }
+        }
+      }
+    },
+    "권한 설정이 필요합니다": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Permissions required"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "권한 설정이 필요합니다"
+          }
+        }
+      }
+    },
+    "%@로 해제 · %@로 긴급 해제": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ to end · %@ for emergency release"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@로 해제 · %@로 긴급 해제"
+          }
+        }
+      }
+    },
+    "메뉴 막대 또는 %@로 자리 비움을 시작할 수 있습니다.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Start a session from the menu bar or with %@."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "메뉴 막대 또는 %@로 자리 비움을 시작할 수 있습니다."
+          }
+        }
+      }
+    },
+    "접근 권한에서 연결 상태를 확인해주세요.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Check the connection in Permissions."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "접근 권한에서 연결 상태를 확인해주세요."
+          }
+        }
+      }
+    },
+    "접근 권한에서 손쉬운 사용을 허용해주세요.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Allow Accessibility access in Permissions."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "접근 권한에서 손쉬운 사용을 허용해주세요."
+          }
+        }
+      }
+    },
+    "확인이 필요합니다": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Needs attention"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "확인이 필요합니다"
+          }
+        }
+      }
+    },
+    "아래 오류 내용을 확인해주세요.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Check the error below."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "아래 오류 내용을 확인해주세요."
+          }
+        }
+      }
+    },
+    "새 버전을 준비하고 있습니다. 잠시 기다려주세요.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Preparing the new version. Please wait."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "새 버전을 준비하고 있습니다. 잠시 기다려주세요."
+          }
+        }
+      }
+    },
+    "화면 가림 유지 중": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Screen cover active"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "화면 가림 유지 중"
+          }
+        }
+      }
+    },
+    "설정한 긴급 해제 단축키 또는 복구 명령으로 화면을 다시 볼 수 있습니다.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Use your emergency shortcut or the recovery command to reveal the screen."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "설정한 긴급 해제 단축키 또는 복구 명령으로 화면을 다시 볼 수 있습니다."
+          }
+        }
+      }
+    },
+    "이 잔량 이하가 되면 작업 유지를 종료합니다. 다음 차단부터 적용됩니다.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ends keep-awake operation at or below this level. Applies to the next session."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "이 잔량 이하가 되면 작업 유지를 종료합니다. 다음 차단부터 적용됩니다."
+          }
+        }
+      }
+    },
+    "시간 제한 없이 유지합니다. 전원·배터리 조건과 응답 감시는 계속 적용됩니다.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No time limit. Power and battery conditions and response monitoring still apply."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "시간 제한 없이 유지합니다. 전원·배터리 조건과 응답 감시는 계속 적용됩니다."
+          }
+        }
+      }
+    },
+    "시간이 끝나면 해제하고 macOS 인증으로 전환합니다. 새 차단부터 적용됩니다.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ends the session and switches to macOS authentication when time expires. Applies to the next session."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "시간이 끝나면 해제하고 macOS 인증으로 전환합니다. 새 차단부터 적용됩니다."
+          }
+        }
+      }
+    },
+    "시간이 끝나면 입력 차단을 해제합니다. 새 차단부터 적용됩니다.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ends input blocking when time expires. Applies to the next session."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "시간이 끝나면 입력 차단을 해제합니다. 새 차단부터 적용됩니다."
+          }
+        }
+      }
+    },
+    "%@시간": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@h"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@시간"
+          }
+        }
+      }
+    },
+    "처리 중": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Working"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "처리 중"
+          }
+        }
+      }
+    },
+    "준비됨": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ready"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "준비됨"
+          }
+        }
+      }
+    },
+    "연결 필요": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Connection needed"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "연결 필요"
+          }
+        }
+      }
+    },
+    "설치 필요": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Installation needed"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "설치 필요"
+          }
+        }
+      }
+    },
+    "덮개를 닫아도 계속 실행하는 기능에 사용합니다. 처음 설치와 보조 도구 변경 시에만 관리자 승인이 필요합니다.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Used to keep work running with the lid closed. Administrator approval is required for initial installation and helper changes."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "덮개를 닫아도 계속 실행하는 기능에 사용합니다. 처음 설치와 보조 도구 변경 시에만 관리자 승인이 필요합니다."
+          }
+        }
+      }
+    },
+    "키보드·마우스는 막히고, 자동화의 클릭·입력은 동작하는지 확인해주세요.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Check that physical keyboard and mouse input is blocked while automation clicks and typing still work."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "키보드·마우스는 막히고, 자동화의 클릭·입력은 동작하는지 확인해주세요."
+          }
+        }
+      }
+    },
+    "접근 권한에서 입력 차단 연결을 복구해주세요.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Restore input blocking in Permissions."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "접근 권한에서 입력 차단 연결을 복구해주세요."
+          }
+        }
+      }
+    },
+    "테스트를 실행하려면 접근 권한을 먼저 설정해주세요.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Set up permissions before running a test."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "테스트를 실행하려면 접근 권한을 먼저 설정해주세요."
+          }
+        }
+      }
+    },
+    "업데이트가 끝나면 다시 사용할 수 있습니다.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Available again after the update finishes."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "업데이트가 끝나면 다시 사용할 수 있습니다."
+          }
+        }
+      }
+    },
+    "화면 가림을 해제한 뒤 테스트할 수 있습니다.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Reveal the screen before running a test."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "화면 가림을 해제한 뒤 테스트할 수 있습니다."
+          }
+        }
+      }
+    },
+    "%@회": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@회"
+          }
+        }
+      }
+    },
+    "허용됨": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Allowed"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "허용됨"
+          }
+        }
+      }
+    },
+    "허용 필요": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Access needed"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "허용 필요"
+          }
+        }
+      }
+    },
+    "권한은 허용됐지만 입력 차단을 준비할 수 없습니다. ‘손쉬운 사용 문제 해결’에서 다시 확인해주세요.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Access is allowed, but input blocking could not be prepared. See Accessibility troubleshooting."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "권한은 허용됐지만 입력 차단을 준비할 수 없습니다. ‘손쉬운 사용 문제 해결’에서 다시 확인해주세요."
+          }
+        }
+      }
+    },
+    "시스템 설정 → 개인정보 보호 및 보안 → 손쉬운 사용에서 DeskVeil을 켜주세요.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Enable DeskVeil in System Settings → Privacy & Security → Accessibility."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "시스템 설정 → 개인정보 보호 및 보안 → 손쉬운 사용에서 DeskVeil을 켜주세요."
+          }
+        }
+      }
+    },
+    "입력 차단 해제 후 적용": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Waiting for input blocking to end"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "입력 차단 해제 후 적용"
+          }
+        }
+      }
+    },
+    "단축키 설정 완료 후 적용": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Waiting for shortcut recording to finish"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "단축키 설정 완료 후 적용"
+          }
+        }
+      }
+    },
+    "화면 전환 완료 후 적용": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Waiting for display transition"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "화면 전환 완료 후 적용"
+          }
+        }
+      }
+    },
+    "화면 복원 완료 후 적용": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Waiting for display restoration"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "화면 복원 완료 후 적용"
+          }
+        }
+      }
+    },
+    "잠자기 설정 복구 후 적용": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Waiting for sleep settings to be restored"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "잠자기 설정 복구 후 적용"
+          }
+        }
+      }
+    },
+    "앱 정리 완료 후 적용": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Waiting for app cleanup"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "앱 정리 완료 후 적용"
+          }
+        }
+      }
+    },
+    "업데이트 대기 경로를 확인하지 못했습니다.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Could not verify the update waiting directory."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "업데이트 대기 경로를 확인하지 못했습니다."
+          }
+        }
+      }
+    },
+    "업데이트 대기 경로를 만들지 못했습니다.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Could not create the update waiting directory."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "업데이트 대기 경로를 만들지 못했습니다."
+          }
+        }
+      }
+    },
+    "업데이트 대기 주소를 확인하지 못했습니다.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Could not verify the update waiting socket."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "업데이트 대기 주소를 확인하지 못했습니다."
+          }
+        }
+      }
+    },
+    "업데이트 대기 주소가 이미 사용 중입니다.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The update waiting socket is already in use."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "업데이트 대기 주소가 이미 사용 중입니다."
+          }
+        }
+      }
+    },
+    "업데이트 대기를 시작하지 못했습니다.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Could not start waiting for updates."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "업데이트 대기를 시작하지 못했습니다."
+          }
+        }
+      }
+    },
+    "업데이트 대기 주소를 열지 못했습니다.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Could not open the update waiting socket."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "업데이트 대기 주소를 열지 못했습니다."
+          }
+        }
+      }
+    },
+    "상태 확인 중": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Checking status"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "상태 확인 중"
+          }
+        }
+      }
+    },
+    "접기": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Collapse"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "접기"
+          }
+        }
+      }
+    },
+    "펼치기": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Expand"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "펼치기"
+          }
+        }
+      }
+    },
+    "디스플레이": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Display"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "디스플레이"
+          }
+        }
+      }
+    },
+    "화면 복구를 시도하고 있습니다. 복원이 확인될 때까지 기다려주세요.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Trying to recover the displays. Wait until restoration is confirmed."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "화면 복구를 시도하고 있습니다. 복원이 확인될 때까지 기다려주세요."
+          }
+        }
+      }
+    },
+    "화면 복구를 시작하지 못했습니다. 긴급 해제로 다시 시도하거나 DeskVeil을 다시 실행해주세요.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Could not start display recovery. Try emergency release or reopen DeskVeil."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "화면 복구를 시작하지 못했습니다. 긴급 해제로 다시 시도하거나 DeskVeil을 다시 실행해주세요."
+          }
+        }
+      }
+    },
+    "화면 보조 프로세스가 종료됐습니다. 계속 어두우면 DeskVeil을 다시 실행해주세요.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The display helper stopped. If the screens stay dark, reopen DeskVeil."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "화면 보조 프로세스가 종료됐습니다. 계속 어두우면 DeskVeil을 다시 실행해주세요."
+          }
+        }
+      }
+    },
+    "잠자기": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Asleep"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "잠자기"
+          }
+        }
+      }
+    },
+    "비활성": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Inactive"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "비활성"
+          }
+        }
+      }
+    },
+    "검은 화면 출력": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Black output"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "검은 화면 출력"
+          }
+        }
+      }
+    },
+    "최저 밝기": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Minimum brightness"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "최저 밝기"
+          }
+        }
+      }
+    },
+    "출력 활성": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Output active"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "출력 활성"
+          }
+        }
+      }
+    },
+    "내장 디스플레이": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Built-in display"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "내장 디스플레이"
+          }
+        }
+      }
+    },
+    "디스플레이 %@": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Display %@"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "디스플레이 %@"
+          }
+        }
+      }
+    },
+    "잠금 화면으로 전환하지 못했습니다": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Could not switch to the lock screen"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "잠금 화면으로 전환하지 못했습니다"
+          }
+        }
+      }
+    },
+    "%@  다시 시도\n%@  긴급 해제": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@  Retry\n%@  Emergency release"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@  다시 시도\n%@  긴급 해제"
+          }
+        }
+      }
+    },
+    "DeskVeil 잠금 전환 오류": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "DeskVeil lock transition error"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "DeskVeil 잠금 전환 오류"
+          }
+        }
+      }
+    },
+    "%@ %@로 다시 시도하거나 %@로 긴급 해제할 수 있습니다.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ Retry with %@ or use %@ for emergency release."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ %@로 다시 시도하거나 %@로 긴급 해제할 수 있습니다."
+          }
+        }
+      }
+    },
+    "꺼짐": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Off"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "꺼짐"
+          }
+        }
+      }
+    },
+    "예방 신호 확인됨": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Prevention signal verified"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "예방 신호 확인됨"
+          }
+        }
+      }
+    },
+    "동작 확인 중": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Verifying"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "동작 확인 중"
+          }
+        }
+      }
+    },
+    "입력이 없으면 동작": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Starts when input is idle"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "입력이 없으면 동작"
+          }
+        }
+      }
+    },
+    "입력 중 · 대기": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Input active · Waiting"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "입력 중 · 대기"
+          }
+        }
+      }
+    },
+    "손쉬운 사용 권한 필요": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Accessibility access needed"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "손쉬운 사용 권한 필요"
+          }
+        }
+      }
+    },
+    "사용자 전환 · 중단": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "User switched · Paused"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "사용자 전환 · 중단"
+          }
+        }
+      }
+    },
+    "macOS 잠금 중 · 중단": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "macOS locked · Paused"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "macOS 잠금 중 · 중단"
+          }
+        }
+      }
+    },
+    "화면 보호기 · 중단": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Screen saver · Paused"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "화면 보호기 · 중단"
+          }
+        }
+      }
+    },
+    "화면 잠자기 · 중단": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Display asleep · Paused"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "화면 잠자기 · 중단"
+          }
+        }
+      }
+    },
+    "암호 등 보안 입력 중 · 중단": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Secure Input · Paused"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "암호 등 보안 입력 중 · 중단"
+          }
+        }
+      }
+    },
+    "자동 잠금 방지: 유휴 시간을 읽을 수 없습니다.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Auto-lock prevention: could not read idle time."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "자동 잠금 방지: 유휴 시간을 읽을 수 없습니다."
+          }
+        }
+      }
+    },
+    "자동 잠금 방지 신호가 유휴 시간을 초기화하지 못했습니다.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The auto-lock prevention signal did not reset idle time."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "자동 잠금 방지 신호가 유휴 시간을 초기화하지 못했습니다."
+          }
+        }
+      }
+    },
+    "자동 잠금 방지 신호를 생성할 수 없습니다.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Could not generate an auto-lock prevention signal."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "자동 잠금 방지 신호를 생성할 수 없습니다."
+          }
+        }
+      }
+    },
+    "화면 변경에 실패해 원래 화면으로 복원했습니다.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Display change failed. The original display state was restored."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "화면 변경에 실패해 원래 화면으로 복원했습니다."
+          }
+        }
+      }
+    },
+    "이 화면은 개별 끄기를 지원하지 않습니다.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "This display does not support individual dimming."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "이 화면은 개별 끄기를 지원하지 않습니다."
+          }
+        }
+      }
+    },
+    "다른 화면 처리가 끝난 뒤 다시 시도해주세요.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wait for the other display operation to finish, then try again."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "다른 화면 처리가 끝난 뒤 다시 시도해주세요."
+          }
+        }
+      }
+    },
+    "원래 화면을 복원하지 못했습니다. 켜기를 다시 누르거나 긴급 해제해주세요.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Could not restore the original display state. Press Restore again or use emergency release."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "원래 화면을 복원하지 못했습니다. 켜기를 다시 누르거나 긴급 해제해주세요."
+          }
+        }
+      }
+    },
+    "화면 변경에 실패했습니다. 연결 상태를 확인해주세요.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Display change failed. Check the connection."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "화면 변경에 실패했습니다. 연결 상태를 확인해주세요."
+          }
+        }
+      }
+    },
+    "화면을 어둡게 유지하지 못했습니다. 켜기로 복원한 뒤 다시 시도해주세요.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Could not keep this display dimmed. Restore it, then try again."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "화면을 어둡게 유지하지 못했습니다. 켜기로 복원한 뒤 다시 시도해주세요."
+          }
+        }
+      }
+    },
+    "화면 응답이 지연됩니다. 켜기로 복원하거나 긴급 해제해주세요.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The display is slow to respond. Restore it or use emergency release."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "화면 응답이 지연됩니다. 켜기로 복원하거나 긴급 해제해주세요."
+          }
+        }
+      }
+    },
+    "설치 디스크를 사용 중인 앱이 있습니다. 디스크 안에서 실행 중인 앱을 닫고 다시 추출해주세요.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "An app is using the installation disk. Close apps running from that disk, then eject it again."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "설치 디스크를 사용 중인 앱이 있습니다. 디스크 안에서 실행 중인 앱을 닫고 다시 추출해주세요."
+          }
+        }
+      }
+    },
+    "디스크는 추출했지만 DMG 파일이 변경되어 휴지통으로 옮기지 않았습니다.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The disk was ejected, but the DMG changed and was not moved to the Trash."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "디스크는 추출했지만 DMG 파일이 변경되어 휴지통으로 옮기지 않았습니다."
+          }
+        }
+      }
+    },
+    "같은 이름의 앱이 이미 있습니다. Finder에서 설치 화면의 앱을 응용 프로그램 폴더로 드래그해 교체해주세요.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "An app with the same name already exists. Drag the app from the installation window to Applications in Finder to replace it."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "같은 이름의 앱이 이미 있습니다. Finder에서 설치 화면의 앱을 응용 프로그램 폴더로 드래그해 교체해주세요."
+          }
+        }
+      }
+    },
+    "복사한 앱을 확인하지 못했습니다. 설치 파일을 다시 받아주세요.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Could not verify the copied app. Download the installer again."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "복사한 앱을 확인하지 못했습니다. 설치 파일을 다시 받아주세요."
+          }
+        }
+      }
+    },
+    "설치 디스크 정보를 확인하지 못했습니다.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Could not read the installation disk information."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "설치 디스크 정보를 확인하지 못했습니다."
+          }
+        }
+      }
+    },
+    "DeskVeil이 이미 실행 중입니다": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "DeskVeil is already running"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "DeskVeil이 이미 실행 중입니다"
+          }
+        }
+      }
+    },
+    "기존 앱에서 입력 차단을 해제하고 종료한 뒤 다시 설치해주세요.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "End input blocking and quit the existing app before installing again."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "기존 앱에서 입력 차단을 해제하고 종료한 뒤 다시 설치해주세요."
+          }
+        }
+      }
+    },
+    "Finder에서 설치를 마무리해주세요": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Finish installation in Finder"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Finder에서 설치를 마무리해주세요"
+          }
+        }
+      }
+    },
+    "앱은 복사됐지만 열지 못했습니다": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The app was copied but could not be opened"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "앱은 복사됐지만 열지 못했습니다"
+          }
+        }
+      }
+    },
+    "응용 프로그램에서 DeskVeil을 직접 열어주세요.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Open DeskVeil from Applications."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "응용 프로그램에서 DeskVeil을 직접 열어주세요."
+          }
+        }
+      }
+    },
+    "설치된 앱을 열까요?": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Open the installed app?"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "설치된 앱을 열까요?"
+          }
+        }
+      }
+    },
+    "DeskVeil을 설치할까요?": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Install DeskVeil?"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "DeskVeil을 설치할까요?"
+          }
+        }
+      }
+    },
+    "응용 프로그램에 설치된 DeskVeil을 실행합니다.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Open the DeskVeil installed in Applications."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "응용 프로그램에 설치된 DeskVeil을 실행합니다."
+          }
+        }
+      }
+    },
+    "응용 프로그램으로 복사한 뒤 바로 실행합니다.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Copy to Applications and open immediately."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "응용 프로그램으로 복사한 뒤 바로 실행합니다."
+          }
+        }
+      }
+    },
+    "설치된 앱 열기": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Open installed app"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "설치된 앱 열기"
+          }
+        }
+      }
+    },
+    "설치하고 열기": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Install and open"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "설치하고 열기"
+          }
+        }
+      }
+    },
+    "취소": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cancel"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "취소"
+          }
+        }
+      }
+    },
+    "응용 프로그램": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Applications"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "응용 프로그램"
+          }
+        }
+      }
+    },
+    "설치 위치": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Install location"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "설치 위치"
+          }
+        }
+      }
+    },
+    "DeskVeil 설치 완료": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "DeskVeil installed"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "DeskVeil 설치 완료"
+          }
+        }
+      }
+    },
+    "설치 디스크는 이제 추출해도 됩니다.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "You can now eject the installation disk."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "설치 디스크는 이제 추출해도 됩니다."
+          }
+        }
+      }
+    },
+    "디스크 추출": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Eject disk"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "디스크 추출"
+          }
+        }
+      }
+    },
+    "나중에": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Later"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "나중에"
+          }
+        }
+      }
+    },
+    "DMG 파일도 휴지통으로 이동": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Also move the DMG to the Trash"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "DMG 파일도 휴지통으로 이동"
+          }
+        }
+      }
+    },
+    "설치된 DeskVeil은 유지하고 이 DMG 파일만 휴지통으로 옮깁니다.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Keep the installed DeskVeil and move only this DMG to the Trash."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "설치된 DeskVeil은 유지하고 이 DMG 파일만 휴지통으로 옮깁니다."
+          }
+        }
+      }
+    },
+    "설치 파일": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Installer"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "설치 파일"
+          }
+        }
+      }
+    },
+    "설치 디스크 정리를 마치지 못했습니다": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Could not finish cleaning up the installation disk"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "설치 디스크 정리를 마치지 못했습니다"
+          }
+        }
+      }
+    },
+    "전원을 연결하거나 ‘배터리에서도 계속 실행’을 켜주세요.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Connect power or enable Keep running on battery."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "전원을 연결하거나 ‘배터리에서도 계속 실행’을 켜주세요."
+          }
+        }
+      }
+    },
+    "배터리가 %@% 이하라 작업 유지를 종료했습니다. 전원을 연결한 뒤 다시 차단해주세요.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Keep-awake operation ended because the battery reached %@% or below. Connect power before starting again."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "배터리가 %@% 이하라 작업 유지를 종료했습니다. 전원을 연결한 뒤 다시 차단해주세요."
+          }
+        }
+      }
+    },
+    "배터리 잔량을 확인할 수 없어 작업 유지를 중단했습니다. 전원을 연결한 뒤 다시 시도해주세요.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Keep-awake operation ended because the battery level could not be read. Connect power and try again."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "배터리 잔량을 확인할 수 없어 작업 유지를 중단했습니다. 전원을 연결한 뒤 다시 시도해주세요."
+          }
+        }
+      }
+    },
+    "잠자기 방지를 유지할 수 없습니다: %@": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Could not maintain sleep prevention: %@"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "잠자기 방지를 유지할 수 없습니다: %@"
+          }
+        }
+      }
+    },
+    "무제한": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Unlimited"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "무제한"
+          }
+        }
+      }
+    },
+    "1시간": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "1 hour"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "1시간"
+          }
+        }
+      }
+    },
+    "4시간": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "4 hours"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "4시간"
+          }
+        }
+      }
+    },
+    "8시간": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "8 hours"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "8시간"
+          }
+        }
+      }
+    },
+    "12시간": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "12 hours"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "12시간"
+          }
+        }
+      }
+    },
+    "24시간": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "24 hours"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "24시간"
+          }
+        }
+      }
+    },
+    "48시간": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "48 hours"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "48시간"
+          }
+        }
+      }
+    },
+    "72시간": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "72 hours"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "72시간"
+          }
+        }
+      }
+    },
+    "7일": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "7 days"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "7일"
+          }
+        }
+      }
+    },
+    "%@분 남음": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ min remaining"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@분 남음"
+          }
+        }
+      }
+    },
+    "%@시간 남음": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ hr remaining"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@시간 남음"
+          }
+        }
+      }
+    },
+    "%@시간 %@분 남음": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ hr %@ min remaining"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@시간 %@분 남음"
+          }
+        }
+      }
+    },
+    "클라이언트 서명 검증을 통과하지 못했습니다.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Client signature verification failed."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "클라이언트 서명 검증을 통과하지 못했습니다."
+          }
+        }
+      }
+    },
+    "설치를 요청한 DeskVeil을 확인하지 못했습니다.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Could not verify the DeskVeil requesting installation."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "설치를 요청한 DeskVeil을 확인하지 못했습니다."
+          }
+        }
+      }
+    },
+    "설치 사용자를 확인하지 못했습니다.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Could not verify the installing user."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "설치 사용자를 확인하지 못했습니다."
+          }
+        }
+      }
+    },
+    "기존 설정을 확인하지 못했습니다: %@": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Could not verify the existing configuration: %@"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "기존 설정을 확인하지 못했습니다: %@"
+          }
+        }
+      }
+    },
+    "설치 잠금 대기 시간이 올바르지 않습니다.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Invalid installation lock timeout."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "설치 잠금 대기 시간이 올바르지 않습니다."
+          }
+        }
+      }
+    },
+    "보조 도구 설치 잠금을 열지 못했습니다.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Could not open the helper installation lock."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "보조 도구 설치 잠금을 열지 못했습니다."
+          }
+        }
+      }
+    },
+    "보조 도구 설치 잠금 파일을 확인하지 못했습니다.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Could not verify the helper installation lock file."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "보조 도구 설치 잠금 파일을 확인하지 못했습니다."
+          }
+        }
+      }
+    },
+    "보조 도구 설치 잠금을 얻지 못했습니다.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Could not acquire the helper installation lock."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "보조 도구 설치 잠금을 얻지 못했습니다."
+          }
+        }
+      }
+    },
+    "다른 보조 도구 설치가 진행 중입니다. 잠시 후 다시 시도해주세요.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Another helper installation is in progress. Wait a moment and try again."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "다른 보조 도구 설치가 진행 중입니다. 잠시 후 다시 시도해주세요."
+          }
+        }
+      }
+    },
+    "다른 사용자가 설치한 보조 도구입니다.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The helper was installed by another user."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "다른 사용자가 설치한 보조 도구입니다."
+          }
+        }
+      }
+    },
+    "기존 서비스가 DeskVeil 보조 도구와 다릅니다.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The existing service is not a DeskVeil helper."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "기존 서비스가 DeskVeil 보조 도구와 다릅니다."
+          }
+        }
+      }
+    },
+    "실행 중인 앱과 설치 파일의 서명이 다릅니다. DeskVeil을 다시 열어주세요.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The running app and installer have different signatures. Reopen DeskVeil."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "실행 중인 앱과 설치 파일의 서명이 다릅니다. DeskVeil을 다시 열어주세요."
+          }
+        }
+      }
+    },
+    "설치 도중 앱이 변경됐습니다. DeskVeil을 다시 열어주세요.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The app changed during installation. Reopen DeskVeil."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "설치 도중 앱이 변경됐습니다. DeskVeil을 다시 열어주세요."
+          }
+        }
+      }
+    },
+    "복사한 보조 도구의 서명이 다릅니다.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The copied helper has a different signature."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "복사한 보조 도구의 서명이 다릅니다."
+          }
+        }
+      }
+    },
+    "복구 상태를 확인하지 못했습니다.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Could not verify the recovery state."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "복구 상태를 확인하지 못했습니다."
+          }
+        }
+      }
+    },
+    "복구 잠금 파일을 확인하지 못했습니다.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Could not verify the recovery lock file."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "복구 잠금 파일을 확인하지 못했습니다."
+          }
+        }
+      }
+    },
+    "이전 잠자기 설정 복구가 진행 중입니다. 잠시 후 다시 시도해주세요.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Previous sleep settings are still being restored. Wait a moment and try again."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "이전 잠자기 설정 복구가 진행 중입니다. 잠시 후 다시 시도해주세요."
+          }
+        }
+      }
+    },
+    "복구 기록을 확인하지 못했습니다.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Could not verify the recovery record."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "복구 기록을 확인하지 못했습니다."
+          }
+        }
+      }
+    },
+    "기존 보조 도구를 복원하지 못했습니다. 원본은 %@에 보존했습니다.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Could not restore the previous helper. The original is preserved at %@."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "기존 보조 도구를 복원하지 못했습니다. 원본은 %@에 보존했습니다."
+          }
+        }
+      }
+    },
+    "설치 실패 후 이전 설정의 복구를 확인하지 못했습니다. 복구 파일은 %@에 보존했습니다. %@": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Could not confirm recovery of the previous settings after installation failed. Recovery files are preserved at %@. %@"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "설치 실패 후 이전 설정의 복구를 확인하지 못했습니다. 복구 파일은 %@에 보존했습니다. %@"
+          }
+        }
+      }
+    },
+    "앱 서명을 확인하지 못했습니다.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Could not verify the app signature."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "앱 서명을 확인하지 못했습니다."
+          }
+        }
+      }
+    },
+    "앱 서명 정보를 읽지 못했습니다.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Could not read the app signature information."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "앱 서명 정보를 읽지 못했습니다."
+          }
+        }
+      }
+    },
+    "앱 서명 해시를 읽지 못했습니다.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Could not read the app signature hash."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "앱 서명 해시를 읽지 못했습니다."
+          }
+        }
+      }
+    },
+    "앱 서명 식별자를 확인하지 못했습니다.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Could not verify the app signing identifier."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "앱 서명 식별자를 확인하지 못했습니다."
+          }
+        }
+      }
+    },
+    "전원 보조 도구에 연결하지 못했습니다.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Could not connect to the power helper."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "전원 보조 도구에 연결하지 못했습니다."
+          }
+        }
+      }
+    },
+    "전원 보조 도구 연결을 기다리는 중입니다.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Waiting for the power helper connection."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "전원 보조 도구 연결을 기다리는 중입니다."
+          }
+        }
+      }
+    },
+    "전원 보조 도구가 응답하지 않습니다.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The power helper is not responding."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "전원 보조 도구가 응답하지 않습니다."
+          }
+        }
+      }
+    },
+    "전원 보조 도구의 신원을 확인하지 못했습니다.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Could not verify the power helper's identity."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "전원 보조 도구의 신원을 확인하지 못했습니다."
+          }
+        }
+      }
+    },
+    "보조 도구를 업데이트해주세요.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Update the helper."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "보조 도구를 업데이트해주세요."
+          }
+        }
+      }
+    },
+    "보조 도구 연결이 중단됐습니다.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The helper connection was interrupted."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "보조 도구 연결이 중단됐습니다."
+          }
+        }
+      }
+    },
+    "전원 보조 도구 응답이 지연되고 있습니다.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The power helper is slow to respond."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "전원 보조 도구 응답이 지연되고 있습니다."
+          }
+        }
+      }
+    },
+    "보조 도구 다시 연결…": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Reconnect helper…"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "보조 도구 다시 연결…"
+          }
+        }
+      }
+    },
+    "보조 도구 업데이트…": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Update helper…"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "보조 도구 업데이트…"
+          }
+        }
+      }
+    },
+    "관리자 승인 · 설치 중": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Administrator approval · Installing"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "관리자 승인 · 설치 중"
+          }
+        }
+      }
+    },
+    "차단 준비 중": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Preparing session"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "차단 준비 중"
+          }
+        }
+      }
+    },
+    "잠자기 설정 복구 확인 중": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Verifying sleep settings recovery"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "잠자기 설정 복구 확인 중"
+          }
+        }
+      }
+    },
+    "보조 도구 업데이트 필요": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Helper update needed"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "보조 도구 업데이트 필요"
+          }
+        }
+      }
+    },
+    "동작 중 · ": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Active · "
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "동작 중 · "
+          }
+        }
+      }
+    },
+    "잠자기 설정 복구 중": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Restoring sleep settings"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "잠자기 설정 복구 중"
+          }
+        }
+      }
+    },
+    "보조 도구 연결 확인 중": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Checking helper connection"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "보조 도구 연결 확인 중"
+          }
+        }
+      }
+    },
+    "다른 잠자기 방지 설정이 사용 중입니다.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Another sleep prevention policy is in use."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "다른 잠자기 방지 설정이 사용 중입니다."
+          }
+        }
+      }
+    },
+    "설정한 유지 시간이 끝났습니다.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The configured duration has expired."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "설정한 유지 시간이 끝났습니다."
+          }
+        }
+      }
+    },
+    "차단 해제로 종료됨": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ended with input blocking"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "차단 해제로 종료됨"
+          }
+        }
+      }
+    },
+    "앱 연결 중단으로 덮개 유지를 종료했습니다.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Closed-lid operation ended because the app disconnected."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "앱 연결 중단으로 덮개 유지를 종료했습니다."
+          }
+        }
+      }
+    },
+    "macOS 잠금·사용자 전환으로 종료됨": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ended by macOS lock or user switch"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "macOS 잠금·사용자 전환으로 종료됨"
+          }
+        }
+      }
+    },
+    "전원 보조 도구를 확인해주세요.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Check the power helper."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "전원 보조 도구를 확인해주세요."
+          }
+        }
+      }
+    },
+    "덮개 유지를 계속할 수 없습니다. 동작 기록에서 복구 상태를 확인해주세요.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Closed-lid operation cannot continue. Check recovery status in the activity log."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "덮개 유지를 계속할 수 없습니다. 동작 기록에서 복구 상태를 확인해주세요."
+          }
+        }
+      }
+    },
+    "‘접근 권한’에서 ‘%@’를 눌러주세요.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Click “%@” in Permissions."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "‘접근 권한’에서 ‘%@’를 눌러주세요."
+          }
+        }
+      }
+    },
+    "덮개 모드 준비 시간이 초과됐습니다.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Closed-lid preparation timed out."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "덮개 모드 준비 시간이 초과됐습니다."
+          }
+        }
+      }
+    },
+    "관리자 승인을 취소했습니다.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Administrator approval was canceled."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "관리자 승인을 취소했습니다."
+          }
+        }
+      }
+    },
+    "보조 도구 설정을 마치지 못했습니다. %@": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Could not finish helper setup. %@"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "보조 도구 설정을 마치지 못했습니다. %@"
+          }
+        }
+      }
+    },
+    "확인 불가": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Unavailable"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "확인 불가"
+          }
+        }
+      }
+    },
+    "%@대 연결": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Connected: %@"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@대 연결"
+          }
+        }
+      }
+    },
+    "확인 필요": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Needs attention"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "확인 필요"
+          }
+        }
+      }
+    },
+    "디스플레이 상태를 읽지 못했습니다.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Could not read display status."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "디스플레이 상태를 읽지 못했습니다."
+          }
+        }
+      }
+    },
+    "연결된 디스플레이가 없습니다.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No displays connected."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "연결된 디스플레이가 없습니다."
+          }
+        }
+      }
+    },
+    "입력 해제": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Input released"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "입력 해제"
+          }
+        }
+      }
+    },
+    "잠자기 방지 중": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Preventing sleep"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "잠자기 방지 중"
+          }
+        }
+      }
+    },
+    "잠자기 방지 꺼짐": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sleep prevention off"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "잠자기 방지 꺼짐"
+          }
+        }
+      }
+    },
+    "화면 어둡게 사용 중": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Displays dimmed"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "화면 어둡게 사용 중"
+          }
+        }
+      }
+    },
+    "macOS에서 확인한 출력 상태": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Output status reported by macOS"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "macOS에서 확인한 출력 상태"
+          }
+        }
+      }
+    },
+    "끄기는 해당 화면의 밝기·출력을 어둡게 하고 켜기는 원래 상태로 복원합니다. 원격 연결은 유지하며 모니터의 물리적 전원을 바꾸지 않습니다. 매초 상태를 확인합니다.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dimming lowers this display's brightness and output; restoring returns its original state. Remote connections stay active. Physical monitor power is unchanged. Status is checked every second."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "끄기는 해당 화면의 밝기·출력을 어둡게 하고 켜기는 원래 상태로 복원합니다. 원격 연결은 유지하며 모니터의 물리적 전원을 바꾸지 않습니다. 매초 상태를 확인합니다."
+          }
+        }
+      }
+    },
+    "외장 / 가상 디스플레이": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "External / virtual"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "외장 / 가상 디스플레이"
+          }
+        }
+      }
+    },
+    " · 밝기 확인 불가": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": " · Brightness unavailable"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": " · 밝기 확인 불가"
+          }
+        }
+      }
+    },
+    "%@ 화면 식별": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Identify %@"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ 화면 식별"
+          }
+        }
+      }
+    },
+    "클릭하면 이 화면에 식별 번호를 잠깐 표시합니다.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Click to briefly show an identification number on this display."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "클릭하면 이 화면에 식별 번호를 잠깐 표시합니다."
+          }
+        }
+      }
+    },
+    "켜져 있는 화면에서 식별 번호를 표시할 수 있습니다.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Identification is available while the display is on."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "켜져 있는 화면에서 식별 번호를 표시할 수 있습니다."
+          }
+        }
+      }
+    },
+    "%@ 화면 %@": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ display %@"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ 화면 %@"
+          }
+        }
+      }
+    },
+    "화면 변경을 처리하고 있습니다.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A display change is in progress."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "화면 변경을 처리하고 있습니다."
+          }
+        }
+      }
+    },
+    "전체 입력 차단과 화면 전환이 끝난 뒤 개별 화면을 조작할 수 있습니다.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Individual display controls are available once input blocking and display transitions have ended."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "전체 입력 차단과 화면 전환이 끝난 뒤 개별 화면을 조작할 수 있습니다."
+          }
+        }
+      }
+    },
+    "이 화면을 식별할 수 없어 개별 제어를 사용할 수 없습니다.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Individual control is unavailable because this display could not be identified."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "이 화면을 식별할 수 없어 개별 제어를 사용할 수 없습니다."
+          }
+        }
+      }
+    },
+    "macOS에서 잠자기 중인 화면입니다.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "macOS reports that this display is asleep."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "macOS에서 잠자기 중인 화면입니다."
+          }
+        }
+      }
+    },
+    "화면 켜기 · 원래 밝기와 색상으로 복원": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Restore display · Original brightness and colors"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "화면 켜기 · 원래 밝기와 색상으로 복원"
+          }
+        }
+      }
+    },
+    "화면 끄기 · 이 화면만 어둡게": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dim display · This display only"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "화면 끄기 · 이 화면만 어둡게"
+          }
+        }
+      }
+    },
+    "\n물리적 전원은 바꾸지 않습니다.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\nPhysical power is unchanged."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\n물리적 전원은 바꾸지 않습니다."
+          }
+        }
+      }
+    },
+    "현재 상태: %@\n": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Current status: %@\n"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "현재 상태: %@\n"
+          }
+        }
+      }
+    },
+    "%@ 밝기": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ brightness"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ 밝기"
+          }
+        }
+      }
+    },
+    "앱 식별자를 확인하지 못했습니다.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Could not verify the app identifier."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "앱 식별자를 확인하지 못했습니다."
+          }
+        }
+      }
+    },
+    "같은 사용자로 실행 중인 DeskVeil 하나를 확인해야 복구할 수 있습니다.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Recovery requires exactly one DeskVeil running as the current user."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "같은 사용자로 실행 중인 DeskVeil 하나를 확인해야 복구할 수 있습니다."
+          }
+        }
+      }
+    },
+    "화면 복구 요청을 보내지 못했습니다.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Could not send the screen recovery request."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "화면 복구 요청을 보내지 못했습니다."
+          }
+        }
+      }
+    },
+    "복구 응답을 받지 못했습니다. 기존 긴급 해제를 사용해주세요.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No recovery response received. Use your existing emergency shortcut."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "복구 응답을 받지 못했습니다. 기존 긴급 해제를 사용해주세요."
+          }
+        }
+      }
+    },
+    "앱의 복구 응답이 올바르지 않습니다.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The app returned an invalid recovery response."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "앱의 복구 응답이 올바르지 않습니다."
+          }
+        }
+      }
+    },
+    "복구 응답 시간이 초과됐습니다. 기존 긴급 해제를 사용해주세요.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Recovery timed out. Use your existing emergency shortcut."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "복구 응답 시간이 초과됐습니다. 기존 긴급 해제를 사용해주세요."
+          }
+        }
+      }
+    },
+    "복구 대상 프로세스가 올바르지 않습니다.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Invalid recovery process."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "복구 대상 프로세스가 올바르지 않습니다."
+          }
+        }
+      }
+    },
+    "복구 연결 시간이 초과됐습니다.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Recovery connection timed out."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "복구 연결 시간이 초과됐습니다."
+          }
+        }
+      }
+    },
+    "복구 연결을 만들지 못했습니다.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Could not create the recovery connection."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "복구 연결을 만들지 못했습니다."
+          }
+        }
+      }
+    },
+    "복구 연결의 시간 제한을 설정하지 못했습니다.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Could not set the recovery connection timeout."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "복구 연결의 시간 제한을 설정하지 못했습니다."
+          }
+        }
+      }
+    },
+    "실행 중인 앱의 복구 경로에 연결하지 못했습니다.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Could not connect to the running app's recovery socket."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "실행 중인 앱의 복구 경로에 연결하지 못했습니다."
+          }
+        }
+      }
+    },
+    "복구 대상 앱의 신원을 확인하지 못했습니다.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Could not verify the recovery app's identity."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "복구 대상 앱의 신원을 확인하지 못했습니다."
+          }
+        }
+      }
+    },
+    "DeskVeil 화면 가림": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "DeskVeil screen cover"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "DeskVeil 화면 가림"
+          }
+        }
+      }
+    },
+    "입력 차단이 중단되어 화면을 가렸습니다": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Input blocking stopped, so the screen is covered"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "입력 차단이 중단되어 화면을 가렸습니다"
+          }
+        }
+      }
+    },
+    "가림을 해제하기 전까지 이 화면을 유지합니다.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "This cover stays until you choose to reveal the screen."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "가림을 해제하기 전까지 이 화면을 유지합니다."
+          }
+        }
+      }
+    },
+    "Mac 잠금 전환 중…": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Switching to Mac lock…"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mac 잠금 전환 중…"
+          }
+        }
+      }
+    },
+    "Mac 잠금으로 전환": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Switch to Mac lock"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mac 잠금으로 전환"
+          }
+        }
+      }
+    },
+    "자리 비움 해제": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "End session"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "자리 비움 해제"
+          }
+        }
+      }
+    },
+    "자리 비움 시작": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Start session"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "자리 비움 시작"
+          }
+        }
+      }
+    },
+    "접근 권한 설정…": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Set up access…"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "접근 권한 설정…"
+          }
+        }
+      }
+    },
+    "설정…": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Settings…"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "설정…"
+          }
+        }
+      }
+    },
+    "DeskVeil 정보": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "About DeskVeil"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "DeskVeil 정보"
+          }
+        }
+      }
+    },
+    "DeskVeil 종료": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Quit DeskVeil"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "DeskVeil 종료"
+          }
+        }
+      }
+    },
+    "다시 시작할 앱의 준비 상태를 확인하지 못했습니다.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Could not verify that the app is ready to restart."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "다시 시작할 앱의 준비 상태를 확인하지 못했습니다."
+          }
+        }
+      }
+    },
+    "macOS 잠금을 요청할 수 없습니다.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Could not request macOS lock."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "macOS 잠금을 요청할 수 없습니다."
+          }
+        }
+      }
+    },
+    "macOS 잠금 요청에 실패했습니다.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The macOS lock request failed."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "macOS 잠금 요청에 실패했습니다."
+          }
+        }
+      }
+    },
+    "잠금 전환이 취소됐습니다.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lock transition canceled."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "잠금 전환이 취소됐습니다."
+          }
+        }
+      }
+    },
+    "macOS 잠금을 확인하지 못했습니다.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Could not confirm macOS lock."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "macOS 잠금을 확인하지 못했습니다."
+          }
+        }
+      }
+    },
+    " 입력 차단은 유지됩니다. %@로 긴급 해제할 수 있습니다.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": " Input blocking remains active. Use %@ for emergency release."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": " 입력 차단은 유지됩니다. %@로 긴급 해제할 수 있습니다."
+          }
+        }
+      }
+    },
+    "키 %@": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Key %@"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "키 %@"
+          }
+        }
+      }
+    },
+    "⌘·⌥·⌃ 중 하나 이상과 다른 키를 함께 눌러주세요.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Press another key together with at least one of ⌘, ⌥, or ⌃."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "⌘·⌥·⌃ 중 하나 이상과 다른 키를 함께 눌러주세요."
+          }
+        }
+      }
+    },
+    "차단·해제와 긴급 해제는 서로 다른 조합이어야 합니다.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Start/end and emergency release must use different shortcuts."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "차단·해제와 긴급 해제는 서로 다른 조합이어야 합니다."
+          }
+        }
+      }
+    },
+    "클릭한 뒤 원하는 키 조합을 누르세요. Esc로 취소합니다.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Click, then press your shortcut. Press Esc to cancel."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "클릭한 뒤 원하는 키 조합을 누르세요. Esc로 취소합니다."
+          }
+        }
+      }
+    },
+    "키 조합을 누르세요…": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Press your shortcut…"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "키 조합을 누르세요…"
+          }
+        }
+      }
+    },
+    "개발 버전": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Development build"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "개발 버전"
+          }
+        }
+      }
+    },
+    "종료": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Quit"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "종료"
+          }
+        }
+      }
+    },
+    "DeskVeil 설정 열기": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Open DeskVeil Settings"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "DeskVeil 설정 열기"
+          }
+        }
+      }
+    },
+    "DeskVeil 정보 · %@": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "About DeskVeil · %@"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "DeskVeil 정보 · %@"
+          }
+        }
+      }
+    },
+    "DeskVeil 정보, 버전 %@": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "About DeskVeil, version %@"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "DeskVeil 정보, 버전 %@"
+          }
+        }
+      }
+    },
+    "화면 설정을 복원하고 DeskVeil 종료": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Restore displays and quit DeskVeil"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "화면 설정을 복원하고 DeskVeil 종료"
+          }
+        }
+      }
+    },
+    "화면 가림을 해제했습니다.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Screen cover removed."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "화면 가림을 해제했습니다."
+          }
+        }
+      }
+    },
+    "해제할 화면 가림이 없습니다. 입력 차단은 변경하지 않았습니다.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No screen cover to remove. Input blocking was unchanged."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "해제할 화면 가림이 없습니다. 입력 차단은 변경하지 않았습니다."
+          }
+        }
+      }
+    },
+    "켜기": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Restore"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "켜기"
+          }
+        }
+      }
+    },
+    "끄기": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dim"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "끄기"
+          }
+        }
+      }
+    },
+    "macOS 설정 따르기": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Follow macOS settings"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "macOS 설정 따르기"
+          }
+        }
+      }
+    },
+    "적용 및 재시작": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Apply and restart"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "적용 및 재시작"
+          }
+        }
+      }
+    },
+    "언어 / Language": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Language"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "언어 / Language"
+          }
+        }
+      }
+    },
+    "일반": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "General"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "일반"
+          }
+        }
+      }
+    },
+    "재시작하면 적용됩니다. 차단·화면 복구 중에는 재시작할 수 없습니다.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Takes effect after restart. Unavailable while blocking input or restoring displays."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "재시작하면 적용됩니다. 차단·화면 복구 중에는 재시작할 수 없습니다."
+          }
+        }
+      }
+    },
+    "재시작 후 적용": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Restart to apply"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "재시작 후 적용"
+          }
+        }
+      }
+    },
+    "권한 및 보조 도구": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Permissions & Tools"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "권한 및 보조 도구"
+          }
+        }
+      }
+    },
+    "테스트 및 진단": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tests & Diagnostics"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "테스트 및 진단"
+          }
+        }
+      }
+    },
+    "화면": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Displays"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "화면"
+          }
+        }
+      }
+    },
+    "앱": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "App"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "앱"
+          }
+        }
+      }
+    },
+    "보조 도구 설정": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Set up helper"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "보조 도구 설정"
+          }
+        }
+      }
+    },
+    "최근 차단 집계": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Recent input counts"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "최근 차단 집계"
+          }
+        }
+      }
+    },
+    "현재 동작 상태": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Current status"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "현재 동작 상태"
+          }
+        }
+      }
+    },
+    "보조 도구 기록": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Helper log"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "보조 도구 기록"
+          }
+        }
+      }
+    },
+    "덮개 유지 보조 도구의 동작 기록을 엽니다.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Open the closed-lid helper activity log."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "덮개 유지 보조 도구의 동작 기록을 엽니다."
+          }
+        }
+      }
+    },
+    "입력 차단 테스트로 이동": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Go to input blocking test"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "입력 차단 테스트로 이동"
+          }
+        }
+      }
+    },
+    "입력 차단 중 동작합니다. 끄면 덮개 유지도 함께 꺼집니다.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Runs while input is blocked. Turning it off also turns off closed-lid mode."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "입력 차단 중 동작합니다. 끄면 덮개 유지도 함께 꺼집니다."
+          }
+        }
+      }
+    },
+    "잠자기 방지를 함께 켭니다. 처음 사용할 때 보조 도구를 준비해주세요.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Also enables sleep prevention. Set up the helper before first use."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "잠자기 방지를 함께 켭니다. 처음 사용할 때 보조 도구를 준비해주세요."
+          }
+        }
+      }
+    },
+    "덮개 유지에만 적용됩니다. 전원을 분리해도 계속 실행합니다.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Applies only to closed-lid mode. Continue after disconnecting power."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "덮개 유지에만 적용됩니다. 전원을 분리해도 계속 실행합니다."
+          }
+        }
+      }
+    },
+    "선택 사항 · 덮개 유지에만 필요합니다. 처음 설치와 보조 도구 변경 시 관리자 승인이 필요합니다.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Optional: required only for closed-lid mode. Administrator approval is needed for installation and helper changes."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "선택 사항 · 덮개 유지에만 필요합니다. 처음 설치와 보조 도구 변경 시 관리자 승인이 필요합니다."
+          }
+        }
+      }
+    },
+    "필수 권한이 준비됐습니다. 입력 차단 테스트로 동작을 확인할 수 있습니다.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Required access is ready. Run the input blocking test to check it works."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "필수 권한이 준비됐습니다. 입력 차단 테스트로 동작을 확인할 수 있습니다."
+          }
+        }
+      }
+    },
+    "화면 밝기와 덮개 유지 동작은 이 테스트에 포함되지 않습니다.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "This test does not check display dimming or closed-lid operation."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "화면 밝기와 덮개 유지 동작은 이 테스트에 포함되지 않습니다."
+          }
+        }
+      }
+    },
+    "화면을 가리고 키보드·마우스 입력을 차단합니다.\n\nmacOS 암호 잠금은 별도로 동작합니다.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Covers your displays and blocks keyboard and mouse input.\n\nThe macOS password lock operates separately."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "화면을 가리고 키보드·마우스 입력을 차단합니다.\n\nmacOS 암호 잠금은 별도로 동작합니다."
+          }
+        }
+      }
+    },
+    "입력 차단 안 함": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Input not blocked"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "입력 차단 안 함"
+          }
+        }
+      }
+    },
+    "입력 차단 사용 불가": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Input blocking unavailable"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "입력 차단 사용 불가"
+          }
+        }
+      }
+    },
+    "입력 차단 중단": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Input blocking stopped"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "입력 차단 중단"
+          }
+        }
+      }
+    },
+    "잠자기 방지 사용 안 함": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sleep prevention disabled"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "잠자기 방지 사용 안 함"
+          }
+        }
+      }
+    },
+    "잠자기 방지 중단": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sleep prevention stopped"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "잠자기 방지 중단"
+          }
+        }
+      }
+    },
+    "잠자기 방지 대기": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sleep prevention on standby"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "잠자기 방지 대기"
+          }
+        }
+      }
+    },
+    "입력 차단 세션과 입력 감시 연결 상태를 확인합니다.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Reports the input blocking session and input monitoring connection."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "입력 차단 세션과 입력 감시 연결 상태를 확인합니다."
+          }
+        }
+      }
+    },
+    "설정값과 실제 잠자기 방지 요청의 활성 상태를 구분해 표시합니다.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Distinguishes the setting from active sleep prevention requests."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "설정값과 실제 잠자기 방지 요청의 활성 상태를 구분해 표시합니다."
+          }
+        }
+      }
+    }
+  },
+  "version": "1.0"
+}

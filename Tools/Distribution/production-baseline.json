@@ -1,0 +1,10 @@
+{
+  "bundleIdentifier": "dev.local.softlock",
+  "certificateSHA1": "93f61198f102ef50d7276bab2c85a1548515348e",
+  "appCDHash": "e954eea5dfe9b491ecb91342d713816246c2eb9d",
+  "helperBundleIdentifier": "dev.local.softlock.power",
+  "helperCDHash": "1bde128228e376ab163f3a608e8ce7bfea0f3203",
+  "protocolVersion": 4,
+  "version": "0.8.7",
+  "build": "56"
+}

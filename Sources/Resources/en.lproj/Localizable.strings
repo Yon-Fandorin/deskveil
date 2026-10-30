@@ -1,0 +1,858 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>
+물리적 전원은 바꾸지 않습니다.</key>
+	<string>
+Physical power is unchanged.</string>
+	<key> %@초</key>
+	<string> %@s</string>
+	<key> · 밝기 확인 불가</key>
+	<string> · Brightness unavailable</string>
+	<key> 입력 차단은 유지됩니다. %@로 긴급 해제할 수 있습니다.</key>
+	<string> Input blocking remains active. Use %@ for emergency release.</string>
+	<key> 차단</key>
+	<string> Blocking</string>
+	<key>%@  다시 시도
+%@  긴급 해제</key>
+	<string>%@  Retry
+%@  Emergency release</string>
+	<key>%@ %@로 다시 시도하거나 %@로 긴급 해제할 수 있습니다.</key>
+	<string>%@ Retry with %@ or use %@ for emergency release.</string>
+	<key>%@ 밝기</key>
+	<string>%@ brightness</string>
+	<key>%@ 화면 %@</key>
+	<string>%@ display %@</string>
+	<key>%@ 화면 식별</key>
+	<string>Identify %@</string>
+	<key>%@대 연결</key>
+	<string>Connected: %@</string>
+	<key>%@로 해제 · %@로 긴급 해제</key>
+	<string>%@ to end · %@ for emergency release</string>
+	<key>%@분 남음</key>
+	<string>%@ min remaining</string>
+	<key>%@시간</key>
+	<string>%@h</string>
+	<key>%@시간 %@분 남음</key>
+	<string>%@ hr %@ min remaining</string>
+	<key>%@시간 남음</key>
+	<string>%@ hr remaining</string>
+	<key>%@초</key>
+	<string>%@s</string>
+	<key>%@초 후 자동 해제</key>
+	<string>Auto-release in %@s</string>
+	<key>%@회</key>
+	<string>%@</string>
+	<key>%g초</key>
+	<string>%gs</string>
+	<key>0.15초</key>
+	<string>0.15s</string>
+	<key>0.3초</key>
+	<string>0.3s</string>
+	<key>0.6초</key>
+	<string>0.6s</string>
+	<key>12시간</key>
+	<string>12 hours</string>
+	<key>1~8,760시간을 입력할 수 있습니다. 새 차단을 시작할 때 적용됩니다.</key>
+	<string>Enter 1–8,760 hours. Applies to the next session.</string>
+	<key>1시간</key>
+	<string>1 hour</string>
+	<key>1초</key>
+	<string>1s</string>
+	<key>24시간</key>
+	<string>24 hours</string>
+	<key>48시간</key>
+	<string>48 hours</string>
+	<key>4시간</key>
+	<string>4 hours</string>
+	<key>72시간</key>
+	<string>72 hours</string>
+	<key>7일</key>
+	<string>7 days</string>
+	<key>8시간</key>
+	<string>8 hours</string>
+	<key>DMG 파일도 휴지통으로 이동</key>
+	<string>Also move the DMG to the Trash</string>
+	<key>DeskVeil · %@
+%@ 차단·해제 · %@ 긴급 해제</key>
+	<string>DeskVeil · %@
+%@ Start/end · %@ Emergency release</string>
+	<key>DeskVeil 상태 확인 필요</key>
+	<string>DeskVeil needs attention</string>
+	<key>DeskVeil 설정</key>
+	<string>DeskVeil Settings</string>
+	<key>DeskVeil 설정 열기</key>
+	<string>Open DeskVeil Settings</string>
+	<key>DeskVeil 설치 완료</key>
+	<string>DeskVeil installed</string>
+	<key>DeskVeil 잠금 전환 오류</key>
+	<string>DeskVeil lock transition error</string>
+	<key>DeskVeil 정보</key>
+	<string>About DeskVeil</string>
+	<key>DeskVeil 정보 · %@</key>
+	<string>About DeskVeil · %@</string>
+	<key>DeskVeil 정보, 버전 %@</key>
+	<string>About DeskVeil, version %@</string>
+	<key>DeskVeil 종료</key>
+	<string>Quit DeskVeil</string>
+	<key>DeskVeil 화면 가림</key>
+	<string>DeskVeil screen cover</string>
+	<key>DeskVeil을 설치할까요?</key>
+	<string>Install DeskVeil?</string>
+	<key>DeskVeil이 이미 실행 중입니다</key>
+	<string>DeskVeil is already running</string>
+	<key>Finder에서 설치를 마무리해주세요</key>
+	<string>Finish installation in Finder</string>
+	<key>Finder에서 앱 보기</key>
+	<string>Show app in Finder</string>
+	<key>Mac 잠금 전환 중…</key>
+	<string>Switching to Mac lock…</string>
+	<key>Mac 잠금으로 전환</key>
+	<string>Switch to Mac lock</string>
+	<key>macOS 설정 따르기</key>
+	<string>Follow macOS settings</string>
+	<key>macOS 잠금 요청에 실패했습니다.</key>
+	<string>The macOS lock request failed.</string>
+	<key>macOS 잠금 전환에 실패했을 때 소리를 냅니다. 기본값은 꺼짐입니다.</key>
+	<string>Play a sound if switching to macOS lock fails. Off by default.</string>
+	<key>macOS 잠금 전환을 사용할 수 없습니다. ‘해제할 때 macOS 잠금’을 끄면 입력 차단만 사용할 수 있습니다.</key>
+	<string>macOS locking is unavailable. Turn off Lock macOS when ending to use input blocking alone.</string>
+	<key>macOS 잠금 중 · 중단</key>
+	<string>macOS locked · Paused</string>
+	<key>macOS 잠금·사용자 전환으로 종료됨</key>
+	<string>Ended by macOS lock or user switch</string>
+	<key>macOS 잠금으로 전환 중</key>
+	<string>Switching to macOS lock</string>
+	<key>macOS 잠금을 요청할 수 없습니다.</key>
+	<string>Could not request macOS lock.</string>
+	<key>macOS 잠금을 확인하지 못했습니다.</key>
+	<string>Could not confirm macOS lock.</string>
+	<key>macOS에서 사용하는 조합입니다. 다른 키를 지정해주세요.</key>
+	<string>This shortcut is used by macOS. Choose a different shortcut.</string>
+	<key>macOS에서 잠자기 중인 화면입니다.</key>
+	<string>macOS reports that this display is asleep.</string>
+	<key>macOS에서 확인한 출력 상태</key>
+	<string>Output status reported by macOS</string>
+	<key>v%@ 업데이트 대기 · %@</key>
+	<string>v%@ update waiting · %@</string>
+	<key>‘접근 권한’에서 ‘%@’를 눌러주세요.</key>
+	<string>Click “%@” in Permissions.</string>
+	<key>⌘·⌥·⌃ 중 하나 이상과 다른 키를 함께 눌러주세요.</key>
+	<string>Press another key together with at least one of ⌘, ⌥, or ⌃.</string>
+	<key>가림을 해제하기 전까지 이 화면을 유지합니다.</key>
+	<string>This cover stays until you choose to reveal the screen.</string>
+	<key>같은 사용자로 실행 중인 DeskVeil 하나를 확인해야 복구할 수 있습니다.</key>
+	<string>Recovery requires exactly one DeskVeil running as the current user.</string>
+	<key>같은 이름의 앱이 이미 있습니다. Finder에서 설치 화면의 앱을 응용 프로그램 폴더로 드래그해 교체해주세요.</key>
+	<string>An app with the same name already exists. Drag the app from the installation window to Applications in Finder to replace it.</string>
+	<key>개발 버전</key>
+	<string>Development build</string>
+	<key>검은 전환 화면을 준비할 수 없습니다.</key>
+	<string>Could not prepare the black transition screen.</string>
+	<key>검은 화면 출력</key>
+	<string>Black output</string>
+	<key>계속 안 된다면 앱을 다시 등록해주세요.</key>
+	<string>If the issue persists, register the app again.</string>
+	<key>관리자 승인 · 설치 중</key>
+	<string>Administrator approval · Installing</string>
+	<key>관리자 승인 후 덮개 유지 보조 도구와 동작 기록을 제거합니다. 입력 차단과 밝기 조절은 계속 사용할 수 있습니다.</key>
+	<string>Remove the closed-lid helper and its log with administrator approval. Input blocking and brightness control remain available.</string>
+	<key>관리자 승인을 취소했습니다.</key>
+	<string>Administrator approval was canceled.</string>
+	<key>권한 다시 확인</key>
+	<string>Check permissions again</string>
+	<key>권한 및 보조 도구</key>
+	<string>Permissions &amp; Tools</string>
+	<key>권한 설정</key>
+	<string>Set up permissions</string>
+	<key>권한 설정 필요</key>
+	<string>Permissions needed</string>
+	<key>권한 설정이 필요합니다</key>
+	<string>Permissions required</string>
+	<key>권한은 허용됐지만 입력 차단을 준비할 수 없습니다. ‘손쉬운 사용 문제 해결’에서 다시 확인해주세요.</key>
+	<string>Access is allowed, but input blocking could not be prepared. See Accessibility troubleshooting.</string>
+	<key>기록 보기</key>
+	<string>View log</string>
+	<key>기존 보조 도구를 복원하지 못했습니다. 원본은 %@에 보존했습니다.</key>
+	<string>Could not restore the previous helper. The original is preserved at %@.</string>
+	<key>기존 서비스가 DeskVeil 보조 도구와 다릅니다.</key>
+	<string>The existing service is not a DeskVeil helper.</string>
+	<key>기존 설정을 확인하지 못했습니다: %@</key>
+	<string>Could not verify the existing configuration: %@</string>
+	<key>기존 앱에서 입력 차단을 해제하고 종료한 뒤 다시 설치해주세요.</key>
+	<string>End input blocking and quit the existing app before installing again.</string>
+	<key>긴급 해제</key>
+	<string>Emergency release</string>
+	<key>긴급 해제 단축키</key>
+	<string>Emergency shortcut</string>
+	<key>긴급 해제 단축키가 다른 앱과 겹칩니다. 설정에서 다른 조합을 지정해주세요.</key>
+	<string>The emergency shortcut conflicts with another app. Choose a different shortcut in Settings.</string>
+	<key>긴급 해제 키가 다른 앱에서 사용 중입니다. 다른 조합을 지정해주세요.</key>
+	<string>The emergency shortcut is used by another app. Choose a different shortcut.</string>
+	<key>긴급 해제 키를 다시 연결하지 못했습니다. 다른 조합을 지정해주세요.</key>
+	<string>Could not reconnect the emergency shortcut. Choose a different shortcut.</string>
+	<key>꺼짐</key>
+	<string>Off</string>
+	<key>끄기</key>
+	<string>Dim</string>
+	<key>끄기는 해당 화면의 밝기·출력을 어둡게 하고 켜기는 원래 상태로 복원합니다. 원격 연결은 유지하며 모니터의 물리적 전원을 바꾸지 않습니다. 매초 상태를 확인합니다.</key>
+	<string>Dimming lowers this display's brightness and output; restoring returns its original state. Remote connections stay active. Physical monitor power is unchanged. Status is checked every second.</string>
+	<key>나중에</key>
+	<string>Later</string>
+	<key>내장 디스플레이</key>
+	<string>Built-in display</string>
+	<key>내장·지원 외장 화면에 적용하고, 해제하면 원래 밝기로 돌립니다.</key>
+	<string>Dims built-in and supported external displays, then restores their original brightness.</string>
+	<key>내장은 밝기를 낮추고, 지원 외장은 밝기와 출력 색상을 함께 낮춰 내용을 검게 가립니다. 화면 연결은 유지하며 해제하면 원래 값으로 복원합니다. 외장 백라이트의 빛은 남을 수 있습니다.</key>
+	<string>Lowers built-in brightness and dims brightness and output colors on supported external displays. Connections stay active, and original values are restored when the session ends. External backlight glow may remain.</string>
+	<key>다른 보조 도구 설치가 진행 중입니다. 잠시 후 다시 시도해주세요.</key>
+	<string>Another helper installation is in progress. Wait a moment and try again.</string>
+	<key>다른 사용자가 설치한 보조 도구입니다.</key>
+	<string>The helper was installed by another user.</string>
+	<key>다른 잠자기 방지 설정이 사용 중입니다.</key>
+	<string>Another sleep prevention policy is in use.</string>
+	<key>다른 화면 처리가 끝난 뒤 다시 시도해주세요.</key>
+	<string>Wait for the other display operation to finish, then try again.</string>
+	<key>다시 시작 실패</key>
+	<string>Restart failed</string>
+	<key>다시 시작할 앱의 준비 상태를 확인하지 못했습니다.</key>
+	<string>Could not verify that the app is ready to restart.</string>
+	<key>단축키 설정 완료 후 적용</key>
+	<string>Waiting for shortcut recording to finish</string>
+	<key>단축키 초기화</key>
+	<string>Reset shortcuts</string>
+	<key>대기 중</key>
+	<string>Ready</string>
+	<key>덮개 모드 준비 시간이 초과됐습니다.</key>
+	<string>Closed-lid preparation timed out.</string>
+	<key>덮개 모드 준비 중</key>
+	<string>Preparing closed-lid mode</string>
+	<key>덮개 모드 준비가 중단됐습니다. 전원과 배터리 상태를 확인한 뒤 다시 시도해주세요.</key>
+	<string>Closed-lid setup was interrupted. Check the power source and battery, then try again.</string>
+	<key>덮개 유지</key>
+	<string>Closed-lid mode</string>
+	<key>덮개 유지 보조 도구</key>
+	<string>Closed-lid helper</string>
+	<key>덮개 유지 보조 도구의 동작 기록을 엽니다.</key>
+	<string>Open the closed-lid helper activity log.</string>
+	<key>덮개 유지 시간</key>
+	<string>Closed-lid duration</string>
+	<key>덮개 유지 중 전원을 분리해도 작업을 계속합니다. 아래에서 선택한 잔량에 도달하거나 잔량을 확인할 수 없으면 종료합니다.</key>
+	<string>Continue closed-lid operation after power is disconnected. Ends at the selected battery level or if the level cannot be read.</string>
+	<key>덮개 유지를 계속할 수 없습니다. 동작 기록에서 복구 상태를 확인해주세요.</key>
+	<string>Closed-lid operation cannot continue. Check recovery status in the activity log.</string>
+	<key>덮개 유지에만 적용됩니다. 전원을 분리해도 계속 실행합니다.</key>
+	<string>Applies only to closed-lid mode. Continue after disconnecting power.</string>
+	<key>덮개를 닫아도 계속 실행</key>
+	<string>Keep running with lid closed</string>
+	<key>덮개를 닫아도 계속 실행하는 기능에 사용합니다. 처음 설치와 보조 도구 변경 시에만 관리자 승인이 필요합니다.</key>
+	<string>Used to keep work running with the lid closed. Administrator approval is required for initial installation and helper changes.</string>
+	<key>동작 중 · </key>
+	<string>Active · </string>
+	<key>동작 중 · %@</key>
+	<string>Active · %@</string>
+	<key>동작 확인 및 테스트</key>
+	<string>Status and testing</string>
+	<key>동작 확인 중</key>
+	<string>Verifying</string>
+	<key>디스크 추출</key>
+	<string>Eject disk</string>
+	<key>디스크는 추출했지만 DMG 파일이 변경되어 휴지통으로 옮기지 않았습니다.</key>
+	<string>The disk was ejected, but the DMG changed and was not moved to the Trash.</string>
+	<key>디스플레이</key>
+	<string>Display</string>
+	<key>디스플레이 %@</key>
+	<string>Display %@</string>
+	<key>디스플레이 상태를 읽지 못했습니다.</key>
+	<string>Could not read display status.</string>
+	<key>먼저 권한을 다시 확인해주세요.</key>
+	<string>Check permissions again first.</string>
+	<key>메뉴 막대 또는 %@로 자리 비움을 시작할 수 있습니다.</key>
+	<string>Start a session from the menu bar or with %@.</string>
+	<key>무제한</key>
+	<string>Unlimited</string>
+	<key>밝기 보조 프로세스가 종료되어 입력 차단을 해제했습니다.</key>
+	<string>Input blocking ended because the brightness helper stopped.</string>
+	<key>밝기 보조 프로세스를 실행할 수 없습니다. 화면을 켠 채 입력만 차단합니다.</key>
+	<string>The brightness helper could not start. Input will be blocked with the displays left on.</string>
+	<key>밝기 전환 시간</key>
+	<string>Brightness transition</string>
+	<key>배터리 %@%</key>
+	<string>Battery %@%</string>
+	<key>배터리 잔량을 확인할 수 없어 작업 유지를 중단했습니다. 전원을 연결한 뒤 다시 시도해주세요.</key>
+	<string>Keep-awake operation ended because the battery level could not be read. Connect power and try again.</string>
+	<key>배터리 종료 기준</key>
+	<string>Battery cutoff</string>
+	<key>배터리가 %@% 이하라 작업 유지를 종료했습니다. 전원을 연결한 뒤 다시 차단해주세요.</key>
+	<string>Keep-awake operation ended because the battery reached %@% or below. Connect power before starting again.</string>
+	<key>배터리에서도 계속 실행</key>
+	<string>Keep running on battery</string>
+	<key>보안 입력이 활성화되어 입력 차단을 해제했습니다.</key>
+	<string>Input blocking ended because Secure Input became active.</string>
+	<key>보안 입력이 활성화되어 있습니다. 암호 입력창 등을 닫고 다시 시도해주세요.</key>
+	<string>Secure Input is active. Close any password fields and try again.</string>
+	<key>보조 도구 기록</key>
+	<string>Helper log</string>
+	<key>보조 도구 다시 연결…</key>
+	<string>Reconnect helper…</string>
+	<key>보조 도구 설정</key>
+	<string>Set up helper</string>
+	<key>보조 도구 설정을 마치지 못했습니다. %@</key>
+	<string>Could not finish helper setup. %@</string>
+	<key>보조 도구 설치 잠금 파일을 확인하지 못했습니다.</key>
+	<string>Could not verify the helper installation lock file.</string>
+	<key>보조 도구 설치 잠금을 얻지 못했습니다.</key>
+	<string>Could not acquire the helper installation lock.</string>
+	<key>보조 도구 설치 잠금을 열지 못했습니다.</key>
+	<string>Could not open the helper installation lock.</string>
+	<key>보조 도구 설치…</key>
+	<string>Install helper…</string>
+	<key>보조 도구 업데이트 필요</key>
+	<string>Helper update needed</string>
+	<key>보조 도구 업데이트…</key>
+	<string>Update helper…</string>
+	<key>보조 도구 연결 확인 중</key>
+	<string>Checking helper connection</string>
+	<key>보조 도구 연결이 중단됐습니다.</key>
+	<string>The helper connection was interrupted.</string>
+	<key>보조 도구 제거…</key>
+	<string>Remove helper…</string>
+	<key>보조 도구를 업데이트해주세요.</key>
+	<string>Update the helper.</string>
+	<key>보조 프로세스 종료를 확인하지 못했습니다. 종료가 확인된 뒤 다시 시도해주세요.</key>
+	<string>Could not confirm that the helper stopped. Try again once it has exited.</string>
+	<key>복구 기록을 확인하지 못했습니다.</key>
+	<string>Could not verify the recovery record.</string>
+	<key>복구 대상 앱의 신원을 확인하지 못했습니다.</key>
+	<string>Could not verify the recovery app's identity.</string>
+	<key>복구 대상 프로세스가 올바르지 않습니다.</key>
+	<string>Invalid recovery process.</string>
+	<key>복구 상태를 확인하지 못했습니다.</key>
+	<string>Could not verify the recovery state.</string>
+	<key>복구 연결 시간이 초과됐습니다.</key>
+	<string>Recovery connection timed out.</string>
+	<key>복구 연결을 만들지 못했습니다.</key>
+	<string>Could not create the recovery connection.</string>
+	<key>복구 연결의 시간 제한을 설정하지 못했습니다.</key>
+	<string>Could not set the recovery connection timeout.</string>
+	<key>복구 응답 시간이 초과됐습니다. 기존 긴급 해제를 사용해주세요.</key>
+	<string>Recovery timed out. Use your existing emergency shortcut.</string>
+	<key>복구 응답을 받지 못했습니다. 기존 긴급 해제를 사용해주세요.</key>
+	<string>No recovery response received. Use your existing emergency shortcut.</string>
+	<key>복구 잠금 파일을 확인하지 못했습니다.</key>
+	<string>Could not verify the recovery lock file.</string>
+	<key>복사한 보조 도구의 서명이 다릅니다.</key>
+	<string>The copied helper has a different signature.</string>
+	<key>복사한 앱을 확인하지 못했습니다. 설치 파일을 다시 받아주세요.</key>
+	<string>Could not verify the copied app. Download the installer again.</string>
+	<key>비활성</key>
+	<string>Inactive</string>
+	<key>사용 안 함</key>
+	<string>Off</string>
+	<key>사용자 전환 · 중단</key>
+	<string>User switched · Paused</string>
+	<key>상태 확인 중</key>
+	<string>Checking status</string>
+	<key>상태 확인 필요</key>
+	<string>Check status</string>
+	<key>새 버전을 준비하고 있습니다. 잠시 기다려주세요.</key>
+	<string>Preparing the new version. Please wait.</string>
+	<key>새 앱을 실행하지 못해 현재 앱을 유지합니다.</key>
+	<string>Could not launch the new app. Keeping the current app.</string>
+	<key>새 앱의 시작을 확인하지 못해 현재 앱을 유지합니다.</key>
+	<string>Could not confirm the new app started. Keeping the current app.</string>
+	<key>선택 사항 · 덮개 유지에만 필요합니다. 처음 설치와 보조 도구 변경 시 관리자 승인이 필요합니다.</key>
+	<string>Optional: required only for closed-lid mode. Administrator approval is needed for installation and helper changes.</string>
+	<key>설정</key>
+	<string>Settings</string>
+	<key>설정 전</key>
+	<string>Not configured</string>
+	<key>설정 창을 다시 열어주세요.</key>
+	<string>Reopen Settings.</string>
+	<key>설정…</key>
+	<string>Settings…</string>
+	<key>설정값과 실제 잠자기 방지 요청의 활성 상태를 구분해 표시합니다.</key>
+	<string>Distinguishes the setting from active sleep prevention requests.</string>
+	<key>설정한 긴급 해제 단축키 또는 복구 명령으로 화면을 다시 볼 수 있습니다.</key>
+	<string>Use your emergency shortcut or the recovery command to reveal the screen.</string>
+	<key>설정한 유지 시간이 끝났습니다.</key>
+	<string>The configured duration has expired.</string>
+	<key>설치 도중 앱이 변경됐습니다. DeskVeil을 다시 열어주세요.</key>
+	<string>The app changed during installation. Reopen DeskVeil.</string>
+	<key>설치 디스크 정리를 마치지 못했습니다</key>
+	<string>Could not finish cleaning up the installation disk</string>
+	<key>설치 디스크 정보를 확인하지 못했습니다.</key>
+	<string>Could not read the installation disk information.</string>
+	<key>설치 디스크는 이제 추출해도 됩니다.</key>
+	<string>You can now eject the installation disk.</string>
+	<key>설치 디스크를 사용 중인 앱이 있습니다. 디스크 안에서 실행 중인 앱을 닫고 다시 추출해주세요.</key>
+	<string>An app is using the installation disk. Close apps running from that disk, then eject it again.</string>
+	<key>설치 사용자를 확인하지 못했습니다.</key>
+	<string>Could not verify the installing user.</string>
+	<key>설치 실패 후 이전 설정의 복구를 확인하지 못했습니다. 복구 파일은 %@에 보존했습니다. %@</key>
+	<string>Could not confirm recovery of the previous settings after installation failed. Recovery files are preserved at %@. %@</string>
+	<key>설치 위치</key>
+	<string>Install location</string>
+	<key>설치 잠금 대기 시간이 올바르지 않습니다.</key>
+	<string>Invalid installation lock timeout.</string>
+	<key>설치 파일</key>
+	<string>Installer</string>
+	<key>설치 필요</key>
+	<string>Installation needed</string>
+	<key>설치된 DeskVeil은 유지하고 이 DMG 파일만 휴지통으로 옮깁니다.</key>
+	<string>Keep the installed DeskVeil and move only this DMG to the Trash.</string>
+	<key>설치된 앱 열기</key>
+	<string>Open installed app</string>
+	<key>설치된 앱을 열까요?</key>
+	<string>Open the installed app?</string>
+	<key>설치를 요청한 DeskVeil을 확인하지 못했습니다.</key>
+	<string>Could not verify the DeskVeil requesting installation.</string>
+	<key>설치하고 열기</key>
+	<string>Install and open</string>
+	<key>손쉬운 사용</key>
+	<string>Accessibility</string>
+	<key>손쉬운 사용 권한 필요</key>
+	<string>Accessibility access needed</string>
+	<key>손쉬운 사용 문제 해결</key>
+	<string>Accessibility troubleshooting</string>
+	<key>손쉬운 사용에서 기존 DeskVeil을 지운 뒤 아래 앱을 다시 추가해주세요. 재등록 후에도 안 되면 앱을 다시 시작해주세요.</key>
+	<string>Remove the existing DeskVeil entry from Accessibility, then add the app shown below. Restart the app if registering it again does not help.</string>
+	<key>시간</key>
+	<string>hours</string>
+	<key>시간 제한 없이 유지합니다. 전원·배터리 조건과 응답 감시는 계속 적용됩니다.</key>
+	<string>No time limit. Power and battery conditions and response monitoring still apply.</string>
+	<key>시간이 끝나면 입력 차단을 해제합니다. 새 차단부터 적용됩니다.</key>
+	<string>Ends input blocking when time expires. Applies to the next session.</string>
+	<key>시간이 끝나면 해제하고 macOS 인증으로 전환합니다. 새 차단부터 적용됩니다.</key>
+	<string>Ends the session and switches to macOS authentication when time expires. Applies to the next session.</string>
+	<key>시스템 설정 → 개인정보 보호 및 보안 → 손쉬운 사용에서 DeskVeil을 켜주세요.</key>
+	<string>Enable DeskVeil in System Settings → Privacy &amp; Security → Accessibility.</string>
+	<key>시스템 설정 열기</key>
+	<string>Open System Settings</string>
+	<key>실행 중인 앱과 설치 파일의 서명이 다릅니다. DeskVeil을 다시 열어주세요.</key>
+	<string>The running app and installer have different signatures. Reopen DeskVeil.</string>
+	<key>실행 중인 앱의 복구 경로에 연결하지 못했습니다.</key>
+	<string>Could not connect to the running app's recovery socket.</string>
+	<key>아래 오류 내용을 확인해주세요.</key>
+	<string>Check the error below.</string>
+	<key>암호 등 보안 입력 중 · 중단</key>
+	<string>Secure Input · Paused</string>
+	<key>앱</key>
+	<string>App</string>
+	<key>앱 다시 시작</key>
+	<string>Restart app</string>
+	<key>앱 서명 식별자를 확인하지 못했습니다.</key>
+	<string>Could not verify the app signing identifier.</string>
+	<key>앱 서명 정보를 읽지 못했습니다.</key>
+	<string>Could not read the app signature information.</string>
+	<key>앱 서명 해시를 읽지 못했습니다.</key>
+	<string>Could not read the app signature hash.</string>
+	<key>앱 서명을 확인하지 못했습니다.</key>
+	<string>Could not verify the app signature.</string>
+	<key>앱 식별자를 확인하지 못했습니다.</key>
+	<string>Could not verify the app identifier.</string>
+	<key>앱 연결 중단으로 덮개 유지를 종료했습니다.</key>
+	<string>Closed-lid operation ended because the app disconnected.</string>
+	<key>앱 응답이 지연되어 입력 차단을 해제했습니다.</key>
+	<string>Input blocking ended because the app stopped responding.</string>
+	<key>앱 정리 완료 후 적용</key>
+	<string>Waiting for app cleanup</string>
+	<key>앱은 복사됐지만 열지 못했습니다</key>
+	<string>The app was copied but could not be opened</string>
+	<key>앱을 다시 시작한 뒤 변경해주세요.</key>
+	<string>Restart the app before changing this setting.</string>
+	<key>앱을 다시 열어주세요.</key>
+	<string>Reopen the app.</string>
+	<key>앱의 복구 응답이 올바르지 않습니다.</key>
+	<string>The app returned an invalid recovery response.</string>
+	<key>언어 / Language</key>
+	<string>Language</string>
+	<key>업데이트 대기 경로를 만들지 못했습니다.</key>
+	<string>Could not create the update waiting directory.</string>
+	<key>업데이트 대기 경로를 확인하지 못했습니다.</key>
+	<string>Could not verify the update waiting directory.</string>
+	<key>업데이트 대기 주소가 이미 사용 중입니다.</key>
+	<string>The update waiting socket is already in use.</string>
+	<key>업데이트 대기 주소를 열지 못했습니다.</key>
+	<string>Could not open the update waiting socket.</string>
+	<key>업데이트 대기 주소를 확인하지 못했습니다.</key>
+	<string>Could not verify the update waiting socket.</string>
+	<key>업데이트 대기를 시작하지 못했습니다.</key>
+	<string>Could not start waiting for updates.</string>
+	<key>업데이트 승인을 받지 못해 현재 버전을 유지합니다.</key>
+	<string>Update approval was not received. Keeping the current version.</string>
+	<key>업데이트 적용 중</key>
+	<string>Applying update</string>
+	<key>업데이트 적용 중…</key>
+	<string>Applying update…</string>
+	<key>업데이트가 끝나면 다시 사용할 수 있습니다.</key>
+	<string>Available again after the update finishes.</string>
+	<key>연결 필요</key>
+	<string>Connection needed</string>
+	<key>연결된 디스플레이가 없습니다.</key>
+	<string>No displays connected.</string>
+	<key>예방 신호 확인됨</key>
+	<string>Prevention signal verified</string>
+	<key>오류 알림 소리</key>
+	<string>Error sound</string>
+	<key>외장 / 가상 디스플레이</key>
+	<string>External / virtual</string>
+	<key>원래 화면을 복원하지 못했습니다. 켜기를 다시 누르거나 긴급 해제해주세요.</key>
+	<string>Could not restore the original display state. Press Restore again or use emergency release.</string>
+	<key>유지 시간 · 시간 단위</key>
+	<string>Duration in hours</string>
+	<key>응용 프로그램</key>
+	<string>Applications</string>
+	<key>응용 프로그램에 설치된 DeskVeil을 실행합니다.</key>
+	<string>Open the DeskVeil installed in Applications.</string>
+	<key>응용 프로그램에서 DeskVeil을 직접 열어주세요.</key>
+	<string>Open DeskVeil from Applications.</string>
+	<key>응용 프로그램으로 복사한 뒤 바로 실행합니다.</key>
+	<string>Copy to Applications and open immediately.</string>
+	<key>이 잔량 이하가 되면 작업 유지를 종료합니다. 다음 차단부터 적용됩니다.</key>
+	<string>Ends keep-awake operation at or below this level. Applies to the next session.</string>
+	<key>이 화면은 개별 끄기를 지원하지 않습니다.</key>
+	<string>This display does not support individual dimming.</string>
+	<key>이 화면을 식별할 수 없어 개별 제어를 사용할 수 없습니다.</key>
+	<string>Individual control is unavailable because this display could not be identified.</string>
+	<key>이전 잠자기 설정 복구가 진행 중입니다. 잠시 후 다시 시도해주세요.</key>
+	<string>Previous sleep settings are still being restored. Wait a moment and try again.</string>
+	<key>이전 화면을 복구한 뒤 화면 버튼을 다시 눌러주세요.</key>
+	<string>Restore the previous display before using the display button again.</string>
+	<key>일반</key>
+	<string>General</string>
+	<key>일반 차단에 적용합니다. 배터리 사용은 아래 옵션에서 선택합니다. 응답 중단·해제 시 잠자기 설정을 복구합니다.</key>
+	<string>Applies to normal sessions. Choose battery use below. Sleep settings are restored when the app stops responding or the session ends.</string>
+	<key>일반 해제·유지 시간 종료 시 인증합니다. 테스트·긴급 해제는 제외됩니다.</key>
+	<string>Authenticate on normal release or when the duration expires. Excludes tests and emergency release.</string>
+	<key>일반 해제에만 적용합니다. 자동 해제 테스트·긴급 해제·오류 복구는 제외됩니다.</key>
+	<string>Applies to normal sessions only. Excludes timed tests, emergency release, and error recovery.</string>
+	<key>입력 감시가 중단되어 차단을 해제했습니다.</key>
+	<string>Input blocking ended because input monitoring stopped.</string>
+	<key>입력 감시를 유지할 수 없어 차단을 해제했습니다.</key>
+	<string>Input blocking ended because input monitoring could not be maintained.</string>
+	<key>입력 중 · 대기</key>
+	<string>Input active · Waiting</string>
+	<key>입력 차단 기능을 준비하지 못했습니다. 손쉬운 사용을 허용한 뒤 ‘권한 다시 확인’을 눌러주세요.</key>
+	<string>Could not prepare input blocking. Allow Accessibility access, then click Check permissions again.</string>
+	<key>입력 차단 사용 불가</key>
+	<string>Input blocking unavailable</string>
+	<key>입력 차단 세션과 입력 감시 연결 상태를 확인합니다.</key>
+	<string>Reports the input blocking session and input monitoring connection.</string>
+	<key>입력 차단 안 함</key>
+	<string>Input not blocked</string>
+	<key>입력 차단 준비 실패</key>
+	<string>Input blocking unavailable</string>
+	<key>입력 차단 중</key>
+	<string>Input blocked</string>
+	<key>입력 차단 중 동작합니다. 끄면 덮개 유지도 함께 꺼집니다.</key>
+	<string>Runs while input is blocked. Turning it off also turns off closed-lid mode.</string>
+	<key>입력 차단 중 동작합니다. 배터리 사용은 덮개 유지 옵션에서 선택합니다.</key>
+	<string>Active while input is blocked. Choose battery use under closed-lid options.</string>
+	<key>입력 차단 중단</key>
+	<string>Input blocking stopped</string>
+	<key>입력 차단 중단 · 화면 가림 유지</key>
+	<string>Input blocking stopped · Screen covered</string>
+	<key>입력 차단 테스트</key>
+	<string>Test input blocking</string>
+	<key>입력 차단 테스트로 이동</key>
+	<string>Go to input blocking test</string>
+	<key>입력 차단 해제 후 적용</key>
+	<string>Waiting for input blocking to end</string>
+	<key>입력 차단을 준비할 수 없습니다</key>
+	<string>Input blocking unavailable</string>
+	<key>입력 차단을 준비할 수 없습니다. 권한을 다시 확인해주세요.</key>
+	<string>Could not prepare input blocking. Check permissions again.</string>
+	<key>입력 차단을 해제한 뒤 변경해주세요.</key>
+	<string>End input blocking before changing this setting.</string>
+	<key>입력 차단이 중단되어 화면을 가렸습니다</key>
+	<string>Input blocking stopped, so the screen is covered</string>
+	<key>입력 해제</key>
+	<string>Input released</string>
+	<key>입력이 없으면 동작</key>
+	<string>Starts when input is idle</string>
+	<key>자동 잠금 방지</key>
+	<string>Auto-lock prevention</string>
+	<key>자동 잠금 방지 신호가 유휴 시간을 초기화하지 못했습니다.</key>
+	<string>The auto-lock prevention signal did not reset idle time.</string>
+	<key>자동 잠금 방지 신호를 생성할 수 없습니다.</key>
+	<string>Could not generate an auto-lock prevention signal.</string>
+	<key>자동 잠금 방지: 유휴 시간을 읽을 수 없습니다.</key>
+	<string>Auto-lock prevention: could not read idle time.</string>
+	<key>자리 비움 시작</key>
+	<string>Start session</string>
+	<key>자리 비움 해제</key>
+	<string>End session</string>
+	<key>작업 유지</key>
+	<string>Keep work running</string>
+	<key>잠금 전환 실패 · 입력 차단 유지</key>
+	<string>Lock failed · Input still blocked</string>
+	<key>잠금 전환이 취소됐습니다.</key>
+	<string>Lock transition canceled.</string>
+	<key>잠금 화면으로 전환하지 못했습니다</key>
+	<string>Could not switch to the lock screen</string>
+	<key>잠자기</key>
+	<string>Asleep</string>
+	<key>잠자기 방지</key>
+	<string>Sleep prevention</string>
+	<key>잠자기 방지 꺼짐</key>
+	<string>Sleep prevention off</string>
+	<key>잠자기 방지 대기</key>
+	<string>Sleep prevention on standby</string>
+	<key>잠자기 방지 사용 안 함</key>
+	<string>Sleep prevention disabled</string>
+	<key>잠자기 방지 중</key>
+	<string>Preventing sleep</string>
+	<key>잠자기 방지 중단</key>
+	<string>Sleep prevention stopped</string>
+	<key>잠자기 방지를 유지할 수 없습니다: %@</key>
+	<string>Could not maintain sleep prevention: %@</string>
+	<key>잠자기 방지를 준비하지 못해 차단 시작을 취소했습니다.</key>
+	<string>The session was canceled because sleep prevention could not be prepared.</string>
+	<key>잠자기 방지를 함께 켭니다. 처음 사용할 때 보조 도구를 준비해주세요.</key>
+	<string>Also enables sleep prevention. Set up the helper before first use.</string>
+	<key>잠자기 설정 복구 중</key>
+	<string>Restoring sleep settings</string>
+	<key>잠자기 설정 복구 확인 중</key>
+	<string>Verifying sleep settings recovery</string>
+	<key>잠자기 설정 복구 후 적용</key>
+	<string>Waiting for sleep settings to be restored</string>
+	<key>잠자기·자동 잠금 방지</key>
+	<string>Prevent sleep and auto-lock</string>
+	<key>재시작 후 적용</key>
+	<string>Restart to apply</string>
+	<key>재시작하면 적용됩니다. 차단·화면 복구 중에는 재시작할 수 없습니다.</key>
+	<string>Takes effect after restart. Unavailable while blocking input or restoring displays.</string>
+	<key>적용 및 재시작</key>
+	<string>Apply and restart</string>
+	<key>전원 보조 도구 연결을 기다리는 중입니다.</key>
+	<string>Waiting for the power helper connection.</string>
+	<key>전원 보조 도구 응답이 지연되고 있습니다.</key>
+	<string>The power helper is slow to respond.</string>
+	<key>전원 보조 도구가 응답하지 않습니다.</key>
+	<string>The power helper is not responding.</string>
+	<key>전원 보조 도구를 확인해주세요.</key>
+	<string>Check the power helper.</string>
+	<key>전원 보조 도구에 연결하지 못했습니다.</key>
+	<string>Could not connect to the power helper.</string>
+	<key>전원 보조 도구의 신원을 확인하지 못했습니다.</key>
+	<string>Could not verify the power helper's identity.</string>
+	<key>전원 연결 시 동작</key>
+	<string>Starts when power is connected</string>
+	<key>전원 연결됨</key>
+	<string>Power connected</string>
+	<key>전원을 분리해도 덮개 유지를 계속합니다.</key>
+	<string>Continue closed-lid operation after disconnecting power.</string>
+	<key>전원을 연결하거나 ‘배터리에서도 계속 실행’을 켜주세요.</key>
+	<string>Connect power or enable Keep running on battery.</string>
+	<key>전체 입력 차단과 화면 전환이 끝난 뒤 개별 화면을 조작할 수 있습니다.</key>
+	<string>Individual display controls are available once input blocking and display transitions have ended.</string>
+	<key>접근 권한</key>
+	<string>Permissions</string>
+	<key>접근 권한 설정…</key>
+	<string>Set up access…</string>
+	<key>접근 권한에서 손쉬운 사용을 허용해주세요.</key>
+	<string>Allow Accessibility access in Permissions.</string>
+	<key>접근 권한에서 연결 상태를 확인해주세요.</key>
+	<string>Check the connection in Permissions.</string>
+	<key>접근 권한에서 입력 차단 연결을 복구해주세요.</key>
+	<string>Restore input blocking in Permissions.</string>
+	<key>접기</key>
+	<string>Collapse</string>
+	<key>정리 상태가 변경되어 업데이트를 적용하지 않았습니다.</key>
+	<string>Cleanup state changed, so the update was not applied.</string>
+	<key>종료</key>
+	<string>Quit</string>
+	<key>준비됨</key>
+	<string>Ready</string>
+	<key>즉시</key>
+	<string>Instant</string>
+	<key>직접 설정</key>
+	<string>Custom</string>
+	<key>차단 시작 시 동작</key>
+	<string>Starts with input blocking</string>
+	<key>차단 준비 중</key>
+	<string>Preparing session</string>
+	<key>차단 해제로 종료됨</key>
+	<string>Ended with input blocking</string>
+	<key>차단·해제 단축키</key>
+	<string>Start/end shortcut</string>
+	<key>차단·해제 키와 긴급 해제 키를 모두 기본값으로 되돌립니다.</key>
+	<string>Restore both the start/end and emergency shortcuts to their defaults.</string>
+	<key>차단·해제와 긴급 해제는 서로 다른 조합이어야 합니다.</key>
+	<string>Start/end and emergency release must use different shortcuts.</string>
+	<key>차단과 해제</key>
+	<string>Blocking and release</string>
+	<key>차단한 직접 입력</key>
+	<string>Physical input blocked</string>
+	<key>처리 중</key>
+	<string>Working</string>
+	<key>처음 사용할 때 접근 권한에서 보조 도구를 준비해주세요.</key>
+	<string>Set up the helper in Permissions before first use.</string>
+	<key>최근 차단 기록</key>
+	<string>Recent session</string>
+	<key>최근 차단 집계</key>
+	<string>Recent input counts</string>
+	<key>최저 밝기</key>
+	<string>Minimum brightness</string>
+	<key>출력 활성</key>
+	<string>Output active</string>
+	<key>취소</key>
+	<string>Cancel</string>
+	<key>켜기</key>
+	<string>Restore</string>
+	<key>켜져 있는 화면에서 식별 번호를 표시할 수 있습니다.</key>
+	<string>Identification is available while the display is on.</string>
+	<key>클라이언트 서명 검증을 통과하지 못했습니다.</key>
+	<string>Client signature verification failed.</string>
+	<key>클릭하면 이 화면에 식별 번호를 잠깐 표시합니다.</key>
+	<string>Click to briefly show an identification number on this display.</string>
+	<key>클릭한 뒤 원하는 키 조합을 누르세요. Esc로 취소합니다.</key>
+	<string>Click, then press your shortcut. Press Esc to cancel.</string>
+	<key>키 %@</key>
+	<string>Key %@</string>
+	<key>키 조합을 누르세요…</key>
+	<string>Press your shortcut…</string>
+	<key>키보드·마우스는 막히고, 자동화의 클릭·입력은 동작하는지 확인해주세요.</key>
+	<string>Check that physical keyboard and mouse input is blocked while automation clicks and typing still work.</string>
+	<key>테스트</key>
+	<string>Test</string>
+	<key>테스트 및 진단</key>
+	<string>Tests &amp; Diagnostics</string>
+	<key>테스트 자동 해제 시간</key>
+	<string>Test auto-release time</string>
+	<key>테스트 중 · %@초 후 해제</key>
+	<string>Testing · Ends in %@s</string>
+	<key>테스트를 실행하려면 접근 권한을 먼저 설정해주세요.</key>
+	<string>Set up permissions before running a test.</string>
+	<key>통과 횟수에는 DeskVeil의 자동 잠금 방지 신호도 포함됩니다. 일부 자동화 조작은 기록에 남지 않을 수 있습니다.</key>
+	<string>Allowed events include DeskVeil's auto-lock prevention signals. Some automation actions may not be recorded.</string>
+	<key>통과한 앱 입력</key>
+	<string>App input allowed</string>
+	<key>펼치기</key>
+	<string>Expand</string>
+	<key>필수 권한이 준비됐습니다. 입력 차단 테스트로 동작을 확인할 수 있습니다.</key>
+	<string>Required access is ready. Run the input blocking test to check it works.</string>
+	<key>해제할 때 macOS 잠금</key>
+	<string>Lock macOS when ending</string>
+	<key>해제할 화면 가림이 없습니다. 입력 차단은 변경하지 않았습니다.</key>
+	<string>No screen cover to remove. Input blocking was unchanged.</string>
+	<key>허용 필요</key>
+	<string>Access needed</string>
+	<key>허용됨</key>
+	<string>Allowed</string>
+	<key>허용했는데 입력 차단이 되지 않을 때</key>
+	<string>When access is allowed but input blocking does not work</string>
+	<key>현재 동작 상태</key>
+	<string>Current status</string>
+	<key>현재 상태</key>
+	<string>Current status</string>
+	<key>현재 상태: %@
+</key>
+	<string>Current status: %@
+</string>
+	<key>현재 상태와 최근 기록을 확인하고, 입력 차단을 시험합니다.</key>
+	<string>Check the current status and recent activity, and test input blocking.</string>
+	<key>현재 앱 정리 중</key>
+	<string>Cleaning up the current app</string>
+	<key>현재 입력을 차단할 수 없습니다</key>
+	<string>Cannot block input right now</string>
+	<key>화면</key>
+	<string>Displays</string>
+	<key>화면 %@개를 완전히 어둡게 하지 못했습니다. 입력 차단은 유지됩니다.</key>
+	<string>Could not fully dim these displays: %@. Input blocking remains active.</string>
+	<key>화면 가림 유지 중</key>
+	<string>Screen cover active</string>
+	<key>화면 가림 표시를 확인하지 못했습니다. 가림 해제 또는 긴급 해제로 복구해주세요.</key>
+	<string>Could not verify the screen cover. Reveal the screen or use emergency release to recover.</string>
+	<key>화면 가림 해제</key>
+	<string>Reveal screen</string>
+	<key>화면 가림을 해제한 뒤 테스트할 수 있습니다.</key>
+	<string>Reveal the screen before running a test.</string>
+	<key>화면 가림을 해제했습니다.</key>
+	<string>Screen cover removed.</string>
+	<key>화면 끄기 · 이 화면만 어둡게</key>
+	<string>Dim display · This display only</string>
+	<key>화면 밝기를 제어할 수 없습니다. 입력 차단은 유지됩니다.</key>
+	<string>Display brightness cannot be controlled. Input blocking remains active.</string>
+	<key>화면 밝기와 덮개 유지 동작은 이 테스트에 포함되지 않습니다.</key>
+	<string>This test does not check display dimming or closed-lid operation.</string>
+	<key>화면 변경에 실패해 원래 화면으로 복원했습니다.</key>
+	<string>Display change failed. The original display state was restored.</string>
+	<key>화면 변경에 실패했습니다. 연결 상태를 확인해주세요.</key>
+	<string>Display change failed. Check the connection.</string>
+	<key>화면 변경을 처리하고 있습니다.</key>
+	<string>A display change is in progress.</string>
+	<key>화면 보조 프로세스가 종료됐습니다. 계속 어두우면 DeskVeil을 다시 실행해주세요.</key>
+	<string>The display helper stopped. If the screens stay dark, reopen DeskVeil.</string>
+	<key>화면 보호기 · 중단</key>
+	<string>Screen saver · Paused</string>
+	<key>화면 복구 요청을 보내지 못했습니다.</key>
+	<string>Could not send the screen recovery request.</string>
+	<key>화면 복구 프로세스가 종료됐습니다. 계속 어두우면 DeskVeil을 다시 실행해주세요.</key>
+	<string>The display recovery process stopped. If the screens stay dark, reopen DeskVeil.</string>
+	<key>화면 복구를 시도하고 있습니다. 복원이 확인될 때까지 기다려주세요.</key>
+	<string>Trying to recover the displays. Wait until restoration is confirmed.</string>
+	<key>화면 복구를 시작하지 못했습니다. 긴급 해제로 다시 시도하거나 DeskVeil을 다시 실행해주세요.</key>
+	<string>Could not start display recovery. Try emergency release or reopen DeskVeil.</string>
+	<key>화면 복원 완료 후 적용</key>
+	<string>Waiting for display restoration</string>
+	<key>화면 복원에 실패했습니다. %@로 긴급 해제하고, 계속 어두우면 DeskVeil을 다시 실행해주세요.</key>
+	<string>Display restoration failed. Use %@ for emergency release. If the screens stay dark, reopen DeskVeil.</string>
+	<key>화면 복원에 실패했습니다. DeskVeil을 다시 실행해주세요.</key>
+	<string>Display restoration failed. Reopen DeskVeil.</string>
+	<key>화면 복원을 아직 확인하지 못했습니다.</key>
+	<string>Display restoration has not been confirmed yet.</string>
+	<key>화면 복원을 확인하지 못해 업데이트를 적용하지 않았습니다.</key>
+	<string>The update was not applied because display restoration could not be confirmed.</string>
+	<key>화면 복원을 확인하지 못했습니다. 계속 어두우면 DeskVeil을 다시 실행해주세요.</key>
+	<string>Could not confirm display restoration. If the screens stay dark, reopen DeskVeil.</string>
+	<key>화면 설정을 복원하고 DeskVeil 종료</key>
+	<string>Restore displays and quit DeskVeil</string>
+	<key>화면 어둡게</key>
+	<string>Dim displays</string>
+	<key>화면 어둡게 사용 중</key>
+	<string>Displays dimmed</string>
+	<key>화면 연결 상태가 바뀌었습니다. 목록에서 다시 선택해주세요.</key>
+	<string>The display connection changed. Select it again from the list.</string>
+	<key>화면 응답이 지연됩니다. 켜기로 복원하거나 긴급 해제해주세요.</key>
+	<string>The display is slow to respond. Restore it or use emergency release.</string>
+	<key>화면 잠자기 · 중단</key>
+	<string>Display asleep · Paused</string>
+	<key>화면 전환 보조 프로세스가 종료되어 입력 차단을 해제했습니다.</key>
+	<string>Input blocking ended because the display transition helper stopped.</string>
+	<key>화면 전환 보조 프로세스를 준비할 수 없습니다.</key>
+	<string>Could not prepare the display transition helper.</string>
+	<key>화면 전환 완료 후 적용</key>
+	<string>Waiting for display transition</string>
+	<key>화면 전환 준비 응답을 받지 못했습니다.</key>
+	<string>No response received while preparing the display transition.</string>
+	<key>화면 처리가 끝난 뒤 입력 차단을 시작해주세요.</key>
+	<string>Wait for the display operation to finish before blocking input.</string>
+	<key>화면 켜기 · 원래 밝기와 색상으로 복원</key>
+	<string>Restore display · Original brightness and colors</string>
+	<key>화면과 알림</key>
+	<string>Displays and alerts</string>
+	<key>화면을 가리고 키보드·마우스 입력을 차단합니다.
+
+macOS 암호 잠금은 별도로 동작합니다.</key>
+	<string>Covers your displays and blocks keyboard and mouse input.
+
+The macOS password lock operates separately.</string>
+	<key>화면을 어둡게 유지하지 못했습니다. 켜기로 복원한 뒤 다시 시도해주세요.</key>
+	<string>Could not keep this display dimmed. Restore it, then try again.</string>
+	<key>화면을 켜둔 채 시험하고, macOS 인증 없이 자동 해제합니다.</key>
+	<string>Test with the screens left on. Ends automatically without macOS authentication.</string>
+	<key>화면을 켜둔 채 입력 차단만 시험합니다. 수동으로 끝내도 macOS 인증을 요청하지 않습니다.</key>
+	<string>Test input blocking with the screens left on. Ending manually will not request macOS authentication.</string>
+	<key>확인</key>
+	<string>OK</string>
+	<key>확인 불가</key>
+	<string>Unavailable</string>
+	<key>확인 필요</key>
+	<string>Needs attention</string>
+	<key>확인이 필요합니다</key>
+	<string>Needs attention</string>
+</dict>
+</plist>
