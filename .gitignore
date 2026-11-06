@@ -3,3 +3,5 @@ dist/
 dist-tests/
 .DS_Store
 __pycache__/
+node_modules/
+.husky/_/

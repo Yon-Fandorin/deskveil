@@ -42,12 +42,19 @@ Click the menu bar icon to see display status and brightness. Use the round powe
 
 ## Development
 
-Requires Swift 5.9 or later, Xcode Command Line Tools, and Python 3.9 or later for the checks. The app has no external package dependencies.
+Requires Swift 5.9 or later, Xcode Command Line Tools, and Python 3.9 or later for the checks. Commit tooling requires Node.js 22.12 or later and npm. The Swift app has no external package dependencies.
 
 ```sh
 git clone https://github.com/Yon-Fandorin/deskveil.git
 cd deskveil
-git config --local core.hooksPath .githooks
+npm ci
+```
+
+`npm ci` installs the pinned development tools and enables [Husky](https://typicode.github.io/husky/) hooks. The `commit-msg` hook runs [commitlint](https://commitlint.js.org/) with `@commitlint/config-conventional`. Use messages such as `fix(power): preserve the active session`; the scope is optional.
+
+Build a separate development app:
+
+```sh
 env SOFTLOCK_BUNDLE_ID=dev.local.softlock.development \
     SOFTLOCK_SIGNING_IDENTITY=- \
     SOFTLOCK_APP_PATH="$PWD/dist-tests/DeskVeil-dev.app" \
@@ -56,14 +63,12 @@ env SOFTLOCK_BUNDLE_ID=dev.local.softlock.development \
 
 The app is written to `dist-tests/DeskVeil-dev.app` and is not launched automatically. Builds are ad-hoc signed, so rebuilding may require granting Accessibility access again.
 
-The `commit-msg` hook checks [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) headers such as `fix(power): preserve the active session`. A scope is optional. Separate the subject and body with a blank line. Git-generated merge, revert, and autosquash messages are supported.
-
 Quit the installed app and restore your displays before testing: development builds share its recovery data. Do not replace an installed power helper with a development build.
 
 ```sh
 env CLANG_MODULE_CACHE_PATH="$PWD/.build/clang-cache" SWIFTPM_MODULECACHE_OVERRIDE="$PWD/.build/swift-cache" swift test --disable-sandbox
 python3 -B Tests/check_release_guard.py
-python3 -B Tests/check_commit_hook.py
+npm run lint:commits -- --last
 ```
 
 For a UI preview without input blocking, brightness changes, or power control, run `zsh Tools/DesignPreview/build.sh`. See the [engineering notes](docs/engineering.md) (Korean) for architecture and verification details.
