@@ -2,33 +2,76 @@ import AppKit
 import Darwin
 import Foundation
 
-private final class LidConnection {
+final class LidConnection {
     private var fd: Int32 = -1
     private var buffer = Data()
+    private let path: String
+    private let peerUID: uid_t
+    private let timeout: TimeInterval
+    private(set) var lastExchangeDiagnostics: [String: Any]?
+
+    init(path: String = LidPaths.socket, peerUID: uid_t = 0, timeout: TimeInterval = 4) {
+        self.path = path; self.peerUID = peerUID; self.timeout = timeout
+    }
     func closeConnection() { if fd >= 0 { close(fd) }; fd = -1; buffer = Data() }
     deinit { closeConnection() }
     func exchange(_ request: [String: Any]) throws -> [String: Any] {
+        let began = lidTime(), deadline = began + timeout
+        var failures: [[String: Any]] = []
+        var recovered = false
+        lastExchangeDiagnostics = nil
+        defer {
+            if !failures.isEmpty {
+                lastExchangeDiagnostics = ["failures": failures, "recovered": recovered,
+                    "elapsedSeconds": lidTime() - began,
+                    "occurredAt": ISO8601DateFormatter().string(from: Date())]
+            }
+        }
+        // Both attempts share one budget below the service's heartbeat lease.
+        for attempt in 1...2 {
+            do {
+                let state = try exchangeOnce(request, deadline: min(deadline, lidTime() + timeout / 2))
+                recovered = true
+                return state
+            } catch {
+                closeConnection()
+                let detail = error as NSError
+                failures.append(["attempt": attempt, "domain": detail.domain, "code": detail.code,
+                    "operation": detail.userInfo["operation"] as? String ?? "response",
+                    "error": detail.localizedDescription, "elapsedSeconds": lidTime() - began])
+                let retryable = detail.domain == NSPOSIXErrorDomain &&
+                    [EAGAIN, EINTR, ETIMEDOUT, ECONNRESET, ECONNREFUSED, ENOENT, EPIPE, ENOTCONN, ENOBUFS].contains(Int32(detail.code))
+                guard attempt == 1, retryable, lidTime() + 0.05 < deadline else { throw error }
+                usleep(50_000)
+            }
+        }
+        throw lidSocketError("exchange", code: ETIMEDOUT)
+    }
+
+    private func exchangeOnce(_ request: [String: Any], deadline: TimeInterval) throws -> [String: Any] {
         do {
             if fd < 0 {
                 fd = socket(AF_UNIX, SOCK_STREAM, 0)
-                guard fd >= 0 else { throw LidError(L10n.text("전원 보조 도구에 연결하지 못했습니다.")) }
-                _ = fcntl(fd, F_SETFL, O_NONBLOCK)
-                var address = try lidSocketAddress(LidPaths.socket)
+                guard fd >= 0 else { throw lidSocketError("socket") }
+                var noSignal: Int32 = 1
+                guard setsockopt(fd, SOL_SOCKET, SO_NOSIGPIPE, &noSignal, socklen_t(MemoryLayout<Int32>.size)) == 0 else {
+                    throw lidSocketError("socket-options")
+                }
+                guard fcntl(fd, F_SETFL, O_NONBLOCK) == 0 else { throw lidSocketError("nonblocking") }
+                var address = try lidSocketAddress(path)
                 let result = lidWithAddress(&address) { connect(fd, $0, $1) }
                 if result != 0 {
-                    guard errno == EINPROGRESS else { throw LidError(L10n.text("전원 보조 도구 연결을 기다리는 중입니다.")) }
-                    var descriptor = pollfd(fd: fd, events: Int16(POLLOUT), revents: 0)
-                    guard poll(&descriptor, 1, 500) > 0 else { throw LidError(L10n.text("전원 보조 도구가 응답하지 않습니다.")) }
+                    guard errno == EINPROGRESS || errno == EINTR else { throw lidSocketError("connect") }
+                    try lidWaitForSocket(fd, events: Int16(POLLOUT), deadline: min(deadline, lidTime() + 0.5), operation: "connect")
                     var error: Int32 = 0, length = socklen_t(MemoryLayout<Int32>.size)
-                    guard getsockopt(fd, SOL_SOCKET, SO_ERROR, &error, &length) == 0, error == 0 else {
-                        throw LidError(L10n.text("전원 보조 도구에 연결하지 못했습니다."))
-                    }
+                    guard getsockopt(fd, SOL_SOCKET, SO_ERROR, &error, &length) == 0 else { throw lidSocketError("connect-status") }
+                    guard error == 0 else { throw lidSocketError("connect", code: error) }
                 }
                 var uid: uid_t = 1, gid: gid_t = 1
-                guard getpeereid(fd, &uid, &gid) == 0, uid == 0 else { throw LidError(L10n.text("전원 보조 도구의 신원을 확인하지 못했습니다.")) }
+                guard getpeereid(fd, &uid, &gid) == 0 else { throw lidSocketError("peer-credentials") }
+                guard uid == peerUID else { throw LidError(L10n.text("전원 보조 도구의 신원을 확인하지 못했습니다.")) }
             }
-            try lidWriteLine(fd, request)
-            let deadline = lidTime() + 4
+            try lidWriteLine(fd, request, deadline: deadline)
             while lidTime() < deadline {
                 if let end = buffer.firstIndex(of: 10) {
                     let line = buffer[..<end]; buffer.removeSubrange(...end)
@@ -36,15 +79,15 @@ private final class LidConnection {
                           value["protocol"] as? Int == LidPaths.protocolVersion else { throw LidError(L10n.text("보조 도구를 업데이트해주세요.")) }
                     return value
                 }
-                var descriptor = pollfd(fd: fd, events: Int16(POLLIN), revents: 0)
-                guard poll(&descriptor, 1, 100) >= 0 else { throw LidError(L10n.text("보조 도구 연결이 중단됐습니다.")) }
+                try lidWaitForSocket(fd, events: Int16(POLLIN), deadline: deadline, operation: "read")
                 var bytes = [UInt8](repeating: 0, count: 4096)
                 let count = read(fd, &bytes, bytes.count)
                 if count < 0 && (errno == EAGAIN || errno == EINTR) { continue }
-                guard count > 0, buffer.count + count <= 8192 else { throw LidError(L10n.text("보조 도구 연결이 중단됐습니다.")) }
+                guard count > 0 else { throw lidSocketError("read", code: count == 0 ? ECONNRESET : errno) }
+                guard buffer.count + count <= 8192 else { throw LidError(L10n.text("보조 도구 연결이 중단됐습니다.")) }
                 buffer.append(contentsOf: bytes.prefix(count))
             }
-            throw LidError(L10n.text("전원 보조 도구 응답이 지연되고 있습니다."))
+            throw lidSocketError("read", code: ETIMEDOUT)
         } catch { closeConnection(); throw error }
     }
 }
@@ -62,6 +105,7 @@ final class LidSleepController {
     private var preparationNeedsRelease = false
     private let recoveryPending: () -> Bool
     private var lastExchange: TimeInterval = -.infinity
+    private var heartbeatID = 0
     private var activation: ((Result<Void, Error>) -> Void)?
     private var preparingSince: TimeInterval?
     private var installer: Process?
@@ -73,7 +117,9 @@ final class LidSleepController {
     private(set) var reason = ""
     private(set) var snapshot: [String: Any] = [:]
     private(set) var preparationDuration: TimeInterval?
+    private(set) var lastConnectionEvent: [String: Any] = [:]
     var onChange: (() -> Void)?
+    var onConnectionEvent: (([String: Any]) -> Void)?
     var onPreparationUpdate: (() -> Void)?
     var onUnexpectedEnd: ((String, String) -> Void)?
     var preparing: Bool { preparingSince != nil }
@@ -142,8 +188,10 @@ final class LidSleepController {
         guard installer == nil, installed, !inFlight, lidTime() - lastExchange >= 0.25 else { return }
         if let began = preparingSince, lidTime() - began > 8 { finishPreparation(.failure(LidError(L10n.text("덮개 모드 준비 시간이 초과됐습니다.")))) }
         let releasingForPreparation = preparing && preparationNeedsRelease
+        heartbeatID += 1
         let message = (contextOverride?() ?? Self.currentContext()).merging([
-            "protocol": LidPaths.protocolVersion, "requested": !releasingForPreparation && (requested || preparing),
+            "protocol": LidPaths.protocolVersion, "heartbeat": heartbeatID,
+            "requested": !releasingForPreparation && (requested || preparing),
             "allowBattery": allowBattery,
             "batteryReservePercent": reservePercent,
             "durationSeconds": durationSeconds, "session": sessionID,
@@ -152,13 +200,28 @@ final class LidSleepController {
         if message["requested"] as? Bool == true { scopeNeedsRelease = true }
         queue.async { [weak self] in
             guard let self else { return }
+            let began = lidTime()
             let result = Result {
                 if let exchange = self.exchangeOverride { return try exchange(message) }
                 return try self.connection.exchange(message)
             }
+            var connectionEvent = self.exchangeOverride == nil ? self.connection.lastExchangeDiagnostics : nil
+            if connectionEvent == nil, case .failure(let error) = result {
+                let detail = error as NSError
+                connectionEvent = ["failures": [["attempt": 1, "domain": detail.domain, "code": detail.code,
+                    "operation": detail.userInfo["operation"] as? String ?? "exchange", "error": detail.localizedDescription]],
+                    "elapsedSeconds": lidTime() - began, "recovered": false,
+                    "occurredAt": ISO8601DateFormatter().string(from: Date())]
+            }
+            let diagnostic = connectionEvent.map { $0.merging([
+                "session": message["session"] as? String ?? "", "requested": message["requested"] as? Bool == true]) { _, new in new } }
             DispatchQueue.main.async {
                 let oldStatus = self.statusText
                 self.inFlight = false
+                if let diagnostic {
+                    self.lastConnectionEvent = diagnostic
+                    self.onConnectionEvent?(diagnostic)
+                }
                 let currentSession = message["session"] as? String == self.sessionID
                 switch result {
                 case .success(let state):
@@ -177,7 +240,12 @@ final class LidSleepController {
                     }
                 case .failure(let error):
                     self.phase = "unavailable"; self.reason = "connection-ended"
-                    if self.preparing && currentSession { self.finishPreparation(.failure(error)) }
+                    if self.preparing && currentSession {
+                        let detail = error as NSError
+                        let message = detail.code == Int(ETIMEDOUT)
+                            ? L10n.text("전원 보조 도구 응답이 지연되고 있습니다.") : L10n.text("보조 도구 연결이 중단됐습니다.")
+                        self.finishPreparation(.failure(detail.domain == NSPOSIXErrorDomain ? LidError(message) : error))
+                    }
                 }
                 if self.previouslyActive && !self.active && requested { self.onUnexpectedEnd?(self.reason, self.reasonText) }
                 self.previouslyActive = self.active

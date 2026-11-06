@@ -53,6 +53,9 @@ final class SessionHistory {
         writes.wait(timeout: .now() + timeout) == .success
     }
     func started(source: String) { record("session-started", ["source": source, "pid": getpid()]) }
+    func connectionEvent(_ fields: [String: Any]) {
+        record("lid-connection", fields.merging(["pid": getpid()]) { _, new in new })
+    }
     func ended(_ reason: SessionEndReason, tapEnabled: Bool, secureInput: Bool, macOSState: String,
                requestedReason: SessionEndReason? = nil) {
         lastEnd = ["reason": reason.rawValue, "at": ISO8601DateFormatter().string(from: Date())]

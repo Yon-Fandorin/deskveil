@@ -20,7 +20,7 @@ enum LidPaths {
     static let plist = "/Library/LaunchDaemons/" + label + ".plist"
     static let socket = "/private/var/run/softlock-power/control.sock"
     static let lock = "/private/var/tmp/dev.local.softlock.power.lock"
-    static let protocolVersion = 4
+    static let protocolVersion = 5
     static let lease: TimeInterval = 6
 }
 
@@ -286,14 +286,43 @@ func lidWithAddress<T>(_ address: inout sockaddr_un, _ action: (UnsafePointer<so
     }
 }
 
-func lidWriteLine(_ fd: Int32, _ value: [String: Any]) throws {
+func lidSocketError(_ operation: String, code: Int32 = errno) -> NSError {
+    NSError(domain: NSPOSIXErrorDomain, code: Int(code), userInfo: [
+        NSLocalizedDescriptionKey: "Power service \(operation): \(String(cString: strerror(code)))",
+        "operation": operation])
+}
+
+func lidWaitForSocket(_ fd: Int32, events: Int16, deadline: TimeInterval, operation: String) throws {
+    while lidTime() < deadline {
+        var descriptor = pollfd(fd: fd, events: events, revents: 0)
+        let milliseconds = Int32(max(1, min(100, ceil((deadline - lidTime()) * 1000))))
+        let result = poll(&descriptor, 1, milliseconds)
+        if result < 0 {
+            if errno == EINTR { continue }
+            throw lidSocketError(operation)
+        }
+        if result > 0 {
+            guard descriptor.revents & Int16(POLLNVAL) == 0 else { throw lidSocketError(operation, code: EBADF) }
+            return
+        }
+    }
+    throw lidSocketError(operation, code: ETIMEDOUT)
+}
+
+func lidWriteLine(_ fd: Int32, _ value: [String: Any], deadline: TimeInterval? = nil) throws {
     var data = try JSONSerialization.data(withJSONObject: value, options: [.sortedKeys])
     data.append(10)
     try data.withUnsafeBytes { bytes in
         var offset = 0
         while offset < bytes.count {
+            if let deadline, lidTime() >= deadline { throw lidSocketError("write", code: ETIMEDOUT) }
             let count = write(fd, bytes.baseAddress?.advanced(by: offset), bytes.count - offset)
-            guard count > 0 else { throw LidError("Power service connection ended") }
+            if count < 0 && errno == EINTR { continue }
+            if count < 0 && errno == EAGAIN, let deadline {
+                try lidWaitForSocket(fd, events: Int16(POLLOUT), deadline: deadline, operation: "write")
+                continue
+            }
+            guard count > 0 else { throw lidSocketError("write", code: count == 0 ? EPIPE : errno) }
             offset += count
         }
     }

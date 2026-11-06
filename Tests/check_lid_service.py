@@ -8,6 +8,7 @@ from pathlib import Path
 import signal
 import socket
 import subprocess
+import sys
 import tempfile
 import time
 import unittest
@@ -26,6 +27,7 @@ class LidServiceTests(unittest.TestCase):
         self.process = None
         self.client = None
         self.stream = None
+        self.heartbeat = 0
 
     def save(self, name, value):
         target = self.directory / name
@@ -57,20 +59,29 @@ class LidServiceTests(unittest.TestCase):
             time.sleep(0.01)
         self.fail("Condition not met; events=" + json.dumps(self.records()))
 
-    def start(self, limit=30):
+    def start(self, limit=30, lease=0.6):
         self.limit = limit
         self.process = subprocess.Popen([str(BINARY), "--lid-service-simulate", str(self.directory),
-                                         "--lease", "0.6"],
+                                         "--lease", str(lease)],
                                         stdin=subprocess.DEVNULL, stdout=subprocess.DEVNULL,
                                         stderr=subprocess.DEVNULL, start_new_session=True)
         self.wait_for(lambda: (self.directory / "control.sock").exists())
+        self.connect()
+
+    def connect(self):
         self.client = socket.socket(socket.AF_UNIX, socket.SOCK_STREAM)
         self.client.settimeout(4)
         self.client.connect(str(self.directory / "control.sock"))
         self.stream = self.client.makefile("rwb", buffering=0)
 
+    def disconnect(self):
+        self.stream.close()
+        self.client.close()
+        self.stream = self.client = None
+
     def request(self, active=True, **changes):
-        message = dict(protocol=4, allowBattery=False, batteryReservePercent=10, durationSeconds=self.limit, requested=active, session="test-session", ready=True,
+        self.heartbeat += 1
+        message = dict(protocol=5, heartbeat=self.heartbeat, allowBattery=False, batteryReservePercent=10, durationSeconds=self.limit, requested=active, session="test-session", ready=True,
                        locked=True, awake=True, preparing=False, sessionReady=True, ac=True,
                        displayCount=1, displayQuery=0)
         message.update(changes)
@@ -146,6 +157,109 @@ class LidServiceTests(unittest.TestCase):
                                         start_new_session=True)
         self.assertNotEqual(self.process.wait(timeout=3), 0)
         self.assertTrue(self.read("power.json")["disabled"])
+
+    def test_reconnect_preserves_session_deadline_and_battery_policy(self):
+        self.start(limit=2, lease=1.2)
+        self.activate(allowBattery=True, batteryReservePercent=35)
+        before = self.request()
+        self.disconnect()
+        self.wait_for(lambda: any(x["event"] == "client-disconnected" for x in self.records()))
+        self.assertTrue(self.read("power.json")["disabled"])
+        self.connect()
+        after = self.request(durationSeconds=0, allowBattery=False, batteryReservePercent=10)
+        self.assertEqual(after["phase"], "active")
+        self.assertEqual(after["startedAt"], before["startedAt"])
+        self.assertEqual(after["limitSeconds"], 2)
+        self.assertTrue(after["allowBattery"])
+        self.assertEqual(after["batteryReservePercent"], 35)
+        self.assertEqual(sum(x["event"] == "active" for x in self.records()), 1)
+        self.assertFalse(any(x["event"] in ("stopping", "restored") for x in self.records()))
+        self.assertTrue(any(x["event"] == "client-reconnected" for x in self.records()))
+
+    def test_silent_reconnect_cannot_renew_an_expiring_heartbeat(self):
+        self.start(lease=0.6)
+        self.activate()
+        self.disconnect()
+        self.wait_for(lambda: any(x["event"] == "client-disconnected" for x in self.records()))
+        time.sleep(0.3)
+        self.connect()
+        self.wait_for(lambda: not self.read("power.json")["disabled"], seconds=0.5)
+        self.restored()
+        self.assertTrue(any(x.get("reason") == "app-unresponsive" for x in self.records()))
+
+    def test_reconnect_queued_with_old_socket_eof_is_accepted(self):
+        self.start(lease=1.2)
+        self.activate()
+        os.kill(self.process.pid, signal.SIGSTOP)
+        try:
+            message = dict(protocol=5, heartbeat=self.heartbeat + 1, requested=True, session="test-session",
+                           allowBattery=False, batteryReservePercent=10, durationSeconds=self.limit,
+                           ready=True, locked=True, awake=True, sessionReady=True)
+            self.stream.write(json.dumps(message).encode() + b"\n")
+            self.disconnect()
+            self.connect()
+        finally:
+            os.kill(self.process.pid, signal.SIGCONT)
+        self.assertEqual(self.request()["phase"], "active")
+        self.assertFalse(any(x["event"] == "stopping" for x in self.records()))
+
+    def test_replayed_main_loop_heartbeat_cannot_extend_a_disconnected_lease(self):
+        self.start(lease=0.6)
+        self.activate()
+        heartbeat = self.heartbeat
+        self.disconnect()
+        self.wait_for(lambda: any(x["event"] == "client-disconnected" for x in self.records()))
+        time.sleep(0.3)
+        self.connect()
+        self.assertEqual(self.request(heartbeat=heartbeat)["phase"], "active")
+        self.wait_for(lambda: not self.read("power.json")["disabled"], seconds=0.5)
+        self.restored()
+        self.assertTrue(any(x.get("reason") == "app-unresponsive" for x in self.records()))
+
+    def test_disconnected_owner_still_expires_and_cannot_reactivate_late(self):
+        self.start(lease=0.6)
+        self.activate()
+        self.disconnect()
+        self.restored()
+        self.assertTrue(any(x.get("reason") == "app-disconnected" for x in self.records()))
+        self.connect()
+        self.assertNotEqual(self.request()["phase"], "active")
+        self.assertFalse(self.read("power.json")["disabled"])
+
+    def test_session_deadline_and_battery_recovery_continue_while_disconnected(self):
+        for limit, source, reason in [(0.4, None, "session-limit"),
+                                      (0, {"acPower": False, "batteryPercent": 25}, "battery-low")]:
+            with self.subTest(reason=reason):
+                self.start(limit=limit, lease=1.2)
+                self.activate(allowBattery=True, batteryReservePercent=25)
+                self.disconnect()
+                if source is not None:
+                    self.save("source.json", source)
+                self.restored()
+                self.assertTrue(any(x.get("reason") == reason for x in self.records()))
+                self.process.terminate()
+                self.process.wait(timeout=4)
+                self.save("source.json", {"acPower": True, "batteryPercent": 80})
+
+    def test_another_process_cannot_take_over_a_disconnected_owner(self):
+        self.start(lease=1.2)
+        self.activate()
+        self.disconnect()
+        self.wait_for(lambda: any(x["event"] == "client-disconnected" for x in self.records()))
+        program = "import socket,sys;s=socket.socket(socket.AF_UNIX);s.settimeout(1);s.connect(sys.argv[1]);assert s.recv(1)==b''"
+        subprocess.run([sys.executable, "-c", program, str(self.directory / "control.sock")], check=True, timeout=2)
+        self.connect()
+        self.assertEqual(self.request()["phase"], "active")
+        self.assertTrue(self.read("power.json")["disabled"])
+
+    def test_invalid_request_releases_without_waiting_for_transport_grace(self):
+        self.start(lease=2)
+        self.activate()
+        self.stream.write(json.dumps({"protocol": -1}).encode() + b"\n")
+        self.assertEqual(self.stream.readline(), b"")
+        self.wait_for(lambda: not self.read("power.json")["disabled"], seconds=0.8)
+        event = next(x for x in self.records() if x["event"] == "client-disconnected")
+        self.assertIn("Invalid power request", event["error"])
 
     def test_app_stall_and_scope_losses_restore_without_reactivating(self):
         self.start()
@@ -226,7 +340,7 @@ class LidServiceTests(unittest.TestCase):
     def test_orphaned_enable_cannot_run_after_recovery(self):
         self.save("faults.json", {"delayedEnable": True})
         self.start()
-        self.client.sendall(json.dumps(dict(protocol=4, allowBattery=False, batteryReservePercent=10, durationSeconds=self.limit, requested=True, session="orphan", ready=True,
+        self.client.sendall(json.dumps(dict(protocol=5, heartbeat=1, allowBattery=False, batteryReservePercent=10, durationSeconds=self.limit, requested=True, session="orphan", ready=True,
                                             locked=True, awake=True, sessionReady=True)).encode() + b"\n")
         self.wait_for(lambda: (self.directory / "inflight.json").exists())
         self.process.kill()
@@ -299,6 +413,7 @@ class LidServiceTests(unittest.TestCase):
         invalid = [("durationSeconds", value) for value in [None, True, -1, "0", 40000000]]
         invalid += [("allowBattery", value) for value in [None, 0, 1, "true"]]
         invalid += [("batteryReservePercent", value) for value in [None, True, 0, 5, 11, 81, 25.5, "20"]]
+        invalid += [("heartbeat", value) for value in [None, True, 0, -1, 1.5, "1", 10**30]]
         for index, (field, value) in enumerate(invalid):
             # Reconnect because invalid IPC closes its connection.
             if index > 0:
@@ -308,7 +423,7 @@ class LidServiceTests(unittest.TestCase):
                 self.client.settimeout(4)
                 self.client.connect(str(self.directory / "control.sock"))
                 self.stream = self.client.makefile("rwb", buffering=0)
-            message = dict(protocol=4, allowBattery=False, batteryReservePercent=10, requested=True, session="invalid", ready=True,
+            message = dict(protocol=5, heartbeat=1, allowBattery=False, batteryReservePercent=10, requested=True, session="invalid", ready=True,
                            locked=True, awake=True, sessionReady=True, ac=True, durationSeconds=0)
             if value is None: message.pop(field)
             else: message[field] = value

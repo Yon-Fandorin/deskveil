@@ -65,10 +65,10 @@ private func lidSendCommand(_ handle: FileHandle, _ command: String) throws {
 private func lidReadLines(_ fd: Int32, buffer: inout Data) throws -> [String] {
     var bytes = [UInt8](repeating: 0, count: 4096)
     let count = read(fd, &bytes, bytes.count)
-    if count == 0 { throw LidError("Connection closed") }
+    if count == 0 { throw lidSocketError("read", code: ECONNRESET) }
     if count < 0 {
         if errno == EAGAIN || errno == EINTR { return [] }
-        throw LidError("Connection read failed")
+        throw lidSocketError("read")
     }
     buffer.append(contentsOf: bytes.prefix(count))
     guard buffer.count <= 8192 else { throw LidError("Request too large") }
@@ -206,6 +206,7 @@ func runLidService(files: LidServiceFiles, lease: TimeInterval = LidPaths.lease)
         var clientPID: pid_t = 0
         var clientBuffer = Data()
         var lastHeartbeat: TimeInterval = 0
+        var lastHeartbeatID: Double = 0
         var requested: [String: Any] = [:]
         var phase = "idle"
         var reason = ""
@@ -227,6 +228,19 @@ func runLidService(files: LidServiceFiles, lease: TimeInterval = LidPaths.lease)
                 try lidSendCommand(commands.fileHandleForWriting, "release")
                 journal.emit("stopping", ["reason": cause])
             }
+        }
+        func disconnectClient(_ error: Error) throws {
+            close(client); client = -1; clientBuffer = Data()
+            let detail = error as NSError
+            // Keep only an authenticated, live owner's existing lease across transport loss.
+            if detail.domain != NSPOSIXErrorDomain || phase != "active" {
+                requested = [:]
+                try release("app-disconnected")
+            }
+            journal.emit("client-disconnected", ["clientPID": clientPID, "error": detail.localizedDescription,
+                "domain": detail.domain, "code": detail.code,
+                "operation": detail.userInfo["operation"] as? String ?? "request",
+                "remainingLeaseSeconds": max(0, lease - (lidTime() - lastHeartbeat))])
         }
         func status() -> [String: Any] {
             ["protocol": LidPaths.protocolVersion, "phase": phase, "reason": reason, "session": activeSession, "startedAt": startedAt,
@@ -264,18 +278,8 @@ func runLidService(files: LidServiceFiles, lease: TimeInterval = LidPaths.lease)
                         ownsRecovery = false
                     }
                 }
-                let incoming = accept(listener, nil, nil)
-                if incoming >= 0 {
-                    var peerUID: uid_t = 0, peerGID: gid_t = 0, peerPID: pid_t = 0
-                    var length = socklen_t(MemoryLayout<pid_t>.size)
-                    let authorized = getpeereid(incoming, &peerUID, &peerGID) == 0 && peerUID == uid &&
-                        getsockopt(incoming, SOL_LOCAL, LOCAL_PEERPID, &peerPID, &length) == 0 &&
-                        (simulation || lidPeerIsAllowed(peerPID, uid: peerUID, configuration: configuration))
-                    if client < 0 && authorized {
-                        client = incoming; clientPID = peerPID; clientBuffer = Data(); requested = [:]
-                        lastHeartbeat = now
-                        _ = fcntl(client, F_SETFL, O_NONBLOCK)
-                    } else { close(incoming) }
+                if phase == "active" && now - lastHeartbeat >= lease {
+                    try release(client < 0 ? "app-disconnected" : "app-unresponsive")
                 }
                 if client >= 0 {
                     do {
@@ -288,16 +292,52 @@ func runLidService(files: LidServiceFiles, lease: TimeInterval = LidPaths.lease)
                                   BatteryReserve.percent(from: message["batteryReservePercent"]) != nil,
                                   LidDuration.seconds(from: message["durationSeconds"], simulation: simulation) != nil,
                                   let sessionID = message["session"] as? String,
-                                  !sessionID.isEmpty, sessionID.count <= 64 else { throw LidError("Invalid power request") }
-                            requested = message; lastHeartbeat = now
+                                  !sessionID.isEmpty, sessionID.count <= 64,
+                                  let heartbeat = message["heartbeat"] as? NSNumber,
+                                  CFGetTypeID(heartbeat) != CFBooleanGetTypeID(),
+                                  heartbeat.doubleValue.isFinite, heartbeat.doubleValue >= 1,
+                                  heartbeat.doubleValue <= 9_007_199_254_740_991,
+                                  heartbeat.doubleValue.rounded(.towardZero) == heartbeat.doubleValue else { throw LidError("Invalid power request") }
+                            requested = message
+                            // Replaying an in-flight main-loop request cannot renew its lease.
+                            if heartbeat.doubleValue > lastHeartbeatID {
+                                lastHeartbeat = now; lastHeartbeatID = heartbeat.doubleValue
+                            }
                             if message["requested"] as? Bool != true || sessionID != activeSession { canStartAgain = true }
                             if message["requested"] as? Bool != true { try release("unlocked") }
                             responseNeeded = true
                         }
                     } catch {
-                        close(client); client = -1; requested = [:]
-                        try release("app-disconnected")
+                        try disconnectClient(error)
+                        responseNeeded = false
                     }
+                }
+                // Observe the old socket's EOF before admitting a queued reconnect.
+                let incoming = accept(listener, nil, nil)
+                if incoming >= 0 {
+                    if client >= 0 {
+                        var previous = pollfd(fd: client, events: Int16(POLLIN), revents: 0)
+                        if poll(&previous, 1, 0) > 0 && previous.revents & Int16(POLLHUP) != 0 {
+                            try disconnectClient(lidSocketError("read", code: ECONNRESET))
+                            responseNeeded = false
+                        }
+                    }
+                    var peerUID: uid_t = 0, peerGID: gid_t = 0, peerPID: pid_t = 0
+                    var length = socklen_t(MemoryLayout<pid_t>.size)
+                    let authorized = getpeereid(incoming, &peerUID, &peerGID) == 0 && peerUID == uid &&
+                        getsockopt(incoming, SOL_LOCAL, LOCAL_PEERPID, &peerPID, &length) == 0 &&
+                        (simulation || lidPeerIsAllowed(peerPID, uid: peerUID, configuration: configuration))
+                    let resuming = phase == "active" && clientPID == peerPID
+                    if client < 0 && authorized && (phase != "active" || resuming) {
+                        client = incoming; clientPID = peerPID; clientBuffer = Data()
+                        if resuming {
+                            journal.emit("client-reconnected", ["clientPID": clientPID,
+                                "heartbeatAgeSeconds": now - lastHeartbeat])
+                        } else {
+                            requested = [:]; lastHeartbeat = now; lastHeartbeatID = 0
+                        }
+                        _ = fcntl(client, F_SETFL, O_NONBLOCK)
+                    } else { close(incoming) }
                 }
                 let wantsPower = requested["requested"] as? Bool == true
                 let preparing = requested["preparing"] as? Bool == true
@@ -319,9 +359,9 @@ func runLidService(files: LidServiceFiles, lease: TimeInterval = LidPaths.lease)
                 let reservePercent = phase == "active" ? sessionReservePercent :
                     (BatteryReserve.percent(from: requested["batteryReservePercent"]) ?? BatteryReserve.defaultPercent)
                 let restriction = powerSource.restriction(allowBattery: allowBattery, reservePercent: reservePercent)
-                let live = client >= 0 && kill(clientPID, 0) == 0 && now - lastHeartbeat < lease
+                let live = clientPID > 1 && kill(clientPID, 0) == 0 && now - lastHeartbeat < lease
                 if phase == "active" {
-                    if !live { try release("app-unresponsive") }
+                    if !live { try release(client < 0 ? "app-disconnected" : "app-unresponsive") }
                     else if requested["session"] as? String != activeSession { try release("session-changed") }
                     else if !wantsPower { try release("scope-ended") }
                     else if let restriction { try release(restriction == .externalPowerRequired ? "power-disconnected" : restriction.rawValue) }
@@ -369,7 +409,7 @@ func runLidService(files: LidServiceFiles, lease: TimeInterval = LidPaths.lease)
                             journal.emit("error", ["reason": reason, "error": error.localizedDescription])
                         }
                     }
-                } else if (phase == "failed" || phase == "ended") && !wantsPower { phase = "idle" }
+                } else if (phase == "failed" || phase == "ended") && responseNeeded && !wantsPower { phase = "idle" }
                 if phase == "active" && now - lastSample >= 30 {
                     journal.emit("sample", ["lidClosed": lidRootProperties()["AppleClamshellState"] ?? false,
                         "displayCount": requested["displayCount"] as? Int ?? -1,
@@ -387,7 +427,7 @@ func runLidService(files: LidServiceFiles, lease: TimeInterval = LidPaths.lease)
                 }
                 if responseNeeded && client >= 0 {
                     do { try lidWriteLine(client, status()) }
-                    catch { close(client); client = -1; requested = [:]; try release("app-disconnected") }
+                    catch { try disconnectClient(error) }
                 }
                 var pending = [pollfd(fd: listener, events: Int16(POLLIN), revents: 0),
                     pollfd(fd: replies.fileHandleForReading.fileDescriptor, events: Int16(POLLIN), revents: 0)]

@@ -119,6 +119,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
             "lidServiceReason": lidSleep.reason,
             "lidPreparationSeconds": lidSleep.preparationDuration ?? -1,
             "lidServiceStatus": lidStatus,
+            "lidConnectionEvent": lidSleep.lastConnectionEvent,
             "lidClosed": lidRootProperties()["AppleClamshellState"] ?? false,
             "systemSleepDisabled": lidRootProperties()["SleepDisabled"] ?? false,
             "lidRecoveryPending": FileManager.default.fileExists(atPath: LidPaths.receipt),
@@ -240,6 +241,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         NSApp.setActivationPolicy(.accessory)
         signal(SIGPIPE, SIG_IGN)
         lidSleep.onChange = { [weak self] in self?.refreshMenu() }
+        lidSleep.onConnectionEvent = { [weak self] event in self?.sessionHistory.connectionEvent(event) }
         lidSleep.onPreparationUpdate = { [weak self] in self?.updateLidSleep() }
         lidSleep.onUnexpectedEnd = { [weak self] reason, issue in
             guard let self, self.locked, self.sessionUsesLid, !self.coverPending, !self.screenLock.requiresConfirmation else { return }
