@@ -21,7 +21,7 @@ with tempfile.TemporaryDirectory(prefix='softlock-update-fixture-',dir='/private
         errors=[]
         approved=[]
         def wait():
-            try: update.wait_for_idle({process.pid:directory},'0.7.99',directory,on_ready=approved.append)
+            try: update.wait_for_idle({process.pid:directory},'1.0.0',directory,on_ready=approved.append)
             except BaseException as error: errors.append(error)
         thread=threading.Thread(target=wait)
         thread.start()

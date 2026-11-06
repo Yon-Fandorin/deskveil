@@ -38,7 +38,7 @@ with tempfile.TemporaryDirectory(prefix='softlock-privacy-recovery-probe-', dir=
         state(lambda x: x['finishedLaunching'] and not x['available'], 'bystander.json')
         updater = socket.socket(socket.AF_UNIX); updater.settimeout(3)
         updater.connect(f'/private/tmp/softlock-update-{os.getuid()}/{server.pid}.sock')
-        updater.sendall(b'{"command":"defer","version":"0.7.99"}\n')
+        updater.sendall(b'{"command":"defer","version":"1.0.0"}\n')
         state(lambda x: x['pendingUpdate'])
         rejected = subprocess.run([str(foreign), '--fixture-foreign-request', str(server.pid)],
                                   capture_output=True, text=True, timeout=5, check=True)

@@ -585,7 +585,7 @@ sys.exit(91 if name == "ditto" else 92 if name == "swift" else 93)
             command.chmod(0o755)
         mock_shell = self.workspace / "mock-shell"
         mock_shell.mkdir(exist_ok=True)
-        (mock_shell / ".zshenv").write_text('function /usr/libexec/PlistBuddy { print 0.7.11; }\n')
+        (mock_shell / ".zshenv").write_text('function /usr/libexec/PlistBuddy { print 1.0.0; }\n')
         environment = dict(os.environ, SOFTLOCK_APP_PATH=str(self.app), SOFTLOCK_DMG_PATH=str(output),
                            SOFTLOCK_ALLOW_RELEASE_REPLACEMENT="1", SOFTLOCK_TEST_PACKAGE_LOG=str(self.log),
                            SOFTLOCK_TEST_PACKAGE_STOP=stop,

@@ -56,13 +56,13 @@ final class PrivacyRecoveryTests: XCTestCase {
         gate.onChange = { if gate.pending { pending.fulfill() } }
         gate.onRevealPrivacy = { true }
         gate.onCommit = { XCTFail("Recovery must not commit the waiting update") }
-        send("{\"command\":\"defer\",\"version\":\"0.7.99\"}\n", to: updater)
+        send("{\"command\":\"defer\",\"version\":\"1.0.0\"}\n", to: updater)
         wait(for: [pending], timeout: 2)
         gate.onChange = nil
         let recovered = expectation(description: "independent recovery")
         request { result in XCTAssertEqual(try? result.get(), true); recovered.fulfill() }
         wait(for: [recovered], timeout: 4)
-        XCTAssertTrue(gate.pending); XCTAssertEqual(gate.version, "0.7.99")
+        XCTAssertTrue(gate.pending); XCTAssertEqual(gate.version, "1.0.0")
     }
 
     func testInactiveOwnerReturnsNegativeAcknowledgementWithoutStateChange() throws {

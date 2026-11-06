@@ -25,7 +25,7 @@ final class DeferredUpdateTests: XCTestCase {
             XCTAssertEqual(withUnsafePointer(to: &address) {
                 $0.withMemoryRebound(to: sockaddr.self, capacity: 1) { connect(fd, $0, socklen_t(MemoryLayout<sockaddr_un>.size)) }
             }, 0)
-            let wire = Data("{\"command\":\"defer\",\"version\":\"0.7.99\"}\n".utf8)
+            let wire = Data("{\"command\":\"defer\",\"version\":\"1.0.0\"}\n".utf8)
             _ = wire.withUnsafeBytes { write(fd, $0.baseAddress, $0.count) }
             var buffer = Data()
             let deadline = ProcessInfo.processInfo.systemUptime + 2
@@ -96,7 +96,7 @@ final class DeferredUpdateTests: XCTestCase {
         gate.onChange = {
             guard gate.pending else { return }
             XCTAssertTrue(Thread.isMainThread)
-            XCTAssertEqual(gate.version, "0.7.99")
+            XCTAssertEqual(gate.version, "1.0.0")
             gate.reportWaiting(UpdateReadiness(blocking: true).waitingReason!)
             pending.fulfill()
         }
@@ -108,7 +108,7 @@ final class DeferredUpdateTests: XCTestCase {
                 $0.withMemoryRebound(to: sockaddr.self, capacity: 1) { connect(fd, $0, socklen_t(MemoryLayout<sockaddr_un>.size)) }
             }
             XCTAssertEqual(connected, 0)
-            let wire = Data("{\"command\":\"defer\",\"version\":\"0.7.99\"}\n".utf8)
+            let wire = Data("{\"command\":\"defer\",\"version\":\"1.0.0\"}\n".utf8)
             XCTAssertEqual(wire.withUnsafeBytes { write(fd, $0.baseAddress, $0.count) }, wire.count)
             var buffer = Data()
             var sawWaiting = false, sawReady = false
@@ -207,7 +207,7 @@ final class DeferredUpdateTests: XCTestCase {
             XCTAssertEqual(withUnsafePointer(to: &address) {
                 $0.withMemoryRebound(to: sockaddr.self, capacity: 1) { connect(fd, $0, socklen_t(MemoryLayout<sockaddr_un>.size)) }
             }, 0)
-            let wire = Data("{\"command\":\"defer\",\"version\":\"0.7.99\"}\n".utf8)
+            let wire = Data("{\"command\":\"defer\",\"version\":\"1.0.0\"}\n".utf8)
             _ = wire.withUnsafeBytes { write(fd, $0.baseAddress, $0.count) }
             var buffer = Data()
             let deadline = ProcessInfo.processInfo.systemUptime + 2

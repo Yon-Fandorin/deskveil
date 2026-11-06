@@ -509,7 +509,7 @@ final class PreviewDelegate: NSObject, NSApplicationDelegate {
                         }
                     case 32:
                         phase = "update-waiting"
-                        renderedState.updateStatus = "v0.7.99 업데이트 대기 · 입력 차단 해제 후 적용"
+                        renderedState.updateStatus = L10n.text("v%@ 업데이트 대기 · %@", "1.0.0", L10n.text("입력 차단 해제 후 적용"))
                         dashboard.update(renderedState)
                     case 33:
                         phase = "update-cancelled"
