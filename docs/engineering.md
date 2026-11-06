@@ -127,7 +127,11 @@ DMG는 서명된 앱을 그대로 복사하고 창 배치·배경은 볼륨의 `
 
 입력 스레드가 먼저 차단을 해제한 원인은 `InputFilterSnapshot.releasedBy`에 같은 mutex로 보존합니다. 다음 main tick은 이를 먼저 처리해 대기 중인 정상·긴급·시험 해제를 오류 해제로 바꾸지 않습니다. 이후 health 신호는 첫 원인을 덮어쓰지 않고 새 긴급 해제만 우선하며, 새 configure/stop에서 원인을 비웁니다. 재시작·업데이트 준비가 실패하면 닫히는 helper의 종료를 기다린 다음 미복구 기록을 기존 시도 횟수·backoff 그대로 다시 소유합니다.
 
-밝기 및 감마의 read/save/write 사이에 디스플레이가 바뀔 수 있으므로 native 쓰기와 gamma 변경 직전에도 고유한 현재 UUID→ID 연결을 확인합니다. 불일치하면 다른 화면에 쓰지 않고 원래 화면의 복구 기록을 유지합니다. 보조 도구 준비를 즉시 재시도할 때는 이전 scope의 requested:false 응답을 먼저 확인하며 helper 실행 파일과 통신 규약은 바꾸지 않습니다. 업데이트 commit이 main queue에서 5초 넘게 지연되면 종료 권한을 폐기하고 현재 앱을 재개합니다.
+밝기 및 감마의 read/save/write 사이에 디스플레이가 바뀔 수 있으므로 native 쓰기와 gamma 변경 직전에도 고유한 현재 UUID→ID 연결을 확인합니다. 불일치하면 다른 화면에 쓰지 않고 원래 화면의 복구 기록을 유지합니다.
+
+보조 도구 준비를 즉시 재시도할 때는 이전 scope의 `requested:false` 응답을 먼저 확인합니다. 재시도 도중에는 helper 실행 파일이나 통신 규약을 바꾸지 않습니다.
+
+업데이트 commit이 main queue에서 5초 넘게 지연되면 종료 권한을 폐기하고 현재 앱을 재개합니다.
 
 `Tests/check_app_lifecycle.py`는 현재 App.swift의 원본 lock·tick·unlock·cover/밝기 응답·macOS 잠금 결과·복원·실패 복귀 메서드를 추출해 그대로 컴파일합니다. 정상 시작에서 cover ACK·인증 확인·밝기 ACK·cover 해제까지 연결하고 잠금 실패·복원 재시도·오래된 ACK도 검사합니다. 원본 App 초기화와 native surface는 링크하지 않으며, event-tap 준비·창·밝기·전원·설치 경계는 가짜 객체입니다. 입력 이벤트는 메모리에서만 구성해 filter에 직접 전달하고 시스템에 post하지 않습니다. guardian fixture는 실제 밝기 backend 없이 메모리 값을 먼저 낮춘 뒤 EOF·heartbeat 만료·닫힌 응답 파이프에서 원래 값으로 복원되는지 stderr 기록으로 검사합니다.
 
@@ -138,7 +142,6 @@ DMG는 서명된 앱을 그대로 복사하고 창 배치·배경은 볼륨의 `
 앱 자체 재시작은 Launch Services의 실행 성공 응답만으로 기존 앱을 종료하지 않습니다. `RelaunchHandoff`의 사용자 소유 0700 임시 디렉터리에서 일회용 UUID ticket을 교환하고, 기존·새 프로세스의 UID·서명 요구식·실행 경로·프로세스 시작 시각을 확인합니다. 새 앱은 준비 응답 후 기존 프로세스의 실제 종료를 기다리며, 그 뒤에도 `InstallationFlow`의 일반 중복 실행 검사를 거쳐야 입력·전원 제어를 시작합니다. 준비 확인이 15초 안에 오지 않으면 기존 앱이 ticket을 폐기하고 복귀합니다. 자식에게 별도 시간 만료를 두지 않아 기존 앱의 종료 결정과 경합하지 않습니다. `Tools/RelaunchProbe`는 별도 식별자의 일반 앱에서 실제 NSWorkspace 인계와 원본 InstallationFlow를 실행하며 운영 앱·입력·밝기·덮개·전원 backend를 실행하지 않습니다.
 
 재시작의 15초 제한은 Launch Services 호출 전에 시작해 실행 확인창·승인창이 완료 콜백을 지연하는 시간도 포함합니다. 만료 뒤 늦은 콜백은 ticket identity로 무시합니다. 일반 중복 실행 검사는 NSWorkspace의 main-loop 단위 snapshot만 믿지 않고 `kill(pid, 0)`이 ESRCH를 반환한 종료 항목만 제외하며, 권한·조회 실패는 기존 실행본으로 보수적으로 유지합니다. 원본 App의 실행 메서드와 원본 InstallationFlow의 peer 필터를 fake Launch Services 경계에 연결한 테스트가 이 두 경합과 성공·실패 인계를 검사합니다.
-
 
 ## 언어 지원
 
