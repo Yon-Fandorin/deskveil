@@ -1,0 +1,6 @@
+version = 1
+
+[language]
+comments = "en"
+api_documentation = "en"
+test_descriptions = "en"
