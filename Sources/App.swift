@@ -192,6 +192,10 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         get { UserDefaults.standard.bool(forKey: "errorSoundEnabled") }
         set { UserDefaults.standard.set(newValue, forKey: "errorSoundEnabled") }
     }
+    private var privacyShieldMessageEnabled: Bool {
+        get { UserDefaults.standard.bool(forKey: "privacyShieldMessageEnabled") }
+        set { UserDefaults.standard.set(newValue, forKey: "privacyShieldMessageEnabled") }
+    }
     private var shortcutLabel: String { normalShortcut.label }
     private var emergencyLabel: String { emergencyShortcut.label }
 
@@ -237,7 +241,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         }
         UserDefaults.standard.register(defaults: ["dimScreen": false,
             "keepAwakeEnabled": true, "lidModeEnabled": false, "lidOnBatteryEnabled": false,
-            "lockOnUnlockEnabled": true, "errorSoundEnabled": false])
+            "lockOnUnlockEnabled": true, "errorSoundEnabled": false, "privacyShieldMessageEnabled": true])
         NSApp.setActivationPolicy(.accessory)
         signal(SIGPIPE, SIG_IGN)
         lidSleep.onChange = { [weak self] in self?.refreshMenu() }
@@ -491,7 +495,8 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         }
         if privacyShield.begin(reason: reason, sessionActive: locked && !terminating && !relaunching,
                                macOSLocked: screenLock.screenState == .locked && !screenLock.requiresConfirmation &&
-                                    !coverPending && !transitionCover.active && !transitionCover.preparing) {
+                                    !coverPending && !transitionCover.active && !transitionCover.preparing,
+                               showsMessage: privacyShieldMessageEnabled) {
             statusDashboard.close(); controls?.window?.orderOut(nil)
         }
         if locked {
@@ -1295,6 +1300,11 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
                     self.errorSoundEnabled = enabled
                     self.writeDiagnostics()
                 },
+                onPrivacyShieldMessageChange: { [weak self] enabled in
+                    guard let self, !self.locked, !self.privacyShield.active else { return }
+                    self.privacyShieldMessageEnabled = enabled
+                    self.refreshMenu()
+                },
                 onLidChange: { [weak self] enabled in
                     guard let self, !self.locked, !self.lidSleep.busy else { return }
                     self.lidModeEnabled = enabled
@@ -1346,6 +1356,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
             physicalEvents: input.blocked, softwareEvents: input.passed,
             accessibility: AXIsProcessTrusted(),
             issue: issues.current,
+            privacyShieldMessage: privacyShieldMessageEnabled,
             lidEnabled: lidModeEnabled, lidOnBattery: lidOnBatteryEnabled, batteryReservePercent: BatteryReserve.stored(), lidStatus: lidSleep.statusText,
             lidDurationSeconds: LidDuration.stored(),
             lidInstalled: lidSleep.installed, lidNeedsSetup: lidSleep.needsSetup,

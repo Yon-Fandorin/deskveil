@@ -92,6 +92,7 @@ struct ControlWindowState {
     let softwareEvents: Int
     let accessibility: Bool
     let issue: String?
+    var privacyShieldMessage = true
     var lidEnabled = false
     var lidOnBattery = false
     var batteryReservePercent = BatteryReserve.defaultPercent
@@ -115,6 +116,7 @@ final class ControlWindow: NSWindowController, NSTextFieldDelegate {
     private let statusImage = NSImageView()
     private let trial = NSButton(title: L10n.text("테스트"), target: nil, action: nil)
     private let dim = NSSwitch()
+    private let privacyShieldMessage = NSSwitch()
     private let awake = NSSwitch()
     private let lid = NSSwitch()
     private let lidBattery = NSSwitch()
@@ -192,6 +194,7 @@ final class ControlWindow: NSWindowController, NSTextFieldDelegate {
     private let onRetry: () -> Void
     private let onRelaunch: () -> Void
     private let onErrorSoundChange: (Bool) -> Void
+    private let onPrivacyShieldMessageChange: (Bool) -> Void
     private let onLidChange: (Bool) -> Void
     private let onLidBatteryChange: (Bool) -> Void
     private let onBatteryReserveChange: (Int) -> Void
@@ -208,6 +211,7 @@ final class ControlWindow: NSWindowController, NSTextFieldDelegate {
          onShortcutRecording: @escaping (Bool) -> Void = { _ in },
          onLanguageChange: @escaping (AppLanguage) -> Void = { _ in },
          onErrorSoundChange: @escaping (Bool) -> Void = { _ in },
+         onPrivacyShieldMessageChange: @escaping (Bool) -> Void = { _ in },
          onLidChange: @escaping (Bool) -> Void = { _ in },
          onLidBatteryChange: @escaping (Bool) -> Void = { _ in },
          onBatteryReserveChange: @escaping (Int) -> Void = { _ in },
@@ -219,6 +223,7 @@ final class ControlWindow: NSWindowController, NSTextFieldDelegate {
         self.onPermissions = onPermissions; self.onRetry = onRetry; self.onRelaunch = onRelaunch
         self.onLanguageChange = onLanguageChange
         self.onErrorSoundChange = onErrorSoundChange
+        self.onPrivacyShieldMessageChange = onPrivacyShieldMessageChange
         self.onLidChange = onLidChange; self.onLidSetup = onLidSetup
         self.onLidBatteryChange = onLidBatteryChange
         self.onBatteryReserveChange = onBatteryReserveChange
@@ -494,6 +499,9 @@ final class ControlWindow: NSWindowController, NSTextFieldDelegate {
         dim.target = self; dim.action = #selector(settingsChanged); dim.setAccessibilityIdentifier("dim-screen")
         dim.setAccessibilityLabel(L10n.text("화면 어둡게"))
         dim.toolTip = L10n.text("내장은 밝기를 낮추고, 지원 외장은 밝기와 출력 색상을 함께 낮춰 내용을 검게 가립니다. 화면 연결은 유지하며 해제하면 원래 값으로 복원합니다. 외장 백라이트의 빛은 남을 수 있습니다.")
+        privacyShieldMessage.target = self; privacyShieldMessage.action = #selector(privacyShieldMessageChanged)
+        privacyShieldMessage.setAccessibilityIdentifier("privacy-shield-message")
+        privacyShieldMessage.setAccessibilityLabel(L10n.text("가림막 아이콘·문구 표시"))
         awake.target = self; awake.action = #selector(settingsChanged); awake.setAccessibilityIdentifier("keep-awake")
         awake.setAccessibilityLabel(L10n.text("잠자기·자동 잠금 방지"))
         lid.target = self; lid.action = #selector(lidChanged)
@@ -567,7 +575,8 @@ final class ControlWindow: NSWindowController, NSTextFieldDelegate {
             ]),
             settingsSection(L10n.text("화면"), rows: [
                 row(L10n.text("화면 어둡게"), subtitle: L10n.text("내장·지원 외장 화면에 적용하고, 해제하면 원래 밝기로 돌립니다."), control: dim),
-                fades
+                fades,
+                row(L10n.text("가림막 아이콘·문구 표시"), subtitle: L10n.text("꺼도 가림막은 검은 화면으로 유지됩니다."), control: privacyShieldMessage)
             ]),
             settingsSection(L10n.text("앱"), rows: [
                 row(L10n.text("언어 / Language"), subtitle: L10n.text("재시작 후 적용"), control: languageControls, height: 66),
@@ -834,6 +843,7 @@ final class ControlWindow: NSWindowController, NSTextFieldDelegate {
             statusSubtitle.stringValue = L10n.text("설정한 긴급 해제 단축키 또는 복구 명령으로 화면을 다시 볼 수 있습니다.")
         }
         dim.state = state.dim ? .on : .off; awake.state = state.awake ? .on : .off
+        privacyShieldMessage.state = state.privacyShieldMessage ? .on : .off
         lockOnUnlock.state = state.lockOnUnlock ? .on : .off
         errorSound.state = state.errorSound ? .on : .off
         lid.state = state.lidEnabled ? .on : .off
@@ -881,7 +891,7 @@ final class ControlWindow: NSWindowController, NSTextFieldDelegate {
         }
         fades.update(choices: fadeValues.map(Self.fadeLabel),
             selectedIndex: fadeValues.firstIndex(where: { abs($0 - state.fade) < 0.001 }) ?? 2)
-        for control in [dim, awake, shortcuts, emergencyShortcut, lockOnUnlock, errorSound, resetKeys!] { control.isEnabled = editable }
+        for control in [dim, privacyShieldMessage, awake, shortcuts, emergencyShortcut, lockOnUnlock, errorSound, resetKeys!] { control.isEnabled = editable }
         trial.isEnabled = !state.locked && currentReady
         if state.lidBusy { trial.isEnabled = false }
         trials.isEnabled = !state.locked && currentReady
@@ -950,6 +960,10 @@ final class ControlWindow: NSWindowController, NSTextFieldDelegate {
     @objc private func errorSoundChanged() {
         guard !currentLocked else { return }
         onErrorSoundChange(errorSound.state == .on)
+    }
+    @objc private func privacyShieldMessageChanged() {
+        guard !currentLocked else { return }
+        onPrivacyShieldMessageChange(privacyShieldMessage.state == .on)
     }
     @objc private func lidChanged() { if !currentLocked { onLidChange(lid.state == .on) } }
     @objc private func lidBatteryChanged() { if !currentLocked { onLidBatteryChange(lidBattery.state == .on) } }

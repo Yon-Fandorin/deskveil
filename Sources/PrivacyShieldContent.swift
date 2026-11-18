@@ -5,10 +5,12 @@ final class PrivacyShieldContent: NSView {
     private var surfaceWidth: NSLayoutConstraint?
     private var surfaceHeight: NSLayoutConstraint?
     private var messageWidth: NSLayoutConstraint?
-    init() {
+    init(showsMessage: Bool = true) {
         super.init(frame: .zero)
         appearance = NSAppearance(named: .darkAqua)
         wantsLayer = true; layer?.backgroundColor = NSColor.black.cgColor
+        setAccessibilityLabel(L10n.text("DeskVeil 화면 가림"))
+        guard showsMessage else { return }
         func label(_ text: String, size: CGFloat, weight: NSFont.Weight, opacity: CGFloat) -> NSTextField {
             let field = NSTextField(wrappingLabelWithString: text)
             field.font = .systemFont(ofSize: size, weight: weight)
@@ -38,7 +40,6 @@ final class PrivacyShieldContent: NSView {
             if view is NSTextField { view.widthAnchor.constraint(equalTo: stack.widthAnchor).isActive = true }
             else { view.widthAnchor.constraint(lessThanOrEqualTo: stack.widthAnchor).isActive = true }
         }
-        setAccessibilityLabel(L10n.text("DeskVeil 화면 가림"))
     }
     /// The window owns its geometry. Intrinsic label sizes must never resize a
     /// privacy panel away from the display it is meant to cover.

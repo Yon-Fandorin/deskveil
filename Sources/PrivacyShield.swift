@@ -12,7 +12,7 @@ extension SessionEndReason {
 
 protocol PrivacyShieldSurface: AnyObject {
     var presented: Bool { get }
-    func show()
+    func show(showsMessage: Bool)
     func hide()
 }
 
@@ -25,6 +25,7 @@ final class PrivacyShield {
     private var timer: Timer?
     private var latchGeneration: UInt64 = 0
     private var startedAt: TimeInterval = 0
+    private var showsMessage = true
     private(set) var active = false
     private(set) var presented = false
     private(set) var presentationFailed = false
@@ -38,9 +39,11 @@ final class PrivacyShield {
         self.surface = surface; self.automaticPolling = automaticPolling; self.clock = clock
     }
     deinit { timer?.invalidate() }
-    @discardableResult func begin(reason: SessionEndReason, sessionActive: Bool, macOSLocked: Bool) -> Bool {
+    @discardableResult func begin(reason: SessionEndReason, sessionActive: Bool, macOSLocked: Bool,
+                                  showsMessage: Bool = true) -> Bool {
         guard !active, sessionActive, !macOSLocked, reason.needsPrivacyShield else { return false }
         latchGeneration &+= 1
+        self.showsMessage = showsMessage
         active = true; presentationFailed = false
         startedAt = clock()
         rebuild()
@@ -50,7 +53,7 @@ final class PrivacyShield {
         guard active else { return }
         let latchGeneration = latchGeneration
         presented = false
-        surface.show()
+        surface.show(showsMessage: showsMessage)
         // Keep an in-flight timer through topology bursts so notifications
         // cannot keep postponing the original presentation deadline.
         if automaticPolling && timer == nil {
@@ -102,7 +105,7 @@ final class NativePrivacyShieldSurface: NSObject, PrivacyShieldSurface {
             return rect.contains(CGDisplayBounds(display))
         }
     }
-    func show() {
+    func show(showsMessage: Bool) {
         let next = NSScreen.screens.compactMap { screen -> (NSPanel, CGDirectDisplayID)? in
             guard let display = screen.deviceDescription[NSDeviceDescriptionKey("NSScreenNumber")] as? NSNumber else { return nil }
             let frame = screen.frame.insetBy(dx: -screen.frame.width / 8, dy: -screen.frame.height / 8)
@@ -112,7 +115,7 @@ final class NativePrivacyShieldSurface: NSObject, PrivacyShieldSurface {
             panel.ignoresMouseEvents = false; panel.level = .screenSaver
             panel.collectionBehavior = [.canJoinAllSpaces, .fullScreenAuxiliary, .stationary, .ignoresCycle]
             panel.animationBehavior = .none
-            let content = PrivacyShieldContent()
+            let content = PrivacyShieldContent(showsMessage: showsMessage)
             content.fitSurface(to: frame.size, visibleSize: screen.frame.size)
             panel.contentView = content
             panel.setAccessibilityLabel(L10n.text("DeskVeil 화면 가림"))

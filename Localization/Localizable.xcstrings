@@ -1,6 +1,40 @@
 {
   "sourceLanguage": "en",
   "strings": {
+    "가림막 아이콘·문구 표시": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Show cover icon and text"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "가림막 아이콘·문구 표시"
+          }
+        }
+      }
+    },
+    "꺼도 가림막은 검은 화면으로 유지됩니다.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "When off, the cover remains a solid black screen."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "꺼도 가림막은 검은 화면으로 유지됩니다."
+          }
+        }
+      }
+    },
     "화면 가림 표시를 확인하지 못했습니다. 가림 해제 또는 긴급 해제로 복구해주세요.": {
       "extractionState": "manual",
       "localizations": {

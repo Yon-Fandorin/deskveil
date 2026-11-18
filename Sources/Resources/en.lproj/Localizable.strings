@@ -140,6 +140,8 @@ Physical power is unchanged.</string>
 	<string>Click “%@” in Permissions.</string>
 	<key>⌘·⌥·⌃ 중 하나 이상과 다른 키를 함께 눌러주세요.</key>
 	<string>Press another key together with at least one of ⌘, ⌥, or ⌃.</string>
+	<key>가림막 아이콘·문구 표시</key>
+	<string>Show cover icon and text</string>
 	<key>가림을 해제하기 전까지 이 화면을 유지합니다.</key>
 	<string>This cover stays until you choose to reveal the screen.</string>
 	<key>같은 사용자로 실행 중인 DeskVeil 하나를 확인해야 복구할 수 있습니다.</key>
@@ -192,6 +194,8 @@ Physical power is unchanged.</string>
 	<string>The emergency shortcut is used by another app. Choose a different shortcut.</string>
 	<key>긴급 해제 키를 다시 연결하지 못했습니다. 다른 조합을 지정해주세요.</key>
 	<string>Could not reconnect the emergency shortcut. Choose a different shortcut.</string>
+	<key>꺼도 가림막은 검은 화면으로 유지됩니다.</key>
+	<string>When off, the cover remains a solid black screen.</string>
 	<key>꺼짐</key>
 	<string>Off</string>
 	<key>끄기</key>

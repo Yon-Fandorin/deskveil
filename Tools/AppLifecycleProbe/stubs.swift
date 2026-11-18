@@ -39,14 +39,14 @@ final class ApplicationBoundary { var terminations = 0; func terminate(_ value: 
 let NSApp = ApplicationBoundary()
 final class NativePrivacyShieldSurface: PrivacyShieldSurface {
     var presented: Bool { fatalError("Native surface forbidden in lifecycle probe") }
-    func show() { fatalError("Native surface forbidden") }
+    func show(showsMessage: Bool) { fatalError("Native surface forbidden") }
     func hide() { fatalError("Native surface forbidden") }
 }
 final class Surface: PrivacyShieldSurface {
     let trace: Trace
     var presented = false
     init(_ trace: Trace) { self.trace = trace }
-    func show() { trace.values.append("shield-show") }
+    func show(showsMessage: Bool) { trace.values.append("shield-show") }
     func hide() { trace.values.append("shield-hide"); presented = false }
 }
 final class FilterBoundary {
@@ -210,6 +210,7 @@ final class Owner: NSObject {
     var dimScreen = true
     var lidModeEnabled = false
     var errorSoundEnabled = false
+    var privacyShieldMessageEnabled = true
     var keepAwakeEnabled = true
     var lidOnBatteryEnabled = false
     var previousTrust: Bool?

@@ -6,7 +6,7 @@ final class PrivacyShieldTests: XCTestCase {
         var presented = false
         var shows = 0
         var hides = 0
-        func show() { shows += 1 }
+        func show(showsMessage: Bool) { shows += 1 }
         func hide() { hides += 1; presented = false }
     }
     private func begin(_ shield: PrivacyShield, reason: SessionEndReason = .tapUnavailable) -> Bool {

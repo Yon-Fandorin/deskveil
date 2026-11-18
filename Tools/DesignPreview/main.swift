@@ -18,6 +18,7 @@ final class PreviewDelegate: NSObject, NSApplicationDelegate {
     var fade = 0.3
     var lockOnUnlock = true
     var errorSound = false
+    var privacyShieldMessage = true
     var lidMode = true
     var lidOnBattery = false
     var batteryReservePercent = BatteryReserve.defaultPercent
@@ -579,6 +580,7 @@ final class PreviewDelegate: NSObject, NSApplicationDelegate {
                 self.shortcut = normal; self.emergency = emergency; self.refresh(); return nil
             },
             onErrorSoundChange: { [weak self] enabled in self?.errorSound = enabled; self?.refresh() },
+            onPrivacyShieldMessageChange: { [weak self] enabled in self?.privacyShieldMessage = enabled; self?.refresh() },
             onLidChange: { [weak self] enabled in self?.lidMode = enabled; self?.refresh() },
             onLidBatteryChange: { [weak self] enabled in self?.lidOnBattery = enabled; self?.refresh() },
             onBatteryReserveChange: { [weak self] percent in self?.batteryReservePercent = percent; self?.refresh() },
@@ -728,6 +730,7 @@ final class PreviewDelegate: NSObject, NSApplicationDelegate {
             errorSound: errorSound,
             powerStatus: previewLocked ? "동작 중 · 전원 연결됨" : "차단 시작 시 동작", idleStatus: previewLocked ? "동작 확인됨" : "꺼짐", physicalEvents: 507,
             softwareEvents: 10, accessibility: permissionGranted, issue: issue,
+            privacyShieldMessage: privacyShieldMessage,
             lidEnabled: lidMode, lidOnBattery: lidOnBattery, batteryReservePercent: batteryReservePercent, lidStatus: scenario == "lid-update" ? "보조 도구 업데이트 필요" : "준비됨",
             lidDurationSeconds: lidDurationSeconds,
             lidInstalled: scenario != "lid-update", lidNeedsSetup: scenario == "lid-update", lidSetupTitle: "보조 도구 업데이트…",
