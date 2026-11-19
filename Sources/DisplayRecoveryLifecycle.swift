@@ -6,7 +6,8 @@ struct DisplayRecoveryLifecycle {
     var attempts = 0
     var retryAt: TimeInterval = 0
     private(set) var displayIssue: String?
-    var allowsObservation: Bool { !active }
+    private(set) var waitingForDisconnectedDisplays = false
+    var allowsObservation: Bool { !active && !waitingForDisconnectedDisplays }
     var issue: String? {
         if active { return L10n.text("화면 복구를 시도하고 있습니다. 복원이 확인될 때까지 기다려주세요.") }
         if attempts > 0 { return L10n.text("화면 복구를 시작하지 못했습니다. 긴급 해제로 다시 시도하거나 DeskVeil을 다시 실행해주세요.") }
@@ -18,6 +19,7 @@ struct DisplayRecoveryLifecycle {
     @discardableResult
     mutating func requestRestore(pending: Bool, allowRestart: Bool) -> Bool {
         guard pending, allowRestart else { return false }
+        waitingForDisconnectedDisplays = false
         active = true
         attempts = 0
         retryAt = 0
@@ -54,12 +56,25 @@ struct DisplayRecoveryLifecycle {
         attempts = 0
         retryAt = 0
         displayIssue = nil
+        waitingForDisconnectedDisplays = false
+    }
+
+    mutating func deferDisconnectedDisplays(issues: inout AppIssues) {
+        complete(issues: &issues)
+        waitingForDisconnectedDisplays = true
+    }
+
+    mutating func resumeDeferredRestore() {
+        guard waitingForDisconnectedDisplays else { return }
+        waitingForDisconnectedDisplays = false
+        active = true
     }
 
     /// Return whether an earlier recovery attempt needs its failure recorded.
     /// Claim new recovery synchronously, before any UI refresh can reenter.
     mutating func claimGuardianExit(pending: Bool) -> Bool {
         let wasRecovering = active || attempts > 0
+        waitingForDisconnectedDisplays = false
         if pending && !wasRecovering {
             active = true
             attempts = 0

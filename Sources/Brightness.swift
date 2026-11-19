@@ -6,6 +6,12 @@ enum BrightnessTransitionResult: Equatable {
     case restored, dimFailed, restoreFailed
 }
 
+enum BrightnessRestoreStatus: String {
+    case restored, restoring
+    case deferred = "restore-deferred"
+    case failed = "restore-failed"
+}
+
 /// One dim failure restores all affected displays; report the final recovery outcome.
 func brightnessTransitionReplies(_ results: [BrightnessTransitionResult], brightness: NativeBrightness,
                                  dimID: UInt64, restoreID: UInt64) -> [GuardianReply] {
@@ -122,23 +128,23 @@ final class NativeBrightness {
         return blackout?.clearEmptyRecoveryForRestore() ?? true
     }
 
-    private func onlineDisplays() -> [UInt32] {
+    private func onlineDisplays() -> [UInt32]? {
         if let displayProvider { return displayProvider() }
         var count: UInt32 = 0
-        guard CGGetOnlineDisplayList(0, nil, &count) == .success else { return [] }
-        var displays = [UInt32](repeating: 0, count: Int(count))
-        guard CGGetOnlineDisplayList(count, &displays, &count) == .success else { return [] }
+        guard CGGetOnlineDisplayList(0, nil, &count) == .success else { return nil }
+        let capacity = count + 1
+        var displays = [UInt32](repeating: 0, count: Int(capacity))
+        guard CGGetOnlineDisplayList(capacity, &displays, &count) == .success, count < capacity else { return nil }
         return Array(displays.prefix(Int(count)))
+    }
+    private func displayIdentity(_ display: UInt32) -> String? {
+        if let identityProvider { return identityProvider(display) }
+        return ddc.identity(display)
     }
     private func targets() -> [String: UInt32] {
         var result: [String: UInt32] = [:], duplicates = Set<String>()
-        for display in onlineDisplays() {
-            let key: String
-            if let identityProvider { key = identityProvider(display) }
-            else {
-                guard let identity = ddc.identity(display) else { continue }
-                key = identity
-            }
+        for display in onlineDisplays() ?? [] {
+            guard let key = displayIdentity(display) else { continue }
             if result[key] != nil { duplicates.insert(key) }
             result[key] = display
         }
@@ -222,14 +228,14 @@ final class NativeBrightness {
     @discardableResult
     func dim(to target: Float = 0, duration: TimeInterval = 0, at now: TimeInterval = ProcessInfo.processInfo.systemUptime) -> Int {
         guard target.isFinite, (0...1).contains(target) else { return 0 }
-        guard !hasRecoveryLoadFailure else { unsupportedDisplays = max(1, onlineDisplays().count); return 0 }
+        guard !hasRecoveryLoadFailure else { unsupportedDisplays = max(1, onlineDisplays()?.count ?? 0); return 0 }
         dimming = true
         individualTargets.removeAll()
         dimFailures.removeAll()
         var changed = 0
         unsupportedDisplays = 0
         let displays = targets()
-        unsupportedDisplays = max(0, onlineDisplays().count - displays.count)
+        unsupportedDisplays = max(0, (onlineDisplays()?.count ?? 0) - displays.count)
         for (key, display) in displays.sorted(by: { $0.value < $1.value }) {
             if let fade = fades[key], !fade.restoring { changed += 1; continue }
             guard let brightness = readValue(display, key: key), brightness.isFinite, (0...1).contains(brightness),
@@ -383,6 +389,20 @@ final class NativeBrightness {
             (blackout?.pendingIdentities ?? []).allSatisfy { fades[$0]?.restoring == true }
     }
 
+    var restoreStatus: BrightnessRestoreStatus {
+        guard hasPendingRestore else { return .restored }
+        let gamma = blackout?.pendingIdentities ?? []
+        guard !hasRecoveryLoadFailure, !emptyRecoveryPending,
+              !(blackout?.hasPendingRestore == true && gamma.isEmpty),
+              let online = onlineDisplays() else { return .failed }
+        let identities = Set(online.compactMap(displayIdentity).filter { !$0.isEmpty })
+        // An incomplete inventory cannot establish that a saved display is offline.
+        guard identities.count == online.count else { return .failed }
+        let connected = Set(saved.keys).union(gamma).intersection(identities)
+        if connected.isEmpty { return .deferred }
+        return connected.allSatisfy { fades[$0]?.restoring == true } ? .restoring : .failed
+    }
+
     @discardableResult
     func advanceTransitions(at now: TimeInterval = ProcessInfo.processInfo.systemUptime) -> [BrightnessTransitionResult] {
         guard !hasRecoveryLoadFailure else { return [] }
@@ -446,7 +466,7 @@ final class NativeBrightness {
             if !hardwareOK || !gammaReady || !gammaOK { dimFailures.insert(key) }
             else if checkHardware { dimFailures.remove(key) }
         }
-        unsupportedDisplays = dimFailures.count + max(0, onlineDisplays().count - displays.count)
+        unsupportedDisplays = dimFailures.count + max(0, (onlineDisplays()?.count ?? 0) - displays.count)
         return displays.count - dimFailures.count
     }
 }
@@ -489,6 +509,7 @@ func runBrightnessGuardian(fixture: Bool = false) -> Never {
     var maintainingDim = false
     var maintainedDisplayCount = 0
     var wantsRestore = false
+    var lastRestoreStatus: BrightnessRestoreStatus?
     var lastRestoreAttempt: TimeInterval = -.infinity
     var lockHoldUntil: TimeInterval = 0
     var dimID: UInt64 = 0
@@ -497,6 +518,12 @@ func runBrightnessGuardian(fixture: Bool = false) -> Never {
     var lastIndividualRestoreAttempt: TimeInterval = -.infinity
     func emit(_ message: String, id: UInt64) {
         print(id == 0 ? message : "\(message)@\(id)"); fflush(stdout)
+    }
+    func reportRestoreStatus() {
+        let status = brightness.restoreStatus
+        guard lastRestoreStatus != status else { return }
+        lastRestoreStatus = status
+        emit(status.rawValue, id: restoreID)
     }
     while running {
         var descriptor = pollfd(fd: STDIN_FILENO, events: Int16(POLLIN | POLLHUP), revents: 0)
@@ -544,6 +571,15 @@ func runBrightnessGuardian(fixture: Bool = false) -> Never {
                     if outcome == .recoveryNeeded { lastIndividualRestoreAttempt = ProcessInfo.processInfo.systemUptime }
                     emit(outcome.rawValue, id: id)
                 case "dim":
+                    if wantsRestore && brightness.restoreStatus == .failed {
+                        brightness.restore()
+                        reportRestoreStatus()
+                        if lastRestoreStatus == .failed {
+                            emit("dimmed:0", id: id)
+                            emit("restore-failed", id: id)
+                            continue
+                        }
+                    }
                     individualSession.reset()
                     dimID = id; restoreID = 0
                     lockHoldUntil = 0
@@ -559,8 +595,9 @@ func runBrightnessGuardian(fixture: Bool = false) -> Never {
                     lockHoldUntil = 0
                     maintainingDim = false
                     wantsRestore = true; lastRestoreAttempt = ProcessInfo.processInfo.systemUptime
-                    let accepted = brightness.restore(duration: name == "restore-now" ? 0 : duration)
-                    emit(accepted ? (brightness.transitioning ? "restoring" : "restored") : "restore-failed", id: restoreID)
+                    lastRestoreStatus = nil
+                    brightness.restore(duration: name == "restore-now" ? 0 : duration)
+                    reportRestoreStatus()
                 case "hold-for-lock":
                     lockHoldUntil = ProcessInfo.processInfo.systemUptime + 12
                     maintainingDim = brightness.holdDim()
@@ -570,11 +607,15 @@ func runBrightnessGuardian(fixture: Bool = false) -> Never {
             }
         }
         if ProcessInfo.processInfo.systemUptime - lastHeartbeat > 4 { break }
+        let wasTransitioning = brightness.transitioning
         let results = brightness.advanceTransitions()
         if results.contains(.dimFailed) { maintainingDim = false }
-        for reply in brightnessTransitionReplies(results, brightness: brightness, dimID: dimID, restoreID: restoreID) {
-            emit(reply.message, id: reply.id)
-            fflush(stdout)
+        if wantsRestore {
+            if results.contains(.restoreFailed) || (wasTransitioning && !brightness.transitioning) { reportRestoreStatus() }
+        } else {
+            for reply in brightnessTransitionReplies(results, brightness: brightness, dimID: dimID, restoreID: restoreID) {
+                emit(reply.message, id: reply.id)
+            }
         }
         if maintainingDim {
             let previous = brightness.unsupportedDisplays
@@ -597,7 +638,8 @@ func runBrightnessGuardian(fixture: Bool = false) -> Never {
         if wantsRestore && !brightness.transitioning && brightness.hasPendingRestore &&
             ProcessInfo.processInfo.systemUptime - lastRestoreAttempt >= 2 {
             lastRestoreAttempt = ProcessInfo.processInfo.systemUptime
-            if brightness.restore() { emit("restored", id: restoreID) }
+            brightness.restore()
+            reportRestoreStatus()
         }
     }
     for _ in 0..<3 {

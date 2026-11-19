@@ -171,6 +171,24 @@ do {
         o.receiveBrightness(.init(message: "restored", id: retry))
         try expect(!o.coveredBrightnessRestore && !o.transitionCover.active, "current retry ACK could not finish")
     }
+    try test("disconnected recovery releases the lock cover and admits a new session") {
+        let o = Owner(); defer { o.close() }; o.screenDriver.locksOnRequest = true
+        try startNormalUnlock(o); try acknowledgeCover(o); confirmAuthentication(o)
+        o.previousDisplayRecoveryPending = true
+        let restore = o.operationReplies.current(.restore)!
+        o.receiveBrightness(.init(message: "restore-deferred", id: restore - 1))
+        try expect(o.coveredBrightnessRestore && o.transitionCover.active, "stale deferral revealed the cover")
+        o.receiveBrightness(.init(message: "restore-deferred", id: restore))
+        try expect(!o.coveredBrightnessRestore && !o.transitionCover.active && o.issues[.brightness] == nil, "offline recovery blocked the current display")
+        try expect(o.operationReplies.current(.restore) == restore, "reconnect acknowledgement lost its request identity")
+        o.receiveBrightness(.init(message: "restore-failed", id: restore))
+        o.screenDriver.current = .unlocked
+        o.startSession()
+        try expect(!o.locked, "a connected display with unresolved recovery admitted a session")
+        o.receiveBrightness(.init(message: "restore-deferred", id: restore))
+        o.startSession()
+        try expect(o.locked && o.filter.snapshot.locked, "offline recovery prevented a new session")
+    }
     try test("failed OS lock keeps input blocked and waits for opaque failure ACK before restore") {
         let o = Owner(); defer { o.close() }; o.screenDriver.requestSucceeds = false
         try startNormalUnlock(o); try acknowledgeCover(o)

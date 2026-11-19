@@ -22,6 +22,47 @@ private final class GammaBrightnessMemory: BrightnessRecoveryStore {
 final class DisplayGammaTests: XCTestCase {
     private let original = DisplayGammaTable(red: [0, 0.12, 0.8, 1], green: [0, 0.2, 0.7, 0.9], blue: [0, 0.1, 0.6, 0.85])
 
+    func testDisconnectedRecoverySurvivesANewSessionAndRestoresAfterReconnect() {
+        let gamma = GammaMemory(), physical = GammaBrightnessMemory()
+        gamma.values = ["external": original]
+        physical.values = ["external": 0.9]
+        var online: [UInt32] = [1]
+        var identities: [UInt32: String] = [1: "internal", 3: "external"]
+        var levels: [UInt32: Float] = [1: 0.7, 3: 0]
+        var externalGamma = original.scaled(0)
+        let blackout = ExternalBlackout(read: { _ in externalGamma }, write: { _, table in
+            externalGamma = table; return true
+        }, recovery: gamma)
+        let brightness = NativeBrightness(displays: { online }, read: { levels[$0] }, write: { display, value in
+            levels[display] = value; return true
+        }, identity: { identities[$0] ?? "" }, recovery: physical, blackout: blackout, blackoutEligible: { $0 == 3 })
+
+        XCTAssertFalse(brightness.restore())
+        XCTAssertEqual(brightness.restoreStatus, .deferred)
+        XCTAssertEqual(brightness.dim(), 1)
+        XCTAssertEqual(levels[1], 0)
+        XCTAssertFalse(brightness.restore(duration: 0.3, at: 1))
+        XCTAssertEqual(brightness.restoreStatus, .restoring)
+        brightness.advanceTransitions(at: 2)
+        XCTAssertEqual(brightness.restoreStatus, .deferred)
+        XCTAssertEqual(levels[1], 0.7)
+        XCTAssertEqual(physical.values, ["external": 0.9])
+        XCTAssertEqual(gamma.values, ["external": original])
+
+        online.append(2)
+        XCTAssertEqual(brightness.restoreStatus, .failed, "An unidentified screen could own the recovery")
+        identities[2] = "internal"
+        XCTAssertEqual(brightness.restoreStatus, .failed, "Ambiguous identities cannot confirm disconnection")
+        online = [1, 3]
+        XCTAssertEqual(brightness.restoreStatus, .failed, "A reconnected screen still needs its saved values")
+        XCTAssertTrue(brightness.restore())
+        XCTAssertEqual(brightness.restoreStatus, .restored)
+        XCTAssertEqual(levels[3], 0.9)
+        XCTAssertEqual(externalGamma, original)
+        XCTAssertTrue(physical.values.isEmpty)
+        XCTAssertTrue(gamma.values.isEmpty)
+    }
+
     func testGammaCaptureAndDurableSaveCannotWriteToAReusedDisplayID() {
         for replaceDuringRead in [true, false] {
             let recovery = GammaMemory(); var identity = "original", writes = 0

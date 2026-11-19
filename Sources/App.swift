@@ -95,6 +95,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
             "screenLockHandoff": screenLock.state,
             "transitionCoverActive": transitionCover.active,
             "coveredBrightnessRestore": coveredBrightnessRestore,
+            "displayRecoveryDeferred": previousDisplayRecovery.waitingForDisconnectedDisplays,
             "privacyShieldActive": privacyShield.active,
             "privacyShieldPresented": privacyShield.presented,
             "privacyShieldPresentationFailed": privacyShield.presentationFailed,
@@ -658,7 +659,12 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
                 _ = operationReplies.finish(.restore, id: reply.id)
                 previousDisplayRecovery.complete(issues: &issues)
                 if coveredBrightnessRestore { finishCoveredRestore() }
+            } else if reply.message == "restore-deferred" {
+                // Keep the request ID for the guardian's retry after reconnect.
+                previousDisplayRecovery.deferDisconnectedDisplays(issues: &issues)
+                if coveredBrightnessRestore { finishCoveredRestore() }
             } else if reply.message == "restore-failed" {
+                previousDisplayRecovery.resumeDeferredRestore()
                 if coveredBrightnessRestore { retryCoveredRestore() }
                 else { issues[.brightness] = L10n.text("화면 복원에 실패했습니다. DeskVeil을 다시 실행해주세요.") }
             }
